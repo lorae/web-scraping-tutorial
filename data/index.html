@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraping Resources</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>Web Scraping Resources</h1>
+    <p>This is a table of resources on web scraping.</p>
+    <table id="resources-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Date Presented</th>
+                <th>Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+        </tbody>
+    </table>
+    <script>
+        async function fetchResources() {
+            const response = await fetch('resources.json');
+            const data = await response.json();
+            const tableBody = document.getElementById('resources-table').getElementsByTagName('tbody')[0];
+
+            data.forEach(resource => {
+                const row = tableBody.insertRow();
+                const titleCell = row.insertCell(0);
+                const dateCell = row.insertCell(1);
+                const linkCell = row.insertCell(2);
+
+                titleCell.textContent = resource.title;
+                dateCell.textContent = resource.date;
+                linkCell.innerHTML = `<a href="${resource.link}">Link</a>`;
+            });
+        }
+
+        fetchResources();
+    </script>
+</body>
+</html>
