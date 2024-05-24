@@ -2,16 +2,36 @@
     {
         "title": "Introduction to Web Scraping",
         "date": "2024-01-01",
-        "link": "https://example.com/intro"
+        "link": "https://example.com/intro",
+        "authors": "Jane Doe, John Doe",
+        "description": "text"
     },
     {
         "title": "Advanced Web Scraping Techniques",
         "date": "2024-02-01",
-        "link": "https://example.com/advanced"
+        "link": "https://example.com/advanced",
+        "authors": "Jane Doe, John Doe",
+        "description": "text"
     },
     {
         "title": "Web Scraping with Python",
         "date": "2024-03-01",
-        "link": "https://example.com/python"
+        "link": "https://example.com/python",
+        "authors": "Jane Doe, John Doe",
+        "description": "text"
+    }
+    {
+        "title": "Another test",
+        "date": "2024-07-11",
+        "link": "https://example.com/lorae",
+        "authors": "Jane Doe, John Doe",
+        "description": "text"
+    }
+    {
+        "title": "YetAnother test",
+        "date": "2024-08-14",
+        "link": "https://example.com/hello",
+        "authors": "Jane Doe, John Doe",
+        "description": "text"
     }
 ]
