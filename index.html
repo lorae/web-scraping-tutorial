@@ -37,7 +37,7 @@
     </table>
     <script>
         async function fetchResources() {
-            const response = await fetch('resources.json');
+            const response = await fetch('data/web-scraping-resources.json');
             const data = await response.json();
             const tableBody = document.getElementById('resources-table').getElementsByTagName('tbody')[0];
 
