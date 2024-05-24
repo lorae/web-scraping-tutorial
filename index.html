@@ -34,20 +34,39 @@
         .digest-card__label {
             font-weight: bold;
         }
+        .filter-keywords {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
-    <h1>Web Scraping Resources</h1>
-    <p>This is a table of resources on web scraping.</p>
+    <h1>Scrape this website!</h1>
+    <p>Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. I hope you enjoy!</p>
+    <p>If you'd like to learn more about how to use this page, please visit my repository, 
+        <a href="https://github.com/lorae/web-scraping-tutorial" target="_blank">lorae/web-scraping-tutorial</a>
+        .
+    </p>
+    <h2>Learning resources</h2>
+    <div class="filter-keywords">
+        <label for="keyword-filter">Filter by keyword:</label>
+        <input type="text" id="keyword-filter" placeholder="Enter a keyword">
+        <button onclick="filterResources()">Filter</button>
+    </div>
     <div class="promo-grid__promos" id="resources-container">
         <!-- Data will be populated here -->
     </div>
     <script>
+        let resourcesData = [];
+
         async function fetchResources() {
             const response = await fetch('data/web-scraping-resources.json');
-            const data = await response.json();
-            const container = document.getElementById('resources-container');
+            resourcesData = await response.json();
+            displayResources(resourcesData);
+        }
 
+        function displayResources(data) {
+            const container = document.getElementById('resources-container');
+            container.innerHTML = '';
             data.forEach(resource => {
                 const card = document.createElement('div');
                 card.className = 'digest-card';
@@ -72,8 +91,21 @@
                 description.textContent = resource.description;
                 card.appendChild(description);
 
+                const keywords = document.createElement('div');
+                keywords.className = 'digest-card__keywords';
+                keywords.innerHTML = `<span class="digest-card__label">Keywords: </span>${resource.keywords.join(', ')}`;
+                card.appendChild(keywords);
+
                 container.appendChild(card);
             });
+        }
+
+        function filterResources() {
+            const keyword = document.getElementById('keyword-filter').value.toLowerCase();
+            const filteredData = resourcesData.filter(resource =>
+                resource.keywords.some(kw => kw.toLowerCase().includes(keyword))
+            );
+            displayResources(filteredData);
         }
 
         fetchResources();

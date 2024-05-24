@@ -1,43 +1,44 @@
 [
     {
         "title": "Introduction to Web Scraping",
-        "date": "2024-01-01",
-        "link": "https://example.com/intro",
+        "date": "March 31, 2017",
+        "link": "https://github.com/DistrictDataLabs/brookings/",
         "authors": [
-            {"name": "Jane Doe", "link": "#"},
-            {"name": "John Doe", "link": "#"}
+            {"name": "District Data Labs", "link": "#"}
         ],
-        "description": "An introduction to web scraping."
+        "description": "GitHub repository presented to Brookings Data Network which has slides and sample code. The resource is older, but the concepts are still relevant. [NOTE: I haven't tested the code, so I'm not sure if it still works]",
+        "keywords": ["Publicly available datasets", "common data formats", "RESTful APIs", "HTTP requests", "web scraping vs web crawling"]
     },
     {
-        "title": "Advanced Web Scraping Techniques",
-        "date": "2024-02-01",
-        "link": "https://example.com/advanced",
+        "title": "Building a Web Scraper",
+        "date": "May 26, 2017",
+        "link": "https://example.com/secret-internal-link",
         "authors": [
-            {"name": "Jane Doe", "link": "#"},
-            {"name": "John Doe", "link": "#"}
+            {"name": "Curtlyn Kramer", "link": "#"}
         ],
-        "description": "Advanced techniques for web scraping."
+        "description": "Curtlyn Kramer's **Brookings internal** Jupyter notebook, presented to the Brookings Data Network on May 26, 2017. This is only useful if the code works, so I will have to test if the code works. If it does, then this is a helpful Jupyter notebook that walks you through the steps.",
+        "keywords": ["IDK"]
     },
     {
-        "title": "Web Scraping with Python",
-        "date": "2024-03-01",
-        "link": "https://example.com/python",
+        "title": "Introduction to Data Science Using Python",
+        "date": "June 5, 2020",
+        "link": "https://github.com/DistrictDataLabs/Brookings_Python_DS",
         "authors": [
-            {"name": "Jane Doe", "link": "#"},
-            {"name": "John Doe", "link": "#"}
+            {"name": "District Data Labs", "link": "#"}
         ],
-        "description": "Learn web scraping with Python."
+        "description": "Another GitHub repo containing slides and code. I haven't reviewed it yet.",
+        "keywords": ["Python", "data science"]
     },
     {
-        "title": "Another test",
-        "date": "2024-07-11",
-        "link": "https://example.com/lorae",
+        "title": "Webscraping in R (and a little Python and Excel too)",
+        "date": "February 22, 2023",
+        "link": "https://example.com/secret",
         "authors": [
-            {"name": "Jane Doe", "link": "#"},
-            {"name": "John Doe", "link": "#"}
+            {"name": "Valerie Wirtschafter", "link": "#"},
+            {"name": "Mimi Majumder", "link": "#"}
         ],
-        "description": "Another test description."
+        "description": "Another test description.",
+        "keywords": ["test", "keyword"]
     },
     {
         "title": "Yet Another test",
