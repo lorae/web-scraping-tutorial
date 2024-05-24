@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Introduction to Web Scraping",
+        "date": "2024-01-01",
+        "link": "https://example.com/intro"
+    },
+    {
+        "title": "Advanced Web Scraping Techniques",
+        "date": "2024-02-01",
+        "link": "https://example.com/advanced"
+    },
+    {
+        "title": "Web Scraping with Python",
+        "date": "2024-03-01",
+        "link": "https://example.com/python"
+    }
+]
