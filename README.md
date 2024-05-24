@@ -12,8 +12,10 @@ The repository has two main elements:
 
 # Getting Started
 If you'd simply like to view the educational materials, please navigate to:
-**Instructional slides:** [link here]
-**Instructional website:** [link here]
+
+**Instructional slides:** https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html
+
+**Instructional website:** https://lorae.github.io/web-scraping-tutorial
 
 If you'd like to run the source code on your computer, proceed with the steps below. Please note that the [instructional webpage](https://lorae.github.io/web-scraping-tutorial/) is automatically updated via a GitHub Actions workflow each time a modification to `index.html` is pushed to the main branch. No additional action is required to initiate this process. 
 
