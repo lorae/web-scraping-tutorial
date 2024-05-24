@@ -1,27 +1,25 @@
 # Purpose
 The purpose of this repository is to act as a web scraping training ground for those hoping to develop their skills in Python. It was presented to the Brookings Institution as part of the Brookings Data Network presentation series on XXX XX, 2024.
 
-### Instructional slides
-This repository produces slides th, produced using a Jupyter notebook, which can be found here: [ADD LINK!]
-
-### Instructional webpage
-This repository also produces a [web scraping training ground](https://lorae.github.io/web-scraping-tutorial/), a website meant to demonstrate the basic principles of website organization and allow users to test their skills in areas such as:
-- network requests
-- HTML parsing
-- Selenium
-- "hidden" API scraping
-
-Users can follow along with the web scrapign trianing slides (add link here) to get a step-by-step tutorial on the ways that the data on the instructional webpage can be scraped.
-
-# Access the web scraping training ground here!
-https://lorae.github.io/advanced-web-scraping/
-# Access the web scraping training slides here!
-[ADD LINK]
-
-# Web Scraping Tutorial
+The repository has two main elements: 
+1. An instructional slideshow [ADD LINK HERE!!!] produced as a Jupyter notebook, which walk users through web scraping techniques and code
+2. An [instructional webpage](https://lorae.github.io/web-scraping-tutorial/), hosted on GitHub, which users can practice their scraping skills on. The webpage exhibits several features that allow users to practice skills such as:
+   - Making network requests
+   - Parsing HTML code
+   - Using Selenium
+   - Discovering hidden APIs
+   - Rendering JSON data sets
 
 # Getting Started
-Follow these setup instructions if you'd like to clone the repository on your computer.
+If you'd simply like to view the educational materials, please navigate to:
+**Instructional slides:** [link here]
+**Instructional website:** [link here]
+
+If you'd like to run the source code on your computer, proceed with the steps below. Please note that the [instructional webpage](https://lorae.github.io/web-scraping-tutorial/) is automatically updated via a GitHub Actions workflow each time a modification to `index.html` is pushed to the main branch. No additional action is required to initiate this process. 
+
+However, to set up the project on your computer and run the Jupyter notebook and/or run the website on a local server, follow the instructions below. 
+
+## If you're running the project for the first time
 
 1. **Navigate to the directory where you'd like to save the project**:
     ```sh
@@ -41,32 +39,29 @@ Follow these setup instructions if you'd like to clone the repository on your co
 4. **Install Poetry** (Skip this step if Poetry is already installed):
     Poetry is a dependency management and packaging tool for Python. Follow the instructions for your operating system to install Poetry. If you already have Poetry installed, you may safely skip this step.
 
-    ### For bash/zsh (Linux/macOS):
+    - For bash/zsh (Linux/macOS):
+      ```sh
+      curl -sSL https://install.python-poetry.org | python3 -
+      ```
 
-    ```sh
-    curl -sSL https://install.python-poetry.org | python3 -
-    ```
-
-    ### For Windows PowerShell:
-
-    ```powershell
-    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
-    ```
+    - For Windows PowerShell:
+      ```powershell
+      (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+      ```
 
     After installation, ensure that Poetry is added to your PATH. You can verify the installation by running:
-    
-    ```sh
-    poetry --version
-    ```
+   ```sh
+   poetry --version
+   ```
 
-5. **Install Dependencies**:
+6. **Install Dependencies**:
     Use Poetry to install the project dependencies and set up the virtual environment.
 
     ```sh
     poetry install
     ```
 
-6. **Activate the Virtual Environment**:
+7. **Activate the Virtual Environment**:
     Activate the virtual environment created by Poetry.
 
     ### For bash/zsh (Linux/macOS) and Windows PowerShell:
@@ -75,7 +70,13 @@ Follow these setup instructions if you'd like to clone the repository on your co
     poetry shell
     ```
 
+
+
 You are now set up and ready to work on the project!
+
+## If you're running the project for any subsequent time
+
+TODO: explain how to run the .ipynb file to produce the Jupyter slides and how to run the website locally
 
 
 
