@@ -9,47 +9,70 @@
             font-family: Arial, sans-serif;
             margin: 40px;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .promo-grid__promos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
         }
-        th, td {
-            padding: 8px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
+        .digest-card {
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .digest-card__title a {
+            font-size: 1.25em;
+            color: #003399;
+            text-decoration: none;
+        }
+        .digest-card__date,
+        .digest-card__items,
+        .digest-card__summary {
+            margin-top: 10px;
+        }
+        .digest-card__label {
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <h1>Web Scraping Resources</h1>
     <p>This is a table of resources on web scraping.</p>
-    <table id="resources-table">
-        <thead>
-            <tr>
-                <th>Title</th>
-                <th>Date Presented</th>
-                <th>Link</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Data will be populated here -->
-        </tbody>
-    </table>
+    <div class="promo-grid__promos" id="resources-container">
+        <!-- Data will be populated here -->
+    </div>
     <script>
         async function fetchResources() {
             const response = await fetch('data/web-scraping-resources.json');
             const data = await response.json();
-            const tableBody = document.getElementById('resources-table').getElementsByTagName('tbody')[0];
+            const container = document.getElementById('resources-container');
 
             data.forEach(resource => {
-                const row = tableBody.insertRow();
-                const titleCell = row.insertCell(0);
-                const dateCell = row.insertCell(1);
-                const linkCell = row.insertCell(2);
+                const card = document.createElement('div');
+                card.className = 'digest-card';
 
-                titleCell.textContent = resource.title;
-                dateCell.textContent = resource.date;
-                linkCell.innerHTML = `<a href="${resource.link}">Link</a>`;
+                const title = document.createElement('div');
+                title.className = 'digest-card__title';
+                title.innerHTML = `<a href="${resource.link}">${resource.title}</a>`;
+                card.appendChild(title);
+
+                const date = document.createElement('div');
+                date.className = 'digest-card__date';
+                date.innerHTML = `<span class="digest-card__label">${resource.date}</span>`;
+                card.appendChild(date);
+
+                const authors = document.createElement('div');
+                authors.className = 'digest-card__items';
+                authors.innerHTML = `<span class="digest-card__label">Author(s) - </span>${resource.authors.map(author => `<span><a href="${author.link}">${author.name}</a></span>`).join(', ')}`;
+                card.appendChild(authors);
+
+                const description = document.createElement('div');
+                description.className = 'digest-card__summary';
+                description.textContent = resource.description;
+                card.appendChild(description);
+
+                container.appendChild(card);
             });
         }
 
