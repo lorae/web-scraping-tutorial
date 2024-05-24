@@ -2,7 +2,7 @@
 The purpose of this repository is to act as a web scraping training ground for those hoping to develop their skills in Python. It was presented to the Brookings Institution as part of the Brookings Data Network presentation series on XXX XX, 2024.
 
 The repository has two main elements: 
-1. An instructional slideshow [ADD LINK HERE!!!] produced as a Jupyter notebook, which walk users through web scraping techniques and code
+1. An [instructional slideshow](https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html) produced as a Jupyter notebook, which walk users through web scraping techniques and code
 2. An [instructional webpage](https://lorae.github.io/web-scraping-tutorial/), hosted on GitHub, which users can practice their scraping skills on. The webpage exhibits several features that allow users to practice skills such as:
    - Making network requests
    - Parsing HTML code
