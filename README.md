@@ -2,13 +2,15 @@
 The purpose of this repository is to act as a web scraping training ground for those hoping to develop their skills in Python. It was presented to the Brookings Institution as part of the Brookings Data Network presentation series on XXX XX, 2024.
 
 The repository has two main elements: 
-1. An [instructional slideshow](https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html) produced as a Jupyter notebook, which walk users through web scraping techniques and code
-2. An [instructional webpage](https://lorae.github.io/web-scraping-tutorial/), hosted on GitHub, which users can practice their scraping skills on. The webpage exhibits several features that allow users to practice skills such as:
+## 1. **[Instructional slides](https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html)** 
+These slides (produced using Jupyter) walk users through web scraping techniques such as:
    - Making network requests
    - Parsing HTML code
    - Using Selenium
    - Discovering hidden APIs
    - Rendering JSON data sets
+## 2. **[Instructional webpage](https://lorae.github.io/web-scraping-tutorial/)** 
+This webpage, hosted on GitHub, acts as an illustrative example website that users can web scrape directly as they follow along with instructions from the slides.
 
 # Getting Started
 If you'd simply like to view the educational materials, please navigate to:
@@ -36,15 +38,16 @@ If you'd like to run the source code on your computer, proceed with the steps be
     cd web-scraping-tutorial
     ```
 
-4. **Install Poetry** (Skip this step if Poetry is already installed):
-    Poetry is a dependency management and packaging tool for Python. Follow the instructions for your operating system to install Poetry. If you already have Poetry installed, you may safely skip this step.
+4. **Install Poetry**:
 
-    - For bash/zsh (Linux/macOS):
+   Poetry is a dependency management and packaging tool for Python. Follow the instructions for your operating system to install Poetry. If you already have Poetry installed, you may safely skip this step.
+
+    - **For bash/zsh (Linux/macOS):**
       ```sh
       curl -sSL https://install.python-poetry.org | python3 -
       ```
 
-    - For Windows PowerShell:
+    - **For Windows PowerShell:**
       ```powershell
       (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
       ```
@@ -56,16 +59,11 @@ If you'd like to run the source code on your computer, proceed with the steps be
 
 6. **Install Dependencies**:
     Use Poetry to install the project dependencies and set up the virtual environment.
-
     ```sh
     poetry install
     ```
 
-7. **Activate the Virtual Environment**:
-    Activate the virtual environment created by Poetry.
-
-    ### For bash/zsh (Linux/macOS) and Windows PowerShell:
-    
+7. **Activate the Poetry virtual environment**:
     ```sh
     poetry shell
     ```
@@ -76,8 +74,20 @@ You are now set up and ready to work on the project!
 
 ## If you're running the project for any subsequent time
 
-TODO: explain how to run the .ipynb file to produce the Jupyter slides and how to run the website locally
+1. **Set your working directory in the repository**:
+    ```sh
+    cd your/path/to/web-scraping-tutorial
+    ```
+2. **Activate the Poetry virtual environment**:
+    ```sh
+    poetry shell
+    ```
+## To generate the .html slides using Jupyter:
 
+TODO: explain how to run the .ipynb file 
 
+## To run the website locally:
+
+TODO
 
 
