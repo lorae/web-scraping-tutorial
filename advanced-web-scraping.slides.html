@@ -7469,9 +7469,8 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Advanced-Web-Scraping-with-Python">Advanced Web Scraping with Python<a class="anchor-link" href="#Advanced-Web-Scraping-with-Python">¶</a></h1><br/>
-<p><em>Lorae Stojanovic</em></p>
-<br/>
-<p>Welcome - we will start shortly!</p>
+<h3 id="Lorae-Stojanovic">Lorae Stojanovic<a class="anchor-link" href="#Lorae-Stojanovic">¶</a></h3><br/>
+<p>Welcome! We will start shortly.</p>
 </div>
 </div>
 </div>
@@ -7501,6 +7500,82 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="1.-Review:-Web-Scraping-Basics">1. Review: Web Scraping Basics<a class="anchor-link" href="#1.-Review:-Web-Scraping-Basics">¶</a></h1>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Web scraping</strong>: The act of systematically extracting data from an online resource, such as a website.
+<strong>Web crawling</strong>: (use the explanation given by District Data Lab on /brookings repo)</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="How-does-a-website-work?">How does a website work?<a class="anchor-link" href="#How-does-a-website-work?">¶</a></h2><h3 id="Your-Web-Browser">Your Web Browser<a class="anchor-link" href="#Your-Web-Browser">¶</a></h3><p>Your web browser - like Chrome, Safari, Edge, or Firefox - is specialized software designed to display HTML files.</p>
+<h3 id="HTML-and-CSS">HTML and CSS<a class="anchor-link" href="#HTML-and-CSS">¶</a></h3><p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the languages of websites. HTML outlines the structure of the webpage, defining elements like text, images, and links. CSS styles the webpage, specifying colors, fonts, layout, and overall visual appearance.</p>
+<h3 id="Network-Requests">Network Requests<a class="anchor-link" href="#Network-Requests">¶</a></h3><p>When you enter a URL (e.g., www.example.com) into your browser, several things happen:</p>
+<ol>
+<li><p><strong>DNS Lookup</strong>:</p>
+<ul>
+<li>Your browser first translates the human-readable URL into an IP address using a Domain Name System (DNS) lookup. This IP address points to the server where the website is hosted.</li>
+</ul>
+</li>
+<li><p><strong>HTTP Request</strong>:</p>
+<ul>
+<li>The browser sends an HTTP (HyperText Transfer Protocol) request to the server at this IP address. This request asks for the main HTML file of the website.</li>
+</ul>
+</li>
+<li><p><strong>Server Response</strong>:</p>
+<ul>
+<li>The server processes this request and sends back the requested HTML file. This file contains the basic structure of the webpage.</li>
+</ul>
+</li>
+<li><p><strong>Rendering HTML</strong>:</p>
+<ul>
+<li>Your browser starts rendering the HTML file, which often includes references to other resources like CSS files, JavaScript files, images, fonts, and videos.</li>
+</ul>
+</li>
+<li><p><strong>Additional Requests</strong>:</p>
+<ul>
+<li>For each of these additional resources, the browser makes more HTTP requests to the server. For example:<ul>
+<li><strong>CSS Files</strong>: To style the webpage.</li>
+<li><strong>JavaScript Files</strong>: To add interactivity and dynamic content.</li>
+<li><strong>Images and Videos</strong>: To include multimedia content.</li>
+<li><strong>APIs</strong>: Sometimes, the HTML or JavaScript code includes API requests. APIs (Application Programming Interfaces) allow the browser to request and receive data from servers, often in JSON format, which can then be dynamically displayed on the webpage.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Assembling the Page</strong>:</p>
+<ul>
+<li>The browser assembles all these elements and displays the fully rendered webpage to you.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="2">
+<li>Selenium</li>
+</ol>
 </div>
 </div>
 </div>
