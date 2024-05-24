@@ -17,9 +17,7 @@ If you'd simply like to view the educational materials, please navigate to:
 
 **Instructional website:** https://lorae.github.io/web-scraping-tutorial
 
-If you'd like to run the source code on your computer, proceed with the steps below. Please note that the [instructional webpage](https://lorae.github.io/web-scraping-tutorial/) is automatically updated via a GitHub Actions workflow each time a modification to `index.html` is pushed to the main branch. No additional action is required to initiate this process. 
-
-However, to set up the project on your computer and run the Jupyter notebook and/or run the website on a local server, follow the instructions below. 
+If you'd like to run the source code on your computer, proceed with the steps below.
 
 ## If you're running the project for the first time
 
