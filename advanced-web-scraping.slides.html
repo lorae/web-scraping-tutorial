@@ -7482,24 +7482,14 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Agenda">Agenda<a class="anchor-link" href="#Agenda">¶</a></h1><ol>
-<li><a href="#/2">Review: Web Scraping Basics</a></li>
+<li>Internet basics(#/2)</li>
+<li><a href="#/3">Review: Web Scraping Basics</a></li>
 <li>Selenium</li>
 <li>API Scraping</li>
 <li>Automating a web scrape with GitHub Actions</li>
 <li>Demo</li>
 <li><a href="#/3">Additional Resources</a></li>
 </ol>
-</div>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-Review:-Web-Scraping-Basics">1. Review: Web Scraping Basics<a class="anchor-link" href="#1.-Review:-Web-Scraping-Basics">¶</a></h1>
 </div>
 </div>
 </div>
@@ -7515,21 +7505,55 @@ main {
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="How-does-a-website-work?">How does a website work?<a class="anchor-link" href="#How-does-a-website-work?">¶</a></h2><h3 id="Your-Web-Browser">Your Web Browser<a class="anchor-link" href="#Your-Web-Browser">¶</a></h3><p>Your web browser - like Chrome, Safari, Edge, or Firefox - is specialized software designed to display HTML files.</p>
-<h3 id="HTML-and-CSS">HTML and CSS<a class="anchor-link" href="#HTML-and-CSS">¶</a></h3><p>HTML (HyperText Markup Language) and CSS (Cascading Style Sheets) are the languages of websites. HTML outlines the structure of the webpage, defining elements like text, images, and links. CSS styles the webpage, specifying colors, fonts, layout, and overall visual appearance.</p>
-<h3 id="Network-Requests">Network Requests<a class="anchor-link" href="#Network-Requests">¶</a></h3><p>When you enter a URL (e.g., www.example.com) into your browser, several things happen:</p>
+<h1 id="Internet-Basics">Internet Basics<a class="anchor-link" href="#Internet-Basics">¶</a></h1>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="How-does-a-website-work?">How does a website work?<a class="anchor-link" href="#How-does-a-website-work?">¶</a></h2><h3 id="What-is-a-web-browser?">What is a web browser?<a class="anchor-link" href="#What-is-a-web-browser?">¶</a></h3><p>A web browser - like Chrome, Safari, Edge, or Firefox - is a specialized software designed to fetch and display web resources. Web resources are usually in the form of HTML documents, but can also be PDFs, images, or other documents.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Key-terminology">Key terminology<a class="anchor-link" href="#Key-terminology">¶</a></h2><p><strong>Server vs client</strong>
+"Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome)."</p>
+<p>"Servers are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Network-Requests">Network Requests<a class="anchor-link" href="#Network-Requests">¶</a></h3><p>When you enter a URL (e.g., www.brookings.edu) into your browser, several things happen:</p>
 <ol>
-<li><p><strong>DNS Lookup</strong>:</p>
+<li><p>**DNS Lookup*</p>
 <ul>
-<li>Your browser first translates the human-readable URL into an IP address using a Domain Name System (DNS) lookup. This IP address points to the server where the website is hosted.</li>
+<li>Your browser first translates the human-readable URL (e.g. <a href="http://brookings.edu/">http://brookings.edu/</a>) into an IP address (e.g. 137.135.107.235) using a Domain Name System (DNS) lookup. Think of the DNS search like the phone book that links a name of a store to a street address.</li>
 </ul>
+<p>This IP address points to the server where the website is hosted. Your computer now has the address to which it can send its web request.</p>
 </li>
 <li><p><strong>HTTP Request</strong>:</p>
 <ul>
@@ -7538,7 +7562,7 @@ main {
 </li>
 <li><p><strong>Server Response</strong>:</p>
 <ul>
-<li>The server processes this request and sends back the requested HTML file. This file contains the basic structure of the webpage.</li>
+<li>The server processes this request and sends back the requested HTML file. This file contains the basic structure of the webpage (We'll look at an example of one of these)</li>
 </ul>
 </li>
 <li><p><strong>Rendering HTML</strong>:</p>
@@ -7563,6 +7587,37 @@ main {
 </ul>
 </li>
 </ol>
+<p>TODOL: explain what a server is</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Sources used in this slide:
+Tali Garsiel, "Behind the scenes of modern web browsers" (2011) <a href="https://taligarsiel.com/Projects/howbrowserswork1.htm">https://taligarsiel.com/Projects/howbrowserswork1.htm</a></p>
+<ul>
+<li>a bit outdated, but still a useful resource
+MDN WEb Docs, "How the web works" (2023) <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works</a></li>
+<li>a Mozilla-run blog that provides an introduction to how the web works. It's aimed in particular at developer audiences.
+Pavel Panchekha and Chris Harrelson, "Web Browser Engineering" (2023) <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works</a></li>
+<li>a textbook that guides software developers through the process of buildign a web browser.</li>
+</ul>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="2.-Review:-Web-Scraping-Basics">2. Review: Web Scraping Basics<a class="anchor-link" href="#2.-Review:-Web-Scraping-Basics">¶</a></h1>
 </div>
 </div>
 </div>
