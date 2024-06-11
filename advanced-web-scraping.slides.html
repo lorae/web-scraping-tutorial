@@ -7469,8 +7469,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Advanced-Web-Scraping-with-Python">Advanced Web Scraping with Python<a class="anchor-link" href="#Advanced-Web-Scraping-with-Python">¶</a></h1><br/>
-<h3 id="Lorae-Stojanovic">Lorae Stojanovic<a class="anchor-link" href="#Lorae-Stojanovic">¶</a></h3><br/>
-<p>Welcome! We will start shortly.</p>
+<h3 id="Lorae-Stojanovic">Lorae Stojanovic<a class="anchor-link" href="#Lorae-Stojanovic">¶</a></h3><p>June 20, 2024</p>
 </div>
 </div>
 </div>
@@ -7482,7 +7481,7 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Agenda">Agenda<a class="anchor-link" href="#Agenda">¶</a></h1><ol>
-<li>Internet basics(#/2)</li>
+<li><a href="#/2">How does a website work?</a></li>
 <li><a href="#/3">Review: Web Scraping Basics</a></li>
 <li>Selenium</li>
 <li>API Scraping</li>
@@ -7493,37 +7492,15 @@ main {
 </div>
 </div>
 </div>
-</div><div class="fragment">
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Web scraping</strong>: The act of systematically extracting data from an online resource, such as a website.
-<strong>Web crawling</strong>: (use the explanation given by District Data Lab on /brookings repo)</p>
-</div>
-</div>
-</div>
-</div></div></section></section><section><section>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-Internet-Basics">1. Internet Basics<a class="anchor-link" href="#1.-Internet-Basics">¶</a></h1>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="But-first,-some-terminology...">But first, some terminology...<a class="anchor-link" href="#But-first,-some-terminology...">¶</a></h2>
+<h1 id="1.-How-does-a-website-work?">1. How does a website work?<a class="anchor-link" href="#1.-How-does-a-website-work?">¶</a></h1><p>A lot goes on behind the scenes when you view a website like <a href="https://www.brookings.edu/">https://www.brookings.edu/</a>.</p>
+<p>Understanding how your computer interacts with remote resources will help you become a more capable data collector.</p>
 </div>
 </div>
 </div>
@@ -7534,8 +7511,23 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Client</strong>: "Clients are the typical web user's internet-connected devices (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and web-accessing software available on those devices (usually a web browser like Firefox or Chrome)."</p>
-<p><strong>Server</strong>: "Servers are computers that store webpages, sites, or apps. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser."</p>
+<h2 id="Key-terminology">Key terminology<a class="anchor-link" href="#Key-terminology">¶</a></h2><h3 id="Client"><strong>Client</strong><a class="anchor-link" href="#Client">¶</a></h3><p>"Clients are the typical <strong>web user's internet-connected devices</strong> (for example, your computer connected to your Wi-Fi, or your phone connected to your mobile network) and <strong>web-accessing software available on those devices</strong> (usually a web browser like Firefox or Chrome)."<sup class="reference" id="ref01"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" title="Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">[1]</a></sup></p>
+<h3 id="Server"><strong>Server</strong><a class="anchor-link" href="#Server">¶</a></h3><p>"Servers are <strong>computers that store webpages, sites, or apps</strong>. When a client device wants to access a webpage, a copy of the webpage is downloaded from the server onto the client machine to be displayed in the user's web browser."<sup class="reference" id="ref02"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" title="Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">[2]</a></sup></p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+
+<p style="font-size:10px">
+[1] Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works <br/>
+[2] Ibid.
+</p>
 </div>
 </div>
 </div>
@@ -7546,7 +7538,19 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="How-does-a-website-work?">How does a website work?<a class="anchor-link" href="#How-does-a-website-work?">¶</a></h2><p>When you enter a URL (e.g., www.brookings.edu) into your browser, several things happen:</p>
+<p>Clients send <strong>requests</strong> for information from servers. The servers send back <strong>responses</strong>.
+<img alt="A schematic illustrating the relationship between clients and servers" src="slides/client-server-request-response.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Accessing-a-website">Accessing a website<a class="anchor-link" href="#Accessing-a-website">¶</a></h2><p>When you enter a URL (e.g., www.brookings.edu) into your browser, several things happen:</p>
 </div>
 </div>
 </div>
@@ -7558,12 +7562,11 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol>
-<li><strong>DNS Lookup</strong></li>
-<li><strong>HTTP Request</strong></li>
-<li><strong>Server Response</strong></li>
-<li><strong>Rendering HTML</strong></li>
-<li><strong>Additional Requests</strong></li>
-<li><strong>Assembling the Page</strong></li>
+<li>DNS lookup</li>
+<li>Initial HTTP request</li>
+<li>Server response</li>
+<li>Parsing HTML + additional requests</li>
+<li>Assembling the page</li>
 </ol>
 </div>
 </div>
@@ -7576,29 +7579,16 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h3 id="Step-1:-DNS-Lookup"><strong>Step 1: DNS Lookup</strong><a class="anchor-link" href="#Step-1:-DNS-Lookup">¶</a></h3><p>Your browser first translates the human-readable URL (e.g. <a href="http://brookings.edu/">http://brookings.edu/</a>) into an IP address (e.g. 137.135.107.235) using a Domain Name System (DNS) lookup.</p>
-<p>Think of the DNS search like the phone book that links a name of a store to a street address. The street address, in this case, is an IP address which points to the server where the website is hosted. <sup class="reference" id="ref01"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" title="Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">[1]</a></sup> <sup class="reference" id="ref02"><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" title="Cloudflare. What is DNS? Retrieved from https://www.cloudflare.com/learning/dns/what-is-dns/">[2]</a></sup>
-<br/>
-<br/>
-<br/></p>
+<p>Think of the DNS search like the phone book that links a name of a store to a street address. The street address, in this case, is an IP address which points to the server where the website is hosted. <sup class="reference" id="ref02"><a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works" title="Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">[3]</a></sup> <sup class="reference" id="ref03"><a href="https://www.cloudflare.com/learning/dns/what-is-dns/" title="Cloudflare. What is DNS? Retrieved from https://www.cloudflare.com/learning/dns/what-is-dns/">[4]</a></sup></p>
 
 <p style="font-size:10px">
-[1] Mozilla. (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works
+[2] Mozilla (2023). How the web works. Retrieved from https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works
 <br/>
-[2] Cloudflare. What is DNS? Retrieved from https://www.cloudflare.com/learning/dns/what-is-dns/<br/>
+[3] Cloudflare. What is DNS? Retrieved from https://www.cloudflare.com/learning/dns/what-is-dns/<br/>
 </p>
 </div>
 </div>
 </div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-</div>
-</div>
-</div>
 </div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -7606,27 +7596,44 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Slide-1">Slide 1<a class="anchor-link" href="#Slide-1">¶</a></h1><div>
-<p>This is some text on the slide.<sup class="reference" id="ref01"><a href="#" title="Full citation: Author, A. (Year). Title. Journal, Volume(Issue), pages.">[1]</a></sup></p>
-<p><a href="#" title="Full citation: Author, A. (Year). Title. Journal, Volume(Issue), pages.">Source</a></p>
-<p style="font-size:10px">[1] Author, A. (Year). Title. Journal, Volume(Issue), pages.</p>
+<h3 id="Step-2:-HTTP-Request"><strong>Step 2: HTTP Request</strong><a class="anchor-link" href="#Step-2:-HTTP-Request">¶</a></h3><p>Now that your browser has the IP address of website, it sends an HTTP (HyperText Transfer Protocol) request to the server at this IP address. This request asks for the main HTML file of the website.</p>
 </div>
 </div>
 </div>
-</div>
-</div></section><section>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="2">
-<li><strong>HTTP Request</strong>:<ul>
-<li>Now that your browser has the IP address of website, it sends an HTTP (HyperText Transfer Protocol) request to the server at this IP address. This request asks for the main HTML file of the website.</li>
-</ul>
-</li>
-</ol>
+<div class="highlight"><pre><span></span>curl<span class="w"> </span><span class="s1">'https://www.brookings.edu/'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: text/html,application/xhtml+xml,application/xml;...'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept-language: en-US,en;q=0.9'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'cookie: _fbp=REDACTED; hubspotutk=REDACTED; ...'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'priority: u=0, i'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'referer: https://www.google.com/'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua: "Google Chrome";v="REDACTED", "Chromium";v="REDACTED", "Not.A/Brand";v="REDACTED"'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua-mobile: ?0'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua-platform: "Windows"'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-dest: document'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-mode: navigate'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-site: cross-site'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-user: ?1'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'upgrade-insecure-requests: 1'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-3:-Server-Response"><strong>Step 3: Server Response</strong><a class="anchor-link" href="#Step-3:-Server-Response">¶</a></h3><p>The server processes this request and sends back the requested HTML file. This file contains the basic structure of the webpage.</p>
 </div>
 </div>
 </div>
@@ -7658,30 +7665,8 @@ main {
 	<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"description"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"The Brookings Institution is a nonprofit public policy organization based in Washington, DC. Our mission is to conduct in-depth research that leads to new ideas for solving problems facing society at the local, national and global level."</span> <span class="o">/&gt;</span>
 	<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"canonical"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://www.brookings.edu/"</span> <span class="o">/&gt;</span>
 	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"en_US"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"es_MX"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"ar_AR"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"zh_CN"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"fr_FR"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"ko_KR"</span> <span class="o">/&gt;</span>
-	<span class="o">&lt;</span><span class="n">meta</span> <span class="nb">property</span><span class="o">=</span><span class="s2">"og:locale:alternate"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"ru_RU"</span> <span class="o">/&gt;</span>
 </pre></div>
 </div>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="3">
-<li><strong>Server Response</strong>:<ul>
-<li>The server processes this request and sends back the requested HTML file. This file contains the basic structure of the webpage (We'll look at an example of one of these)</li>
-</ul>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -7692,12 +7677,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="4">
-<li><strong>Rendering HTML</strong>:<ul>
-<li>Your browser starts rendering the HTML file, which often includes references to other resources like CSS files, JavaScript files, images, fonts, and videos.</li>
-</ul>
-</li>
-</ol>
+<h3 id="Step-4:-Parsing-HTML-+-additional-requests"><strong>Step 4: Parsing HTML + additional requests</strong><a class="anchor-link" href="#Step-4:-Parsing-HTML-+-additional-requests">¶</a></h3><p>Your browser starts <strong>parsing</strong> the HTML file: reading its instructions to turn it into a user-friendly webpage.</p>
+<p>Oftentimes, this code contains references to additional external resources it needs to display the webpage, such as:</p>
 </div>
 </div>
 </div>
@@ -7708,53 +7689,50 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="5">
-<li><strong>Additional Requests</strong>:<ul>
-<li>For each of these additional resources, the browser makes more HTTP requests to the server. For example:<ul>
-<li><strong>CSS Files</strong>: To style the webpage.</li>
-<li><strong>JavaScript Files</strong>: To add interactivity and dynamic content.</li>
-<li><strong>Images and Videos</strong>: To include multimedia content.</li>
-<li><strong>APIs</strong>: Sometimes, the HTML or JavaScript code includes API requests. APIs (Application Programming Interfaces) allow the browser to request and receive data from servers, often in JSON format, which can then be dynamically displayed on the webpage.</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="6">
-<li><strong>Assembling the Page</strong>:<ul>
-<li>The browser assembles all these elements and displays the fully rendered webpage to you.</li>
-</ul>
-</li>
-</ol>
-</div>
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Sources used in this slide:
-Tali Garsiel, "Behind the scenes of modern web browsers" (2011) <a href="https://taligarsiel.com/Projects/howbrowserswork1.htm">https://taligarsiel.com/Projects/howbrowserswork1.htm</a></p>
 <ul>
-<li>a bit outdated, but still a useful resource
-MDN WEb Docs, "How the web works" (2023) <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works</a></li>
-<li>a Mozilla-run blog that provides an introduction to how the web works. It's aimed in particular at developer audiences.
-Pavel Panchekha and Chris Harrelson, "Web Browser Engineering" (2023) <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works">https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works</a></li>
-<li>a textbook that guides software developers through the process of buildign a web browser.</li>
+<li><strong>CSS (Cascading Style Sheets)</strong>: To set default aesthetics like fonts, colors, and line spacing</li>
+<li><strong>JavaScript code</strong>: To add interactivity and dynamic content</li>
+<li><strong>Images and videos</strong>: To incorporate multimedia content</li>
+<li><strong>API (Application Programming Interface) responses</strong>: To obtain data from servers, often in JSON format, to display on the webpage</li>
 </ul>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>As your browser encounters references to these additional files in the HTML code, it makes HTTP requests to the server to retrieve them.</strong></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Step-5:-Assembling-the-page"><strong>Step 5: Assembling the page</strong><a class="anchor-link" href="#Step-5:-Assembling-the-page">¶</a></h3><p>After downloading all the external resources needed to build the webpage, your browser will compile and execute any JavaScript code that it received.</p>
+<p>With all the downloaded elements in place, the browser processes the HTML, the CSS style sheets, and combines it with other resources (such as downloaded fonts, photos, videos, and data downloaded from APIs) to <strong>paint</strong> the webpage to your screen.<sup class="reference" id="ref05"><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work" title="Mozilla (2023). Populating the page: how browsers work. Retrieved from https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work">[5]</a></sup></p>
+
+<p style="font-size:10px">
+[5] Mozilla (2023). Populating the page: how browsers work. Retrieved from https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work" <br/>
+</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="An image of the brookings.edu homepage" src="slides/brookings-edu-screenshot.png"/></p>
 </div>
 </div>
 </div>
@@ -7769,16 +7747,14 @@ Pavel Panchekha and Chris Harrelson, "Web Browser Engineering" (2023) <a href="h
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<ol start="2">
-<li>Selenium</li>
-</ol>
+<p>Test</p>
 </div>
 </div>
 </div>
@@ -7851,7 +7827,19 @@ Pavel Panchekha and Chris Harrelson, "Web Browser Engineering" (2023) <a href="h
 </div>
 </div>
 </div>
-</div></section></section>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Web scraping</strong>: The act of systematically extracting data from an online resource, such as a website.
+<strong>Web crawling</strong>: (use the explanation given by District Data Lab on /brookings repo)</p>
+</div>
+</div>
+</div>
+</div></div></section></section>
 </div>
 </div>
 </main>
