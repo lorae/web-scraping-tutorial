@@ -1,44 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 40px;
 }
+
+h1, h2 {
+    font-weight: 700;
+}
+
 .promo-grid__promos {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .digest-card {
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     padding: 20px;
     width: 100%;
-    max-width: 400px;
+    max-width: 350px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
 }
+
 .digest-card__top {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    margin-bottom: 10px;
 }
+
 .digest-card__image {
-    width: 25%;
+    width: 100px;
     height: auto;
     margin-right: 20px;
 }
+
+.digest-card__text {
+    flex-grow: 1;
+}
+
 .digest-card__title a {
     font-size: 1.25em;
     color: #003399;
     text-decoration: none;
+    font-weight: 700;
 }
+
 .digest-card__date,
 .digest-card__items,
 .digest-card__summary {
     margin-top: 10px;
+    color: #666;
 }
+
 .digest-card__label {
     font-weight: bold;
+    color: #333;
 }
+
 .filter-keywords {
     margin-bottom: 20px;
+}
+
+.digest-card__keywords {
+    margin-top: 10px;
+    color: #999;
+}
+
+a {
+    color: #003399;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Media queries for responsive layout */
+@media (min-width: 600px) {
+    .promo-grid__promos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .digest-card {
+        width: calc(50% - 20px); /* Two cards per row */
+    }
+}
+
+@media (min-width: 900px) {
+    .digest-card {
+        width: calc(33.333% - 20px); /* Three cards per row */
+    }
 }
