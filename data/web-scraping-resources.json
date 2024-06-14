@@ -7,7 +7,8 @@
             {"name": "District Data Labs", "link": "#"}
         ],
         "description": "GitHub repository presented to Brookings Data Network which has slides and sample code. The resource is older, but the concepts are still relevant. [NOTE: I haven't tested the code, so I'm not sure if it still works]",
-        "keywords": ["Publicly available datasets", "common data formats", "RESTful APIs", "HTTP requests", "web scraping vs web crawling"]
+        "keywords": ["Publicly available datasets", "common data formats", "RESTful APIs", "HTTP requests", "web scraping vs web crawling"],
+        "source": "GitHub"
     },
     {
         "title": "Building a Web Scraper",
@@ -17,7 +18,8 @@
             {"name": "Curtlyn Kramer", "link": "#"}
         ],
         "description": "Curtlyn Kramer's **Brookings internal** Jupyter notebook, presented to the Brookings Data Network on May 26, 2017. This is only useful if the code works, so I will have to test if the code works. If it does, then this is a helpful Jupyter notebook that walks you through the steps.",
-        "keywords": ["IDK"]
+        "keywords": ["IDK"],
+        "source": "Brookings Internal"
     },
     {
         "title": "Introduction to Data Science Using Python",
@@ -27,7 +29,8 @@
             {"name": "District Data Labs", "link": "#"}
         ],
         "description": "Another GitHub repo containing slides and code. I haven't reviewed it yet.",
-        "keywords": ["Python", "data science"]
+        "keywords": ["Python", "data science"],
+        "source": "GitHub"
     },
     {
         "title": "Webscraping in R (and a little Python and Excel too)",
@@ -38,16 +41,40 @@
             {"name": "Mimi Majumder", "link": "#"}
         ],
         "description": "Another test description.",
-        "keywords": ["test", "keyword"]
+        "keywords": ["test", "keyword"],
+        "source": "Brookings Internal"
     },
     {
-        "title": "Yet Another test",
-        "date": "2024-08-14",
-        "link": "https://example.com/hello",
+        "title": "Populating the page: how browsers work",
+        "date": "July 20, 2023",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work",
         "authors": [
-            {"name": "Jane Doe", "link": "#"},
-            {"name": "John Doe", "link": "#"}
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work/contributors.txt"}
         ],
-        "description": "Yet another test description."
+        "description": "A concise blog post, aimed at developers, that explains how browsers provide their users with a web experience.",
+        "keywords": ["DNS lookup", "TCP handshake", "TLS negotiation", "HTTP GET request", "response", "parsing", "DOM tree", "CSSOM tree", "JavaScript compilation", "render", "paint"],
+        "source": "Mozilla Developer Network"
+    },
+    {
+        "title": "What is DNS? | How DNS works",
+        "date": "",
+        "link": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+        "authors": [
+            {"name": "", "link": "#"}
+        ],
+        "description": "A blog post explaining the DNS resolution process. A useful starting point for laypeople interested in learning more about the process.",
+        "keywords": ["DNS server", "IP address", "recursive DNS resolver", "DNS lookup", "DNS caching"],
+        "source": "Cloudflare"
+    },
+    {
+        "title": "How the web works",
+        "date": "November 17, 2023",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works",
+        "authors": [
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/contributors.txt"}
+        ],
+        "description": "A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.",
+        "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
+        "source": "Mozilla Developer Network"
     }
 ]
