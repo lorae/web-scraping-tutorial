@@ -7482,7 +7482,7 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h1 id="Agenda">Agenda<a class="anchor-link" href="#Agenda">¶</a></h1><ol>
 <li><a href="#/2">How does a website work?</a></li>
-<li><a href="#/3">Review: Web Scraping Basics</a></li>
+<li><a href="#/3">Web Scraping Basics</a></li>
 <li>Selenium</li>
 <li>API Scraping</li>
 <li>Automating a web scrape with GitHub Actions</li>
@@ -7499,7 +7499,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="1.-How-does-a-website-work?">1. How does a website work?<a class="anchor-link" href="#1.-How-does-a-website-work?">¶</a></h1><p>A lot goes on behind the scenes when you view a website like <a href="https://www.brookings.edu/">https://www.brookings.edu/</a>.</p>
+<h1 id="How-does-a-website-work?">How does a website work?<a class="anchor-link" href="#How-does-a-website-work?">¶</a></h1><p>A lot goes on behind the scenes when you view a website like <a href="https://www.brookings.edu/">https://www.brookings.edu/</a>.</p>
 <p>Understanding how your computer interacts with remote resources will help you become a more capable data collector.</p>
 </div>
 </div>
@@ -7705,7 +7705,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>As your browser encounters references to these additional files in the HTML code, it makes HTTP requests to the server to retrieve them.</strong></p>
+<p>As your browser encounters <strong>additional references to files</strong> in the HTML code, it <strong>makes HTTP requests</strong> to the server to retrieve them.</p>
 </div>
 </div>
 </div>
@@ -7743,22 +7743,107 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="2.-Review:-Web-Scraping-Basics">2. Review: Web Scraping Basics<a class="anchor-link" href="#2.-Review:-Web-Scraping-Basics">¶</a></h1>
+<h1 id="Web-Scraping-Basics">Web Scraping Basics<a class="anchor-link" href="#Web-Scraping-Basics">¶</a></h1>
 </div>
 </div>
 </div>
-</div></section><section>
+</div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Test</p>
+<p>There are several ways to collect data online. The strategy you choose must be catered to the website in question.</p>
 </div>
 </div>
 </div>
-</div></section></section><section><section>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>I like to categorize web scraping techniques by the point in the client-server interaction that they collect data.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol>
+<li><strong>DNS lookup</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="2">
+<li><strong>Initial HTTP request</strong></li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="3">
+<li><strong>Server response</strong><ul>
+<li><strong>HTML scraping</strong> parses the main HTML file for the webpage to extract data.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="4">
+<li><strong>Parsing HTML + additional requests</strong><ul>
+<li>Technically not classified as "web scraping," <strong>APIs</strong> can often be accessed at this point in the client-server interaction.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol start="5">
+<li><strong>Assembling the page</strong><ul>
+<li><strong>Selenium</strong> behaves like a browser to view content that is otherwise not available in HTML files, because it is dynamically rendered using JavaScript code.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
