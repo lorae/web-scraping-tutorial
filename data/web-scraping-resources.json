@@ -30,10 +30,10 @@
         "authors": [
             {"name": "District Data Labs", "link": "#"}
         ],
-        "description": "Another GitHub repo containing slides and code. I haven't reviewed it yet.",
-        "keywords": ["Python", "data science"],
+        "description": "A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.",
+        "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrame", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
         "source": "GitHub",
-        "image": ""
+        "image": "images/upward-connected-scatter.jpg"
     },
     {
         "title": "Webscraping in R (and a little Python and Excel too)",
