@@ -4,40 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Scraping Resources</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-        }
-        .promo-grid__promos {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .digest-card {
-            border: 1px solid #ddd;
-            padding: 20px;
-            width: 100%;
-            max-width: 400px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .digest-card__title a {
-            font-size: 1.25em;
-            color: #003399;
-            text-decoration: none;
-        }
-        .digest-card__date,
-        .digest-card__items,
-        .digest-card__summary {
-            margin-top: 10px;
-        }
-        .digest-card__label {
-            font-weight: bold;
-        }
-        .filter-keywords {
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <h1>Scrape this website!</h1>
@@ -71,20 +38,35 @@
                 const card = document.createElement('div');
                 card.className = 'digest-card';
 
+                const topSection = document.createElement('div');
+                topSection.className = 'digest-card__top';
+
+                const image = document.createElement('img');
+                image.className = 'digest-card__image';
+                image.src = resource.image;
+                image.alt = `${resource.title} image`;
+                topSection.appendChild(image);
+
+                const textContainer = document.createElement('div');
+                textContainer.className = 'digest-card__text';
+
                 const title = document.createElement('div');
                 title.className = 'digest-card__title';
                 title.innerHTML = `<a href="${resource.link}">${resource.title}</a>`;
-                card.appendChild(title);
+                textContainer.appendChild(title);
 
                 const date = document.createElement('div');
                 date.className = 'digest-card__date';
                 date.innerHTML = `<span class="digest-card__label">${resource.date}</span>`;
-                card.appendChild(date);
+                textContainer.appendChild(date);
 
                 const authors = document.createElement('div');
                 authors.className = 'digest-card__items';
                 authors.innerHTML = `<span class="digest-card__label">Author(s) - </span>${resource.authors.map(author => `<span><a href="${author.link}">${author.name}</a></span>`).join(', ')}`;
-                card.appendChild(authors);
+                textContainer.appendChild(authors);
+
+                topSection.appendChild(textContainer);
+                card.appendChild(topSection);
 
                 const description = document.createElement('div');
                 description.className = 'digest-card__summary';

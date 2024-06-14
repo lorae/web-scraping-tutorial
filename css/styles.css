@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+.promo-grid__promos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.digest-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+.digest-card__top {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.digest-card__image {
+    width: 25%;
+    height: auto;
+    margin-right: 20px;
+}
+.digest-card__title a {
+    font-size: 1.25em;
+    color: #003399;
+    text-decoration: none;
+}
+.digest-card__date,
+.digest-card__items,
+.digest-card__summary {
+    margin-top: 10px;
+}
+.digest-card__label {
+    font-weight: bold;
+}
+.filter-keywords {
+    margin-bottom: 20px;
+}
