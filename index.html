@@ -6,11 +6,12 @@
     <title>Web Scraping Resources</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
 </head>
 <body>
     <h1>Scrape this website!</h1>
-    <p>Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. I hope you enjoy!</p>
-    <p>If you'd like to learn more about how to use this page, please visit my repository, 
+    <p>Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
         <a href="https://github.com/lorae/web-scraping-tutorial" target="_blank">lorae/web-scraping-tutorial</a>
         .
     </p>
@@ -20,7 +21,7 @@
     </div>
     <script>
         let resourcesData = [];
-
+        
         async function fetchResources() {
             const response = await fetch('data/web-scraping-resources.json');
             resourcesData = await response.json();
@@ -79,6 +80,79 @@
         }
 
         fetchResources();
+
+        // Function to fetch and display GDP data
+        async function fetchGDPData() {
+            const response = await fetch('data/gdp-data.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data, { header: true }).data;
+
+            const labels = parsedData.map(row => row.Date);
+            const gdpValues = parsedData.map(row => parseFloat(row.GDP));
+
+            const ctx = document.getElementById('gdpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'US GDP',
+                        data: gdpValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'GDP (in billions)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            enabled: true,
+                            mode: 'nearest',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGDPData();
     </script>
+    <h2>Interactive Graph</h2>
+    <p>The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. </p>
+    <div class="container">
+        <canvas id="gdpChart" width="400" height="200"></canvas>
+        <div class="promo-grid__promos" id="resources-container">
+            <!-- Data will be populated here -->
+        </div>
+    </div>
 </body>
 </html>
