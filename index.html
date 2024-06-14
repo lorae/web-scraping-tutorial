@@ -15,11 +15,6 @@
         .
     </p>
     <h2>Learning resources</h2>
-    <div class="filter-keywords">
-        <label for="keyword-filter">Filter by keyword:</label>
-        <input type="text" id="keyword-filter" placeholder="Enter a keyword">
-        <button onclick="filterResources()">Filter</button>
-    </div>
     <div class="promo-grid__promos" id="resources-container">
         <!-- Data will be populated here -->
     </div>
@@ -81,14 +76,6 @@
 
                 container.appendChild(card);
             });
-        }
-
-        function filterResources() {
-            const keyword = document.getElementById('keyword-filter').value.toLowerCase();
-            const filteredData = resourcesData.filter(resource =>
-                resource.keywords.some(kw => kw.toLowerCase().includes(keyword))
-            );
-            displayResources(filteredData);
         }
 
         fetchResources();
