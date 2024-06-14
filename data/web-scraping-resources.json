@@ -83,5 +83,29 @@
         "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
         "source": "Mozilla Developer Network",
         "image": "images/single-page-file.jpg"
+    },
+    {
+        "title": "A Practical Introduction to Web Scraping in Python",
+        "date": "",
+        "link": "https://realpython.com/python-web-scraping-practical-introduction/",
+        "authors": [
+            {"name": "David Amos", "link": "https://realpython.com/python-web-scraping-practical-introduction/#author"}
+        ],
+        "description": "A tutorial aimed at beginners to web scraping with some prior knowledge of Python. Focuses mainly on building skills with HTML parsing using BeautifulSoup and interacting with the browser using MechanicalSoup. After this tutorial, users will likely be ready to learn to use Selenium.",
+        "keywords": ["HTML", "regex", "regular expressions", "BeautifulSoup", "MechanicalSoup"],
+        "source": "Real Python",
+        "image": "images/computer.jpg"
+    },
+    {
+        "title": "Automate the Boring Stuff: Web Scraping (Chapter 12)",
+        "date": "",
+        "link": "https://automatetheboringstuff.com/2e/chapter12/",
+        "authors": [
+            {"name": "Al Sweigart", "link": "https://realpython.com/python-web-scraping-practical-introduction/#author"}
+        ],
+        "description": "A free online textbook introducing users to concepts in Python. This chapter assumes basic proficiency in Python from reading previous chapters. Walks users through inspecting the HTML code underlying websites using developer tools on the web browser, parsing the content using BeautifulSoup, and rendering interactive pages using a Selenium webdriver.",
+        "keywords": ["requests", "GET requests", "HTML", "View page source", "Inspect element", "Developer tools", "HTML elements", "BeautifulSoup", "select method", "Selenium"],
+        "source": "Real Python",
+        "image": "images/book.jpg"
     }
 ]
