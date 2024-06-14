@@ -8,7 +8,8 @@
         ],
         "description": "GitHub repository presented to Brookings Data Network which has slides and sample code. The resource is older, but the concepts are still relevant. [NOTE: I haven't tested the code, so I'm not sure if it still works]",
         "keywords": ["Publicly available datasets", "common data formats", "RESTful APIs", "HTTP requests", "web scraping vs web crawling"],
-        "source": "GitHub"
+        "source": "GitHub",
+        "image": ""
     },
     {
         "title": "Building a Web Scraper",
@@ -19,7 +20,8 @@
         ],
         "description": "Curtlyn Kramer's **Brookings internal** Jupyter notebook, presented to the Brookings Data Network on May 26, 2017. This is only useful if the code works, so I will have to test if the code works. If it does, then this is a helpful Jupyter notebook that walks you through the steps.",
         "keywords": ["IDK"],
-        "source": "Brookings Internal"
+        "source": "Brookings Internal",
+        "image": ""
     },
     {
         "title": "Introduction to Data Science Using Python",
@@ -30,7 +32,8 @@
         ],
         "description": "Another GitHub repo containing slides and code. I haven't reviewed it yet.",
         "keywords": ["Python", "data science"],
-        "source": "GitHub"
+        "source": "GitHub",
+        "image": ""
     },
     {
         "title": "Webscraping in R (and a little Python and Excel too)",
@@ -42,7 +45,8 @@
         ],
         "description": "Another test description.",
         "keywords": ["test", "keyword"],
-        "source": "Brookings Internal"
+        "source": "Brookings Internal",
+        "image": ""
     },
     {
         "title": "Populating the page: how browsers work",
@@ -53,7 +57,8 @@
         ],
         "description": "A concise blog post, aimed at developers, that explains how browsers provide their users with a web experience.",
         "keywords": ["DNS lookup", "TCP handshake", "TLS negotiation", "HTTP GET request", "response", "parsing", "DOM tree", "CSSOM tree", "JavaScript compilation", "render", "paint"],
-        "source": "Mozilla Developer Network"
+        "source": "Mozilla Developer Network",
+        "image": "images/laptop-web.jpg"
     },
     {
         "title": "What is DNS? | How DNS works",
@@ -64,7 +69,8 @@
         ],
         "description": "A blog post explaining the DNS resolution process. A useful starting point for laypeople interested in learning more about the process.",
         "keywords": ["DNS server", "IP address", "recursive DNS resolver", "DNS lookup", "DNS caching"],
-        "source": "Cloudflare"
+        "source": "Cloudflare",
+        "image": "images/router.jpg"
     },
     {
         "title": "How the web works",
@@ -75,6 +81,7 @@
         ],
         "description": "A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.",
         "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
-        "source": "Mozilla Developer Network"
+        "source": "Mozilla Developer Network",
+        "image": "images/single-page-file.jpg"
     }
 ]
