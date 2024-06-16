@@ -7454,7 +7454,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="s1">'slides/advanced-web-scraping.ipynb'</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="s1">'../advanced-web-scraping'</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="s1">'slides/advanced-web-scraping.ipynb'</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="s1">'../advanced-web-scraping'</span>
 </pre></div>
 </div>
 </div>
@@ -7508,6 +7508,30 @@ main {
 <li>Demo</li>
 <li><a href="#/3">Additional Resources</a></li>
 </ol>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Libraries we WILL use in this presentation:</p>
+<ul>
+<li>requests</li>
+<li>BeautifulSoup</li>
+<li>JSON</li>
+<li>XML</li>
+<li>selenium</li>
+</ul>
+<p>These topics will NOT be covered in this presentation:</p>
+<ul>
+<li>pyppeteer, playwright (an even more advanced way to scrape using Chrome Developer Protocol) [FACT CHECK!!!!]</li>
+<li>scrapy</li>
+<li>MechanicalSoup</li>
+</ul>
 </div>
 </div>
 </div>
@@ -7744,7 +7768,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-python"><pre><span></span><span class="o">&lt;</span><span class="err">!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">&lt;!</span>DOCTYPE<span class="w"> </span>html&gt;
 <span class="o">&lt;</span><span class="n">html</span> <span class="n">lang</span><span class="o">=</span><span class="s2">"en-US"</span><span class="o">&gt;</span>
 
 <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
@@ -7759,7 +7783,7 @@ main {
 <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"alternate"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://www.brookings.edu/ko/"</span> <span class="n">hreflang</span><span class="o">=</span><span class="s2">"ko"</span> <span class="o">/&gt;</span>
 <span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"alternate"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://www.brookings.edu/ru/"</span> <span class="n">hreflang</span><span class="o">=</span><span class="s2">"ru"</span> <span class="o">/&gt;</span>
 
-	<span class="o">&lt;</span><span class="err">!</span><span class="o">--</span> <span class="n">This</span> <span class="n">site</span> <span class="ow">is</span> <span class="n">optimized</span> <span class="k">with</span> <span class="n">the</span> <span class="n">Yoast</span> <span class="n">SEO</span> <span class="n">plugin</span> <span class="n">v22</span><span class="mf">.0</span> <span class="o">-</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">yoast</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">wordpress</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">seo</span><span class="o">/</span> <span class="o">--&gt;</span>
+	<span class="o">&lt;!</span>--<span class="w"> </span>This<span class="w"> </span>site<span class="w"> </span>is<span class="w"> </span>optimized<span class="w"> </span>with<span class="w"> </span>the<span class="w"> </span>Yoast<span class="w"> </span>SEO<span class="w"> </span>plugin<span class="w"> </span>v22.0<span class="w"> </span>-<span class="w"> </span>https://yoast.com/wordpress/plugins/seo/<span class="w"> </span>--&gt;
 	<span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Brookings</span> <span class="o">-</span> <span class="n">Quality</span><span class="o">.</span> <span class="n">Independence</span><span class="o">.</span> <span class="n">Impact</span><span class="o">.&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
 	<span class="o">&lt;</span><span class="n">meta</span> <span class="n">name</span><span class="o">=</span><span class="s2">"description"</span> <span class="n">content</span><span class="o">=</span><span class="s2">"The Brookings Institution is a nonprofit public policy organization based in Washington, DC. Our mission is to conduct in-depth research that leads to new ideas for solving problems facing society at the local, national and global level."</span> <span class="o">/&gt;</span>
 	<span class="o">&lt;</span><span class="n">link</span> <span class="n">rel</span><span class="o">=</span><span class="s2">"canonical"</span> <span class="n">href</span><span class="o">=</span><span class="s2">"https://www.brookings.edu/"</span> <span class="o">/&gt;</span>
@@ -7853,7 +7877,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>I like to categorize web scraping techniques by the point in the client-server interaction that they collect data.</p>
+<h2 id="Types-of-web-scraping"><strong>Types of web scraping</strong><a class="anchor-link" href="#Types-of-web-scraping">¶</a></h2><p>I like to categorize web data collection techniques by the point in the client-server interaction that they interact.</p>
 </div>
 </div>
 </div>
@@ -7908,7 +7932,7 @@ main {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ol start="4">
 <li><strong>Parsing HTML + additional requests</strong><ul>
-<li>Technically not classified as "web scraping," <strong>APIs</strong> can often be accessed at this point in the client-server interaction.</li>
+<li>Technically not classified as "web scraping," <strong>APIs</strong> are a neat way to access data. They are usually requested at this point in the client-server interaction.</li>
 </ul>
 </li>
 </ol>
@@ -7928,6 +7952,73 @@ main {
 </ul>
 </li>
 </ol>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Let's-get-started!"><strong>Let's get started!</strong><a class="anchor-link" href="#Let's-get-started!">¶</a></h2><p>If you don't already have these packages installed, start by installing them.</p>
+<p>Note: It's a best practice to use environments to control package dependencies.<sup class="footnote" id="ref10"><a href="https://python-poetry.org/" title="This project uses Poetry: https://python-poetry.org/">[10]</a></sup></p>
+
+<p style="font-size:10px">
+[10] This project uses Poetry: https://python-poetry.org/ <br/>
+</p>
+</div>
+</div>
+</div>
+</div><aside class="notes">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>NOTE: If you're following along with this Jupyter notebook in your IDE (such as VSCode or JupyterLab), please skip the following terminal command. You can proceed directly to the <code>import requests</code> line, as your Poetry environment should already have the necessary packages installed.</p>
+</div>
+</div>
+</div>
+</div>
+</aside><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Now let's import the requests library to make our first HTTP request.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+</pre></div>
+</div>
 </div>
 </div>
 </div>
