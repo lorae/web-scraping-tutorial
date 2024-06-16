@@ -82,7 +82,7 @@
         "description": "A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.",
         "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
         "source": "Mozilla Developer Network",
-        "image": "images/single-page-file.jpg"
+        "image": "images/writing-website-with-image.jpg"
     },
     {
         "title": "A Practical Introduction to Web Scraping in Python",
@@ -107,5 +107,41 @@
         "keywords": ["requests", "GET requests", "HTML", "View page source", "Inspect element", "Developer tools", "HTML elements", "BeautifulSoup", "select method", "Selenium"],
         "source": "Real Python",
         "image": "images/book.jpg"
+    },
+    {
+        "title": "Getting Started (with Selenium)",
+        "date": "January 12, 2022",
+        "link": "https://www.selenium.dev/documentation/webdriver/getting_started/",
+        "authors": [
+            {"name": "", "link": "#"}
+        ],
+        "description": "Generalized documentation for Selenium, with options to select programming language (such as Python).",
+        "keywords": ["webdrivers", "browsers", "waits", "elements", "interactions", "sample code", "Python"],
+        "source": "Selenium",
+        "image": "images/laptop-web.jpg"
+    },
+    {
+        "title": "Getting started with the web",
+        "date": "February 4, 2024",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+        "authors": [
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/contributors.txt"}
+        ],
+        "description": "A high-quality series of blog posts that guides skills levels ranging from absolute beginners to those with more intermediate understanding through the process of building a website. Comprised of short, accessible blog posts covering many topics, including how the web works, and introductions to HTML, CSS, and JavaScript. Aimed at developers, but serves as useful background for more general audiences and those interested in understanding the web better for web scraping.",
+        "keywords": ["HTML", "CSS", "JavaScript", "tools and testing"],
+        "source": "Mozilla Developer Network",
+        "image": "images/building-blocks.jpg"
+    },
+    {
+        "title": "roundup",
+        "date": "June 16, 2024",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+        "authors": [
+            {"name": "Lorae Stojanovic", "link": "#"}
+        ],
+        "description": "Lorae's (the creater of this website) GitHub repository which scrapes pre-print academic economics papers from 20+ sources; presents titles, abstracts, authors and hyperlinks on an online dashboard. Auto-updates daily using GitHub Actions workflow. May be helpful sample code for those interested in web scraping in Python or automating their scraping using GitHub Actions.",
+        "keywords": ["web scraping", "Python", "GitHub Actions", "Streamlit"],
+        "source": "GitHub",
+        "image": "images/single-page-file.jpg"
     }
 ]
