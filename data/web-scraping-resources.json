@@ -1,29 +1,5 @@
 [
     {
-        "title": "Introduction to Web Scraping",
-        "date": "March 31, 2017",
-        "link": "https://github.com/DistrictDataLabs/brookings/",
-        "authors": [
-            {"name": "District Data Labs", "link": "#"}
-        ],
-        "description": "GitHub repository presented to Brookings Data Network which has slides and sample code. The resource is older, but the concepts are still relevant. [NOTE: I haven't tested the code, so I'm not sure if it still works]",
-        "keywords": ["Publicly available datasets", "common data formats", "RESTful APIs", "HTTP requests", "web scraping vs web crawling"],
-        "source": "GitHub",
-        "image": ""
-    },
-    {
-        "title": "Building a Web Scraper",
-        "date": "May 26, 2017",
-        "link": "https://example.com/secret-internal-link",
-        "authors": [
-            {"name": "Curtlyn Kramer", "link": "#"}
-        ],
-        "description": "Curtlyn Kramer's **Brookings internal** Jupyter notebook, presented to the Brookings Data Network on May 26, 2017. This is only useful if the code works, so I will have to test if the code works. If it does, then this is a helpful Jupyter notebook that walks you through the steps.",
-        "keywords": ["IDK"],
-        "source": "Brookings Internal",
-        "image": ""
-    },
-    {
         "title": "Introduction to Data Science Using Python",
         "date": "June 5, 2020",
         "link": "https://github.com/DistrictDataLabs/Brookings_Python_DS",
