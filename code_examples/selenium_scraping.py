@@ -16,9 +16,9 @@ headless = False
 chrome_options = Options()
 if headless:
     chrome_options.add_argument("--headless")  # Run in headless mode (without opening a browser window)
-chrome_options.add_argument("--disable-gpu")  # Disable GPU usage
-chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
-chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems
+#chrome_options.add_argument("--disable-gpu")  # Disable GPU usage
+#chrome_options.add_argument("--no-sandbox")  # Bypass OS security model
+#chrome_options.add_argument("--disable-dev-shm-usage")  # Overcome limited resource problems
 
 # Set up Chrome driver
 service = Service(ChromeDriverManager().install())
