@@ -7446,16 +7446,33 @@ main {
 </div>
 </div>
 </aside><aside class="notes">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="s1">'slides/advanced-web-scraping.ipynb'</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="s1">'../advanced-web-scraping'</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  Cell </span><span class="ansi-green-intense-fg ansi-bold">In[5], line 1</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    jupyter nbconvert 'slides/advanced-web-scraping.ipynb' --to slides --output='../advanced-web-scraping'</span>
+<span class="ansi-white-intense-fg ansi-bold">            ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+</pre>
 </div>
 </div>
 </div>
@@ -7505,7 +7522,7 @@ main {
 </li>
 <li><a href="#/4">Sample code: HTTP requests &amp; HTML parsing</a><ul>
 <li><a href="#/4/1">HTTP requests with <code>requests</code></a></li>
-<li><a href="#">HTML parsing with <code>beautifulsoup4</code></a></li>
+<li><a href="#/4/8">HTML parsing with <code>beautifulsoup4</code></a></li>
 </ul>
 </li>
 <li><a href="#/5">Sample code: Selenium</a></li>
@@ -8039,7 +8056,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -8114,7 +8131,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -8151,7 +8168,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/"</span>
@@ -8167,13 +8184,23 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><img alt="A screenshot of the &amp;quot;web scraping tutorial&amp;quot; website." src="slides/web-scraping-screenshot.png"/></p>
+<p><img alt="A screenshot of the web scraping tutorial website." src="slides/website-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <p>We're interested specifically in scraping the titles and authors of the books that appear on the table in the webpage.</p>
 <p>In order to do this, we have to first get the HTML file for the website.</p>
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8189,7 +8216,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">session_arguments</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span> 
@@ -8219,7 +8246,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
@@ -8259,7 +8286,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>More interestingly, let's take a peek at the text.</p>
+<p>More interestingly, let's look at the response content.</p>
 </div>
 </div>
 </div>
@@ -8268,10 +8295,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8284,273 +8311,7 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Web Scraping Resources&lt;/title&gt;
-    &lt;link rel="stylesheet" href="css/styles.css"&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
-    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Scrape this website!&lt;/h1&gt;
-    &lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
-        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
-        .
-    &lt;/p&gt;
-    &lt;h2&gt;Reading list&lt;/h2&gt;
-    &lt;table&gt;
-        &lt;tr class="header-row"&gt;
-            &lt;th class="header-cell"&gt;Title&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Author&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-    &lt;h2&gt;Learning resources&lt;/h2&gt;
-    &lt;div class="promo-grid__promos" id="resources-container"&gt;
-        &lt;!-- Data will be populated here --&gt;
-    &lt;/div&gt;
-    &lt;script&gt;
-        let resourcesData = [];
-        
-        async function fetchResources() {
-            const response = await fetch('data/web-scraping-resources.json');
-            resourcesData = await response.json();
-            displayResources(resourcesData);
-        }
-
-        function displayResources(data) {
-            const container = document.getElementById('resources-container');
-            container.innerHTML = '';
-            data.forEach(resource =&gt; {
-                const card = document.createElement('div');
-                card.className = 'digest-card';
-
-                const topSection = document.createElement('div');
-                topSection.className = 'digest-card__top';
-
-                const image = document.createElement('img');
-                image.className = 'digest-card__image';
-                image.src = resource.image;
-                image.alt = `${resource.title} image`;
-                topSection.appendChild(image);
-
-                const textContainer = document.createElement('div');
-                textContainer.className = 'digest-card__text';
-
-                const title = document.createElement('div');
-                title.className = 'digest-card__title';
-                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;
-                textContainer.appendChild(title);
-
-                const date = document.createElement('div');
-                date.className = 'digest-card__date';
-                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;
-                textContainer.appendChild(date);
-
-                const authors = document.createElement('div');
-                authors.className = 'digest-card__items';
-                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(', ')}`;
-                textContainer.appendChild(authors);
-
-                topSection.appendChild(textContainer);
-                card.appendChild(topSection);
-
-                const description = document.createElement('div');
-                description.className = 'digest-card__summary';
-                description.textContent = resource.description;
-                card.appendChild(description);
-
-                const keywords = document.createElement('div');
-                keywords.className = 'digest-card__keywords';
-                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(', ')}`;
-                card.appendChild(keywords);
-
-                container.appendChild(card);
-            });
-        }
-
-        fetchResources();
-
-        // Function to fetch and display GDP data
-        async function fetchGDPData() {
-            const response = await fetch('data/gdp-data.csv');
-            const data = await response.text();
-            const parsedData = Papa.parse(data, { header: true }).data;
-
-            const labels = parsedData.map(row =&gt; row.Date);
-            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));
-
-            const ctx = document.getElementById('gdpChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: labels,
-                    datasets: [{
-                        label: 'US GDP',
-                        data: gdpValues,
-                        borderColor: 'rgba(75, 192, 192, 1)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: {
-                            display: true,
-                            title: {
-                                display: true,
-                                text: 'Year'
-                            }
-                        },
-                        y: {
-                            display: true,
-                            title: {
-                                display: true,
-                                text: 'GDP (in billions)'
-                            }
-                        }
-                    },
-                    plugins: {
-                        tooltip: {
-                            enabled: true,
-                            mode: 'nearest',
-                            intersect: false,
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    if (context.parsed.y !== null) {
-                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        fetchGDPData();
-    &lt;/script&gt;
-    &lt;h2&gt;Interactive Graph&lt;/h2&gt;
-    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
-    &lt;div class="container"&gt;
-        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;
-        &lt;div class="promo-grid__promos" id="resources-container"&gt;
-            &lt;!-- Data will be populated here --&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-
+<pre>b'&lt;!DOCTYPE html&gt;\n&lt;html lang="en"&gt;\n&lt;head&gt;\n    &lt;meta charset="UTF-8"&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;title&gt;Web Scraping Resources&lt;/title&gt;\n    &lt;link rel="stylesheet" href="css/styles.css"&gt;\n    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;\n    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;\n    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Scrape this website!&lt;/h1&gt;\n    &lt;p&gt;Welcome! On this website, you\'ll find a variety of opportunities to practice your skills web scraping with Python. If you\'d like to learn more about how to use this page, please visit my repository, \n        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;\n        .\n    &lt;/p&gt;\n    &lt;h2&gt;Reading list&lt;/h2&gt;\n    &lt;table&gt;\n        &lt;tr class="header-row"&gt;\n            &lt;th class="header-cell"&gt;Title&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Author&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer\'s Stone&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Children\'s Literature&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/table&gt;\n    &lt;h2&gt;Learning resources&lt;/h2&gt;\n    &lt;div class="promo-grid__promos" id="resources-container"&gt;\n        &lt;!-- Data will be populated here --&gt;\n    &lt;/div&gt;\n    &lt;script&gt;\n        let resourcesData = [];\n        \n        async function fetchResources() {\n            const response = await fetch(\'data/web-scraping-resources.json\');\n            resourcesData = await response.json();\n            displayResources(resourcesData);\n        }\n\n        function displayResources(data) {\n            const container = document.getElementById(\'resources-container\');\n            container.innerHTML = \'\';\n            data.forEach(resource =&gt; {\n                const card = document.createElement(\'div\');\n                card.className = \'digest-card\';\n\n                const topSection = document.createElement(\'div\');\n                topSection.className = \'digest-card__top\';\n\n                const image = document.createElement(\'img\');\n                image.className = \'digest-card__image\';\n                image.src = resource.image;\n                image.alt = `${resource.title} image`;\n                topSection.appendChild(image);\n\n                const textContainer = document.createElement(\'div\');\n                textContainer.className = \'digest-card__text\';\n\n                const title = document.createElement(\'div\');\n                title.className = \'digest-card__title\';\n                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;\n                textContainer.appendChild(title);\n\n                const date = document.createElement(\'div\');\n                date.className = \'digest-card__date\';\n                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;\n                textContainer.appendChild(date);\n\n                const authors = document.createElement(\'div\');\n                authors.className = \'digest-card__items\';\n                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(\', \')}`;\n                textContainer.appendChild(authors);\n\n                topSection.appendChild(textContainer);\n                card.appendChild(topSection);\n\n                const description = document.createElement(\'div\');\n                description.className = \'digest-card__summary\';\n                description.textContent = resource.description;\n                card.appendChild(description);\n\n                const keywords = document.createElement(\'div\');\n                keywords.className = \'digest-card__keywords\';\n                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(\', \')}`;\n                card.appendChild(keywords);\n\n                container.appendChild(card);\n            });\n        }\n\n        fetchResources();\n\n        // Function to fetch and display GDP data\n        async function fetchGDPData() {\n            const response = await fetch(\'data/gdp-data.csv\');\n            const data = await response.text();\n            const parsedData = Papa.parse(data, { header: true }).data;\n\n            const labels = parsedData.map(row =&gt; row.Date);\n            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));\n\n            const ctx = document.getElementById(\'gdpChart\').getContext(\'2d\');\n            new Chart(ctx, {\n                type: \'line\',\n                data: {\n                    labels: labels,\n                    datasets: [{\n                        label: \'US GDP\',\n                        data: gdpValues,\n                        borderColor: \'rgba(75, 192, 192, 1)\',\n                        backgroundColor: \'rgba(75, 192, 192, 0.2)\',\n                        borderWidth: 1\n                    }]\n                },\n                options: {\n                    responsive: true,\n                    scales: {\n                        x: {\n                            display: true,\n                            title: {\n                                display: true,\n                                text: \'Year\'\n                            }\n                        },\n                        y: {\n                            display: true,\n                            title: {\n                                display: true,\n                                text: \'GDP (in billions)\'\n                            }\n                        }\n                    },\n                    plugins: {\n                        tooltip: {\n                            enabled: true,\n                            mode: \'nearest\',\n                            intersect: false,\n                            callbacks: {\n                                label: function(context) {\n                                    let label = context.dataset.label || \'\';\n                                    if (label) {\n                                        label += \': \';\n                                    }\n                                    if (context.parsed.y !== null) {\n                                        label += new Intl.NumberFormat(\'en-US\', { style: \'currency\', currency: \'USD\' }).format(context.parsed.y);\n                                    }\n                                    return label;\n                                }\n                            }\n                        }\n                    }\n                }\n            });\n        }\n\n        fetchGDPData();\n    &lt;/script&gt;\n    &lt;h2&gt;Interactive Graph&lt;/h2&gt;\n    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;\n    &lt;div class="container"&gt;\n        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;\n        &lt;div class="promo-grid__promos" id="resources-container"&gt;\n            &lt;!-- Data will be populated here --&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
 </pre>
 </div>
 </div>
@@ -8563,7 +8324,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="HTML-parsing-with-beautifulsoup4">HTML parsing with <code>beautifulsoup4</code><a class="anchor-link" href="#HTML-parsing-with-beautifulsoup4">¶</a></h2><p>Magnificent! We now have the HTML file of the webpage. But now we want to only extract the data of interest. How do we do this?</p>
+<h2 id="HTML-parsing-with-beautifulsoup4">HTML parsing with <code>beautifulsoup4</code><a class="anchor-link" href="#HTML-parsing-with-beautifulsoup4">¶</a></h2><p>The response from the website may look like a mess, but don't worry. <strong>There's a package that makes picking data from the HTML code easy: It's called <code>beautifulsoup4</code>.</strong> We'll use it in conjunction with a helpful browser tool called "<strong>Inspect element</strong>".</p>
+<p>(And, later in this presentation, we'll use "<strong>View page source</strong>" and "<strong>Network requests</strong>": Two other old favorites.)</p>
 </div>
 </div>
 </div>
@@ -8574,11 +8336,11 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p><strong>Inspect element</strong>.</p>
+<p><strong>Simply right click anywhere on the website with your browser open, and select the "Inspect element" option.</strong></p>
 </div>
 </div>
 </div>
-</div></div><div class="fragment">
+</div></div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -8589,7 +8351,7 @@ main {
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div></section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
@@ -9064,9 +8826,9 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <ul>
-<li>your code has no syntax errors yet doesn't pick up elements from the HTML code</li>
-<li><strong>View page source</strong> shows no hard-coded elements</li>
-<li><strong>Network requests</strong> reveal the JavaScript files used to populate the page</li>
+<li>Your code has no syntax errors yet doesn't pick up elements from the HTML code</li>
+<li>"<strong>View page source</strong>" shows no hard-coded elements</li>
+<li>"<strong>Network requests</strong>" reveal the JavaScript files used to populate the page</li>
 </ul>
 </div>
 </div>
