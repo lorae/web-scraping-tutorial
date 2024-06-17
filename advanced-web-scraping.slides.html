@@ -7446,16 +7446,33 @@ main {
 </div>
 </div>
 </aside><aside class="notes">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="s1">'slides/advanced-web-scraping.ipynb'</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="s1">'../advanced-web-scraping'</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
+<pre>
+<span class="ansi-cyan-intense-fg ansi-bold">  Cell </span><span class="ansi-green-intense-fg ansi-bold">In[3], line 1</span>
+<span class="ansi-yellow-intense-fg ansi-bold">    jupyter nbconvert 'slides/advanced-web-scraping.ipynb' --to slides --output='../advanced-web-scraping'</span>
+<span class="ansi-white-intense-fg ansi-bold">            ^</span>
+<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
+</pre>
 </div>
 </div>
 </div>
@@ -7955,14 +7972,25 @@ main {
 </div>
 </div>
 </div>
-</div></div></section><section>
+</div></div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Let's-get-started!"><strong>Let's get started!</strong><a class="anchor-link" href="#Let's-get-started!">¶</a></h2><p>If you don't already have these packages installed, start by installing them.</p>
+<h1 id="Sample-code:-HTML-parsing">Sample code: HTML parsing<a class="anchor-link" href="#Sample-code:-HTML-parsing">¶</a></h1><p>First, we'll walk through making HTTP requests and parsing HTML.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>If you don't already have these packages installed, start by installing them.</p>
 <p>Note: It's a best practice to use environments to control package dependencies.<sup class="footnote" id="ref10"><a href="https://python-poetry.org/" title="This project uses Poetry: https://python-poetry.org/">[10]</a></sup></p>
 
 <p style="font-size:10px">
@@ -7978,7 +8006,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>NOTE: If you're following along with this Jupyter notebook in your IDE (such as VSCode or JupyterLab), please skip the following terminal command. You can proceed directly to the <code>import requests</code> line, as your Poetry environment should already have the necessary packages installed.</p>
+<p>NOTE: If you're following along with this Jupyter notebook in your IDE (such as VSCode or JupyterLab), please skip the following terminal command. Instead, type <code>poetry shell</code> into the terminal.</p>
 </div>
 </div>
 </div>
@@ -7991,7 +8019,7 @@ main {
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">requests</span> <span class="n">beautifulsoup4</span>
 </pre></div>
 </div>
 </div>
@@ -8004,7 +8032,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now let's import the requests library to make our first HTTP request.</p>
+<p>Now we import the needed libraries:</p>
 </div>
 </div>
 </div>
@@ -8013,16 +8041,1029 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Time to get scraping. Recall the earlier GET request we saw? It had a lot of information in it, in the form of <strong>headers</strong>.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<div class="highlight"><pre><span></span>curl<span class="w"> </span>-X<span class="w"> </span>GET<span class="w"> </span><span class="s1">'https://www.brookings.edu/'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept: text/html,application/xhtml+xml,application/xml;...'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'accept-language: en-US,en;q=0.9'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'cookie: _fbp=REDACTED; hubspotutk=REDACTED; ...'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'priority: u=0, i'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'referer: https://www.google.com/'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua: "Google Chrome";v="REDACTED", "Chromium";v="REDACTED", "Not.A/Brand";v="REDACTED"'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua-mobile: ?0'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-ch-ua-platform: "Windows"'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-dest: document'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-mode: navigate'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-site: cross-site'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'sec-fetch-user: ?1'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'upgrade-insecure-requests: 1'</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s1">'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As you can see, headers contain quite a bit of information. Unless otherwise required, I tend to keep my headers on the lighter side.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>These are the headers I usually provide in my HTTP requests. Sometimes, I get blocked - in which case, I change the user-agent string slightly.</p>
+<p>Note that headers must be formatted as a dictionary.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'User-Agent'</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s1">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '</span>
+        <span class="s1">'AppleWebKit/537.36 (KHTML, like Gecko) '</span>
+        <span class="s1">'Chrome/122.0.6261.112 Safari/537.36'</span>
+    <span class="p">),</span>
+    <span class="s1">'Accept'</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s1">'text/html,application/xhtml+xml,application/xml;q=0.9,'</span>
+        <span class="s1">'image/avif,image/webp,image/apng,*/*;q=0.8,'</span>
+        <span class="s1">'application/signed-exchange;v=b3;q=0.7'</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Today, we'll be scraping a website that I created to practice on! Our URL is:
+<a href="https://lorae.github.io/web-scraping-tutorial/">https://lorae.github.io/web-scraping-tutorial/</a></p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/"</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>[insert screenshot here]</p>
+<p>We're interested specifically in scraping the URLs and titles of the tiles that show up on the page: we're eager to learn more about web scraping, and want an easy list of the resources to access.</p>
+<p>In order to do this, we have to first get the HTML file for the website.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>In these next steps, we bundle our arguments together into an instance of the <code>Request</code> object from the <code>requests</code> library. We then initialize the session, prepare the request for sending, and save the response.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">session_arguments</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span> 
+                                     <span class="n">url</span><span class="o">=</span><span class="n">my_url</span><span class="p">,</span> 
+                                     <span class="n">headers</span><span class="o">=</span><span class="n">my_headers</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="n">prepared_request</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">prepare_request</span><span class="p">(</span><span class="n">session_arguments</span><span class="p">)</span>
+<span class="n">response</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">Response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prepared_request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's see what the response was. A response code of 200 indicates a successful response, with the server returning the required resource.</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>200
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>More interestingly, let's take a peek at the text.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Web Scraping Resources&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Scrape this website!&lt;/h1&gt;
+    &lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
+        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
+        .
+    &lt;/p&gt;
+    &lt;h2&gt;Reading list&lt;/h2&gt;
+    &lt;table&gt;
+        &lt;tr class="header-row"&gt;
+            &lt;th class="header-cell"&gt;Title&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Author&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h2&gt;Learning resources&lt;/h2&gt;
+    &lt;div class="promo-grid__promos" id="resources-container"&gt;
+        &lt;!-- Data will be populated here --&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        let resourcesData = [];
+        
+        async function fetchResources() {
+            const response = await fetch('data/web-scraping-resources.json');
+            resourcesData = await response.json();
+            displayResources(resourcesData);
+        }
+
+        function displayResources(data) {
+            const container = document.getElementById('resources-container');
+            container.innerHTML = '';
+            data.forEach(resource =&gt; {
+                const card = document.createElement('div');
+                card.className = 'digest-card';
+
+                const topSection = document.createElement('div');
+                topSection.className = 'digest-card__top';
+
+                const image = document.createElement('img');
+                image.className = 'digest-card__image';
+                image.src = resource.image;
+                image.alt = `${resource.title} image`;
+                topSection.appendChild(image);
+
+                const textContainer = document.createElement('div');
+                textContainer.className = 'digest-card__text';
+
+                const title = document.createElement('div');
+                title.className = 'digest-card__title';
+                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;
+                textContainer.appendChild(title);
+
+                const date = document.createElement('div');
+                date.className = 'digest-card__date';
+                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;
+                textContainer.appendChild(date);
+
+                const authors = document.createElement('div');
+                authors.className = 'digest-card__items';
+                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(', ')}`;
+                textContainer.appendChild(authors);
+
+                topSection.appendChild(textContainer);
+                card.appendChild(topSection);
+
+                const description = document.createElement('div');
+                description.className = 'digest-card__summary';
+                description.textContent = resource.description;
+                card.appendChild(description);
+
+                const keywords = document.createElement('div');
+                keywords.className = 'digest-card__keywords';
+                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(', ')}`;
+                card.appendChild(keywords);
+
+                container.appendChild(card);
+            });
+        }
+
+        fetchResources();
+
+        // Function to fetch and display GDP data
+        async function fetchGDPData() {
+            const response = await fetch('data/gdp-data.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data, { header: true }).data;
+
+            const labels = parsedData.map(row =&gt; row.Date);
+            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));
+
+            const ctx = document.getElementById('gdpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'US GDP',
+                        data: gdpValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'GDP (in billions)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            enabled: true,
+                            mode: 'nearest',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGDPData();
+    &lt;/script&gt;
+    &lt;h2&gt;Interactive Graph&lt;/h2&gt;
+    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
+    &lt;div class="container"&gt;
+        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;
+        &lt;div class="promo-grid__promos" id="resources-container"&gt;
+            &lt;!-- Data will be populated here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Magnificent! We now have the HTML file of the webpage. But now we want to only extract the data of interest. How do we do this?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>Inspect element</strong>.</p>
+<p><img alt="Inspect element screenshot" src="slides/inspect-element-static-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The data we want is contained in a <code>&lt;tr&gt;</code> element with class <code>data-row</code>. And after further inspection, we find that the title is in a <code>&lt;td&gt;</code> child element with classes <code>data-cell</code> and <code>title</code>. The author is a sibling <code>&lt;td&gt;</code> element with classes <code>data-cell</code> and <code>author</code>.</p>
+<p><img alt="Inspect sub-element screenshot" src="slides/inspect-sub-element-static-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's parse the HTML of the response from the web server.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;!DOCTYPE html&gt;
+
+&lt;html lang="en"&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8"/&gt;
+&lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;
+&lt;title&gt;Web Scraping Resources&lt;/title&gt;
+&lt;link href="css/styles.css" rel="stylesheet"/&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;amp;display=swap" rel="stylesheet"/&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Scrape this website!&lt;/h1&gt;
+&lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
+        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
+        .
+    &lt;/p&gt;
+&lt;h2&gt;Reading list&lt;/h2&gt;
+&lt;table&gt;
+&lt;tr class="header-row"&gt;
+&lt;th class="header-cell"&gt;Title&lt;/th&gt;
+&lt;th class="header-cell"&gt;Author&lt;/th&gt;
+&lt;th class="header-cell"&gt;Genre&lt;/th&gt;
+&lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
+&lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;1984&lt;/td&gt;
+&lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
+&lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
+&lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
+&lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
+&lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
+&lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
+&lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
+&lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
+&lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
+&lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
+&lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2&gt;Learning resources&lt;/h2&gt;
+&lt;div class="promo-grid__promos" id="resources-container"&gt;
+&lt;!-- Data will be populated here --&gt;
+&lt;/div&gt;
+&lt;script&gt;
+        let resourcesData = [];
+        
+        async function fetchResources() {
+            const response = await fetch('data/web-scraping-resources.json');
+            resourcesData = await response.json();
+            displayResources(resourcesData);
+        }
+
+        function displayResources(data) {
+            const container = document.getElementById('resources-container');
+            container.innerHTML = '';
+            data.forEach(resource =&gt; {
+                const card = document.createElement('div');
+                card.className = 'digest-card';
+
+                const topSection = document.createElement('div');
+                topSection.className = 'digest-card__top';
+
+                const image = document.createElement('img');
+                image.className = 'digest-card__image';
+                image.src = resource.image;
+                image.alt = `${resource.title} image`;
+                topSection.appendChild(image);
+
+                const textContainer = document.createElement('div');
+                textContainer.className = 'digest-card__text';
+
+                const title = document.createElement('div');
+                title.className = 'digest-card__title';
+                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;
+                textContainer.appendChild(title);
+
+                const date = document.createElement('div');
+                date.className = 'digest-card__date';
+                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;
+                textContainer.appendChild(date);
+
+                const authors = document.createElement('div');
+                authors.className = 'digest-card__items';
+                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(', ')}`;
+                textContainer.appendChild(authors);
+
+                topSection.appendChild(textContainer);
+                card.appendChild(topSection);
+
+                const description = document.createElement('div');
+                description.className = 'digest-card__summary';
+                description.textContent = resource.description;
+                card.appendChild(description);
+
+                const keywords = document.createElement('div');
+                keywords.className = 'digest-card__keywords';
+                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(', ')}`;
+                card.appendChild(keywords);
+
+                container.appendChild(card);
+            });
+        }
+
+        fetchResources();
+
+        // Function to fetch and display GDP data
+        async function fetchGDPData() {
+            const response = await fetch('data/gdp-data.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data, { header: true }).data;
+
+            const labels = parsedData.map(row =&gt; row.Date);
+            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));
+
+            const ctx = document.getElementById('gdpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'US GDP',
+                        data: gdpValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'GDP (in billions)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            enabled: true,
+                            mode: 'nearest',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGDPData();
+    &lt;/script&gt;
+&lt;h2&gt;Interactive Graph&lt;/h2&gt;
+&lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
+&lt;div class="container"&gt;
+&lt;canvas height="200" id="gdpChart" width="400"&gt;&lt;/canvas&gt;
+&lt;div class="promo-grid__promos" id="resources-container"&gt;
+&lt;!-- Data will be populated here --&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Once it's a BeautifulSoup object, it's pretty easy to get the data you want. The key is selecting the right elements using the correct tags.</p>
+<p>We'll use <code>for</code> loops for this.</p>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Select elements corresponding to table rows</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'tr.data-row'</span><span class="p">)</span>
+
+<span class="c1"># Initialize lists for data output</span>
+<span class="n">Titles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Authors</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'title'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">author</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'author'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    
+    <span class="c1"># Add data to lists</span>
+    <span class="n">Titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">Authors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Authors</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['The Adventures of Tom Sawyer', 'Pride and Prejudice', '1984', 'The Great Gatsby', 'To Kill a Mockingbird', 'Moby-Dick', 'War and Peace', 'Crime and Punishment', 'The Catcher in the Rye', "Harry Potter and the Sorcerer's Stone", 'The Hobbit', 'The Lord of the Rings', 'The Chronicles of Narnia', 'Anne of Green Gables']
+['Mark Twain', 'Jane Austen', 'George Orwell', 'F. Scott Fitzgerald', 'Harper Lee', 'Herman Melville', 'Leo Tolstoy', 'Fyodor Dostoevsky', 'J.D. Salinger', 'J.K. Rowling', 'J.R.R. Tolkien', 'J.R.R. Tolkien', 'C.S. Lewis', 'Lucy Maud Montgomery']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Wow, we're pros! Should we try another one? Let's get titles and links of learning resources listed on the website. First we <strong>inspect element</strong> to find the element and class:</p>
+<p><img alt="Inspect element screenshot" src="slides/inspect-element-javascript-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Then we determine that our data in question is in a <code>&lt;div&gt;</code> element with class <code>digest-card</code>. The title is in a child <code>&lt;div&gt;</code> element with class <code>digest-card__title</code>.</p>
+<p><img alt="Inspect sub-element screenshot" src="slides/inspect-sub-element-javascript-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Scrape titles and links</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'div.digest-card__title'</span><span class="p">)</span>
+<span class="c1"># Initialize lists</span>
+<span class="n">Titles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Links</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">el</span><span class="p">)</span>
+    <span class="c1"># Obtain the link to the resource</span>
+    <span class="n">link</span> <span class="o">=</span>  <span class="n">el</span><span class="p">[</span><span class="s1">'href'</span><span class="p">]</span> <span class="c1"># 'href' is a HTML lingo for hyperlinks.</span>
+    <span class="c1"># Obtain the title of the resource</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+
+    <span class="c1"># Append the entries to each list</span>
+    <span class="n">Titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">Authors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+
+<span class="c1"># Print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Links</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[]
+[]
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Why didn't this work?</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This part of the webpage is rendered using JavaScript! This is becoming an increasingly common occurence on today's web, which is why pure HTML scraping is becoming less and less feasible.</p>
+<p>How do you know JavaScript is the culprit?</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ul>
+<li>your code has no syntax errors yet doesn't pick up elements from the HTML code</li>
+<li>"View page source" shows no hard-coded elements</li>
+<li>you find the JavaScript itself the populates the page</li>
+</ul>
+</div>
+</div>
+</div>
 </div></div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sample-code:-Selenium">Sample code: Selenium<a class="anchor-link" href="#Sample-code:-Selenium">¶</a></h1><p>Selenium is a tool in Python (and many other programming languages) that allows users to access dynamic web content by automating web browser interactions. It simulates a real user browsing the web, which enables it to handle JavaScript-rendered content and other dynamic elements that static network requests cannot easily capture.</p>
+</div>
+</div>
+</div>
+</div></section></section><section><section>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
