@@ -8840,7 +8840,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Sample-code:-Selenium">Sample code: Selenium<a class="anchor-link" href="#Sample-code:-Selenium">¶</a></h1><p>Selenium is a tool in Python (and many other programming languages) that allows users to access dynamic web content by automating web browser interactions.<sup class="footnote" id="ref11"><a href="https://www.selenium.dev/documentation/webdriver/getting_started/" title="Selenium documentation can be found here: https://www.selenium.dev/documentation/webdriver/getting_started/">[11]</a></sup> It simulates a real user browsing the web, which enables it to handle JavaScript-rendered content and other dynamic elements that static network requests cannot easily capture.</p>
+<h1 id="Sample-code:-selenium">Sample code: <code>selenium</code><a class="anchor-link" href="#Sample-code:-selenium">¶</a></h1><p><code>selenium</code> is a tool in Python (and many other programming languages) that allows users to <strong>access dynamic web content by automating web browser interactions</strong>.<sup class="footnote" id="ref11"><a href="https://www.selenium.dev/documentation/webdriver/getting_started/" title="Selenium documentation can be found here: https://www.selenium.dev/documentation/webdriver/getting_started/">[11]</a></sup></p>
+<p>It simulates a real user browsing the web, which enables it to <strong>capture JavaScript-rendered content and other dynamic elements</strong> that one-off HTTP requests cannot access.</p>
 
 <p style="font-size:10px">
 [11] Selenium documentation can be found here: https://www.selenium.dev/documentation/webdriver/getting_started/ <br/>
@@ -8856,7 +8857,479 @@ main {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="But-first,-a-note...">But first, a note...<a class="anchor-link" href="#But-first,-a-note...">¶</a></h2><p>Selenium is just a tool to <em>get</em> an HTML file. Once you obtain the file, you parse it exactly the same way as we did in the previous section: using a tool of choice, like Beautiful Soup.</p>
-<p>You've already learned the gritty basics of HTML parsing. The hard part in this section is setting up the web driver.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's start by importing the needed modules.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">selenium</span> <span class="kn">import</span> <span class="n">webdriver</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.service</span> <span class="kn">import</span> <span class="n">Service</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
+<span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
+<span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><code>selenium</code> can run on many browsers, like Chrome and Firefox. For simplicity, we will use Chrome today.</p>
+<p>In order for the code to work, you must have Chrome installed on your computer.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Sometimes, there are annoying problems with the <code>selenium</code> web driver being incompatible with the version of the browser on your computer. Your best option is Google.</p>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Set up Chrome options</span>
+<span class="n">chrome_options</span> <span class="o">=</span> <span class="n">Options</span><span class="p">()</span>
+<span class="n">chrome_options</span><span class="o">.</span><span class="n">add_argument</span><span class="p">(</span><span class="s2">"--headless"</span><span class="p">)</span>  <span class="c1"># Run without opening a browser window</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>If you don't turn on "headless" mode, your browser will pop up on your screen when you run the code.</p>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Set up Chrome driver</span>
+<span class="n">service</span> <span class="o">=</span> <span class="n">Service</span><span class="p">(</span><span class="n">ChromeDriverManager</span><span class="p">()</span><span class="o">.</span><span class="n">install</span><span class="p">())</span>
+<span class="n">driver</span> <span class="o">=</span> <span class="n">webdriver</span><span class="o">.</span><span class="n">Chrome</span><span class="p">(</span><span class="n">service</span><span class="o">=</span><span class="n">service</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">chrome_options</span><span class="p">)</span>
+
+<span class="c1"># Open the website</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/"</span>
+<span class="n">driver</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+
+<span class="c1"># Get the HTML content of the page</span>
+<span class="n">html_content</span> <span class="o">=</span> <span class="n">driver</span><span class="o">.</span><span class="n">page_source</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">html_content</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>&lt;html lang="en"&gt;&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Web Scraping Resources&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;amp;display=swap" rel="stylesheet"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Scrape this website!&lt;/h1&gt;
+    &lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
+        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
+        .
+    &lt;/p&gt;
+    &lt;h2&gt;Reading list&lt;/h2&gt;
+    &lt;table&gt;
+        &lt;tbody&gt;&lt;tr class="header-row"&gt;
+            &lt;th class="header-cell"&gt;Title&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Author&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;&lt;/table&gt;
+    &lt;h2&gt;Learning resources&lt;/h2&gt;
+    &lt;div class="promo-grid__promos" id="resources-container"&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/upward-connected-scatter.jpg" alt="Introduction to Data Science Using Python image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://github.com/DistrictDataLabs/Brookings_Python_DS"&gt;Introduction to Data Science Using Python&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;June 5, 2020&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="#"&gt;District Data Labs&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;Python, data science, data structures, loops, list comprehension, conditional evaluation, functions, Pandas, DataFrame, data visualization, plotly, hypothesis tests, regression analysis, machine learning&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="" alt="Webscraping in R (and a little Python and Excel too) image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://example.com/secret"&gt;Webscraping in R (and a little Python and Excel too)&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;February 22, 2023&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="#"&gt;Valerie Wirtschafter&lt;/a&gt;&lt;/span&gt;, &lt;span&gt;&lt;a href="#"&gt;Mimi Majumder&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;Another test description.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;test, keyword&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/laptop-web.jpg" alt="Populating the page: how browsers work image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work"&gt;Populating the page: how browsers work&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;July 20, 2023&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work/contributors.txt"&gt;MDN contributors&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A concise blog post, aimed at developers, that explains how browsers provide their users with a web experience.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;DNS lookup, TCP handshake, TLS negotiation, HTTP GET request, response, parsing, DOM tree, CSSOM tree, JavaScript compilation, render, paint&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/router.jpg" alt="What is DNS? | How DNS works image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://www.cloudflare.com/learning/dns/what-is-dns/"&gt;What is DNS? | How DNS works&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A blog post explaining the DNS resolution process. A useful starting point for laypeople interested in learning more about the process.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;DNS server, IP address, recursive DNS resolver, DNS lookup, DNS caching&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/writing-website-with-image.jpg" alt="How the web works image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works"&gt;How the web works&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;November 17, 2023&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/contributors.txt"&gt;MDN contributors&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;clients, servers, requests, responses, TCP, IP address, DNS, HTTP, component files, code files, assets, packets&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/computer.jpg" alt="A Practical Introduction to Web Scraping in Python image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://realpython.com/python-web-scraping-practical-introduction/"&gt;A Practical Introduction to Web Scraping in Python&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="https://realpython.com/python-web-scraping-practical-introduction/#author"&gt;David Amos&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A tutorial aimed at beginners to web scraping with some prior knowledge of Python. Focuses mainly on building skills with HTML parsing using BeautifulSoup and interacting with the browser using MechanicalSoup. After this tutorial, users will likely be ready to learn to use Selenium.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;HTML, regex, regular expressions, BeautifulSoup, MechanicalSoup&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/book.jpg" alt="Automate the Boring Stuff: Web Scraping (Chapter 12) image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://automatetheboringstuff.com/2e/chapter12/"&gt;Automate the Boring Stuff: Web Scraping (Chapter 12)&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="https://realpython.com/python-web-scraping-practical-introduction/#author"&gt;Al Sweigart&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A free online textbook introducing users to concepts in Python. This chapter assumes basic proficiency in Python from reading previous chapters. Walks users through inspecting the HTML code underlying websites using developer tools on the web browser, parsing the content using BeautifulSoup, and rendering interactive pages using a Selenium webdriver.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;requests, GET requests, HTML, View page source, Inspect element, Developer tools, HTML elements, BeautifulSoup, select method, Selenium&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/laptop-web.jpg" alt="Getting Started (with Selenium) image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://www.selenium.dev/documentation/webdriver/getting_started/"&gt;Getting Started (with Selenium)&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;January 12, 2022&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;Generalized documentation for Selenium, with options to select programming language (such as Python).&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;webdrivers, browsers, waits, elements, interactions, sample code, Python&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/building-blocks.jpg" alt="Getting started with the web image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"&gt;Getting started with the web&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;February 4, 2024&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/contributors.txt"&gt;MDN contributors&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;A high-quality series of blog posts that guides skills levels ranging from absolute beginners to those with more intermediate understanding through the process of building a website. Comprised of short, accessible blog posts covering many topics, including how the web works, and introductions to HTML, CSS, and JavaScript. Aimed at developers, but serves as useful background for more general audiences and those interested in understanding the web better for web scraping.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;HTML, CSS, JavaScript, tools and testing&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card"&gt;&lt;div class="digest-card__top"&gt;&lt;img class="digest-card__image" src="images/single-page-file.jpg" alt="roundup image"&gt;&lt;div class="digest-card__text"&gt;&lt;div class="digest-card__title"&gt;&lt;a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web"&gt;roundup&lt;/a&gt;&lt;/div&gt;&lt;div class="digest-card__date"&gt;&lt;span class="digest-card__label"&gt;June 16, 2024&lt;/span&gt;&lt;/div&gt;&lt;div class="digest-card__items"&gt;&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;&lt;span&gt;&lt;a href="#"&gt;Lorae Stojanovic&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div class="digest-card__summary"&gt;Lorae's (the creater of this website) GitHub repository which scrapes pre-print academic economics papers from 20+ sources; presents titles, abstracts, authors and hyperlinks on an online dashboard. Auto-updates daily using GitHub Actions workflow. May be helpful sample code for those interested in web scraping in Python or automating their scraping using GitHub Actions.&lt;/div&gt;&lt;div class="digest-card__keywords"&gt;&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;web scraping, Python, GitHub Actions, Streamlit&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;script&gt;
+        let resourcesData = [];
+        
+        async function fetchResources() {
+            const response = await fetch('data/web-scraping-resources.json');
+            resourcesData = await response.json();
+            displayResources(resourcesData);
+        }
+
+        function displayResources(data) {
+            const container = document.getElementById('resources-container');
+            container.innerHTML = '';
+            data.forEach(resource =&gt; {
+                const card = document.createElement('div');
+                card.className = 'digest-card';
+
+                const topSection = document.createElement('div');
+                topSection.className = 'digest-card__top';
+
+                const image = document.createElement('img');
+                image.className = 'digest-card__image';
+                image.src = resource.image;
+                image.alt = `${resource.title} image`;
+                topSection.appendChild(image);
+
+                const textContainer = document.createElement('div');
+                textContainer.className = 'digest-card__text';
+
+                const title = document.createElement('div');
+                title.className = 'digest-card__title';
+                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;
+                textContainer.appendChild(title);
+
+                const date = document.createElement('div');
+                date.className = 'digest-card__date';
+                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;
+                textContainer.appendChild(date);
+
+                const authors = document.createElement('div');
+                authors.className = 'digest-card__items';
+                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(', ')}`;
+                textContainer.appendChild(authors);
+
+                topSection.appendChild(textContainer);
+                card.appendChild(topSection);
+
+                const description = document.createElement('div');
+                description.className = 'digest-card__summary';
+                description.textContent = resource.description;
+                card.appendChild(description);
+
+                const keywords = document.createElement('div');
+                keywords.className = 'digest-card__keywords';
+                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(', ')}`;
+                card.appendChild(keywords);
+
+                container.appendChild(card);
+            });
+        }
+
+        fetchResources();
+
+        // Function to fetch and display GDP data
+        async function fetchGDPData() {
+            const response = await fetch('data/gdp-data.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data, { header: true }).data;
+
+            const labels = parsedData.map(row =&gt; row.Date);
+            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));
+
+            const ctx = document.getElementById('gdpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'US GDP',
+                        data: gdpValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'GDP (in billions)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            enabled: true,
+                            mode: 'nearest',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGDPData();
+    &lt;/script&gt;
+    &lt;h2&gt;Interactive Graph&lt;/h2&gt;
+    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
+    &lt;div class="container"&gt;
+        &lt;canvas id="gdpChart" width="694" height="347" style="display: block; box-sizing: border-box; height: 347px; width: 694px;"&gt;&lt;/canvas&gt;
+        &lt;div class="promo-grid__promos" id="resources-container"&gt;
+            &lt;!-- Data will be populated here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+
+&lt;/body&gt;&lt;/html&gt;
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We did it! Now we have HTML content, just as before. But there's a crucial difference: our dynamic content is pre-loaded into the HTML code.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's try re-running the code from the previous section to this new HTML output. Hopefully, we can access the dynamic elements of the webpage.</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Use BeautifulSoup to parse the html_content</span>
+<span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">html_content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
+
+<span class="c1"># Scrape titles and links</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'div.digest-card__title a'</span><span class="p">)</span>
+<span class="c1"># Initialize lists</span>
+<span class="n">Titles</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Links</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
+    <span class="c1"># Obtain the link to the resource</span>
+    <span class="n">link</span> <span class="o">=</span>  <span class="n">el</span><span class="p">[</span><span class="s1">'href'</span><span class="p">]</span> <span class="c1"># 'href' is a HTML lingo for hyperlinks.</span>
+    <span class="c1"># Obtain the title of the resource</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">text</span>
+
+    <span class="c1"># Append the entries to each list</span>
+    <span class="n">Titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+    <span class="n">Links</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Print the results</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Titles</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Links</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>['Introduction to Data Science Using Python', 'Webscraping in R (and a little Python and Excel too)', 'Populating the page: how browsers work', 'What is DNS? | How DNS works', 'How the web works', 'A Practical Introduction to Web Scraping in Python', 'Automate the Boring Stuff: Web Scraping (Chapter 12)', 'Getting Started (with Selenium)', 'Getting started with the web', 'roundup']
+['https://github.com/DistrictDataLabs/Brookings_Python_DS', 'https://example.com/secret', 'https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work', 'https://www.cloudflare.com/learning/dns/what-is-dns/', 'https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works', 'https://realpython.com/python-web-scraping-practical-introduction/', 'https://automatetheboringstuff.com/2e/chapter12/', 'https://www.selenium.dev/documentation/webdriver/getting_started/', 'https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web', 'https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web']
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We did it!</p>
 </div>
 </div>
 </div>
