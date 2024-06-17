@@ -7446,33 +7446,16 @@ main {
 </div>
 </div>
 </aside><aside class="notes">
-<div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="s1">'slides/advanced-web-scraping.ipynb'</span> <span class="o">--</span><span class="n">to</span> <span class="n">slides</span> <span class="o">--</span><span class="n">output</span><span class="o">=</span><span class="s1">'../advanced-web-scraping'</span>
 </pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
-<pre>
-<span class="ansi-cyan-intense-fg ansi-bold">  Cell </span><span class="ansi-green-intense-fg ansi-bold">In[3], line 1</span>
-<span class="ansi-yellow-intense-fg ansi-bold">    jupyter nbconvert 'slides/advanced-web-scraping.ipynb' --to slides --output='../advanced-web-scraping'</span>
-<span class="ansi-white-intense-fg ansi-bold">            ^</span>
-<span class="ansi-red-intense-fg ansi-bold">SyntaxError</span><span class="ansi-red-intense-fg ansi-bold">:</span> invalid syntax
-</pre>
 </div>
 </div>
 </div>
@@ -7515,14 +7498,19 @@ main {
 <li><a href="#/2/3">Accessing a website</a></li>
 </ul>
 </li>
-<li><a href="#/3">Web Scraping Basics</a><ul>
+<li><a href="#/3">Web scraping basics</a><ul>
+<li><a href="#/3/1">Types of web scraping</a></li>
 <li><a href="#web-requests">Web requests</a></li>
 </ul>
 </li>
-<li>Selenium</li>
-<li>API Scraping</li>
+<li><a href="#/4">Sample code: HTTP requests &amp; HTML parsing</a><ul>
+<li><a href="#/4/1">HTTP requests with <code>requests</code></a></li>
+<li><a href="#">HTML parsing with <code>beautifulsoup4</code></a></li>
+</ul>
+</li>
+<li><a href="#/5">Sample code: Selenium</a></li>
+<li><a href="#/6">Sample code: APIs</a></li>
 <li>Automating a web scrape with GitHub Actions</li>
-<li>Demo</li>
 <li><a href="#/3">Additional Resources</a></li>
 </ol>
 </div>
@@ -7883,7 +7871,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Web-Scraping-Basics">Web Scraping Basics<a class="anchor-link" href="#Web-Scraping-Basics">¶</a></h1><p>There are several ways to collect data online. The strategy you choose must be catered to the website in question.</p>
+<h1 id="Web-scraping-basics">Web scraping basics<a class="anchor-link" href="#Web-scraping-basics">¶</a></h1><p>There are several ways to collect data online. The strategy you choose must be catered to the website in question.</p>
 </div>
 </div>
 </div>
@@ -7979,7 +7967,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Sample-code:-HTML-parsing">Sample code: HTML parsing<a class="anchor-link" href="#Sample-code:-HTML-parsing">¶</a></h1><p>First, we'll walk through making HTTP requests and parsing HTML.</p>
+<h1 id="Sample-code:-Web-requests-&amp;-HTML-parsing">Sample code: Web requests &amp; HTML parsing<a class="anchor-link" href="#Sample-code:-Web-requests-&amp;-HTML-parsing">¶</a></h1><p>Knowing how to make HTTP requests using the Python <code>requests</code> library and parsing HTML responses are two foundational skills in our web scraping toolkit that will help us tackle more complicated tasks later.</p>
 </div>
 </div>
 </div>
@@ -7990,12 +7978,8 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>If you don't already have these packages installed, start by installing them.</p>
-<p>Note: It's a best practice to use environments to control package dependencies.<sup class="footnote" id="ref10"><a href="https://python-poetry.org/" title="This project uses Poetry: https://python-poetry.org/">[10]</a></sup></p>
-
-<p style="font-size:10px">
-[10] This project uses Poetry: https://python-poetry.org/ <br/>
-</p>
+<h2 id="HTTP-requests-with-requests">HTTP requests with <code>requests</code><a class="anchor-link" href="#HTTP-requests-with-requests">¶</a></h2><p>If you don't already have these packages installed, start by installing them.<sup class="footnote" id="ref10"><a href="https://python-poetry.org/" title="It's a best practice to use environments to control package dependencies. This project uses Poetry: https://python-poetry.org/">[10]</a></sup></p>
+<p>To install the packages, type the following prompt into your terminal:</p>
 </div>
 </div>
 </div>
@@ -8025,6 +8009,20 @@ main {
 </div>
 </div>
 </div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+
+<p style="font-size:10px">
+[10] It's a best practice to use environments to control package dependencies. This project uses Poetry: https://python-poetry.org/ <br/>
+</p>
+</div>
+</div>
+</div>
 </div></div><div class="fragment">
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8032,7 +8030,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Now we import the needed libraries:</p>
+<p>Now that we've confirmed installation, we import the needed libraries.</p>
 </div>
 </div>
 </div>
@@ -8095,7 +8093,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>As you can see, headers contain quite a bit of information. Unless otherwise required, I tend to keep my headers on the lighter side.</p>
+<p>As you can see, headers contain quite a bit of information. Unless otherwise required, I try to keep my headers on the lighter side.</p>
 </div>
 </div>
 </div>
@@ -8169,7 +8167,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>[insert screenshot here]</p>
+<p><img alt="A screenshot of the &amp;quot;web scraping tutorial&amp;quot; website." src="slides/web-scraping-screenshot.png"/></p>
 <p>We're interested specifically in scraping the titles and authors of the books that appear on the table in the webpage.</p>
 <p>In order to do this, we have to first get the HTML file for the website.</p>
 </div>
@@ -8240,6 +8238,17 @@ main {
 <pre>200
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Success!</p>
 </div>
 </div>
 </div>
@@ -8554,7 +8563,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Magnificent! We now have the HTML file of the webpage. But now we want to only extract the data of interest. How do we do this?</p>
+<h2 id="HTML-parsing-with-beautifulsoup4">HTML parsing with <code>beautifulsoup4</code><a class="anchor-link" href="#HTML-parsing-with-beautifulsoup4">¶</a></h2><p>Magnificent! We now have the HTML file of the webpage. But now we want to only extract the data of interest. How do we do this?</p>
 </div>
 </div>
 </div>
@@ -8973,7 +8982,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>Then we determine that our data in question is in a <code>&lt;div&gt;</code> element with class <code>digest-card</code>. The title is in a child <code>&lt;div&gt;</code> element with class <code>digest-card__title</code>.</p>
+<p>Data on web scraping learning resources are continained in a <code>&lt;div&gt;</code> element with class <code>digest-card</code>. The title of the resource is in a child <code>&lt;div&gt;</code> element with class <code>digest-card__title</code>: more specifically, the text is stored in an <code>&lt;a&gt;</code> element, with the hyperlink stored in the <code>href</code> attribute.</p>
 <p><img alt="Inspect sub-element screenshot" src="slides/inspect-sub-element-javascript-screenshot.png"/></p>
 </div>
 </div>
@@ -8983,11 +8992,11 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [53]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [55]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Scrape titles and links</span>
-<span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'div.digest-card__title'</span><span class="p">)</span>
+<span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'div.digest-card__title a'</span><span class="p">)</span>
 <span class="c1"># Initialize lists</span>
 <span class="n">Titles</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">Links</span> <span class="o">=</span> <span class="p">[]</span>
@@ -8996,11 +9005,11 @@ main {
     <span class="c1"># Obtain the link to the resource</span>
     <span class="n">link</span> <span class="o">=</span>  <span class="n">el</span><span class="p">[</span><span class="s1">'href'</span><span class="p">]</span> <span class="c1"># 'href' is a HTML lingo for hyperlinks.</span>
     <span class="c1"># Obtain the title of the resource</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">text</span>
 
     <span class="c1"># Append the entries to each list</span>
     <span class="n">Titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-    <span class="n">Authors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+    <span class="n">Links</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
 
 <span class="c1"># Print the results</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">Titles</span><span class="p">)</span>
@@ -9069,7 +9078,46 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Sample-code:-Selenium">Sample code: Selenium<a class="anchor-link" href="#Sample-code:-Selenium">¶</a></h1><p>Selenium is a tool in Python (and many other programming languages) that allows users to access dynamic web content by automating web browser interactions. It simulates a real user browsing the web, which enables it to handle JavaScript-rendered content and other dynamic elements that static network requests cannot easily capture.</p>
+<h1 id="Sample-code:-Selenium">Sample code: Selenium<a class="anchor-link" href="#Sample-code:-Selenium">¶</a></h1><p>Selenium is a tool in Python (and many other programming languages) that allows users to access dynamic web content by automating web browser interactions.<sup class="footnote" id="ref11"><a href="https://www.selenium.dev/documentation/webdriver/getting_started/" title="Selenium documentation can be found here: https://www.selenium.dev/documentation/webdriver/getting_started/">[11]</a></sup> It simulates a real user browsing the web, which enables it to handle JavaScript-rendered content and other dynamic elements that static network requests cannot easily capture.</p>
+
+<p style="font-size:10px">
+[11] Selenium documentation can be found here: https://www.selenium.dev/documentation/webdriver/getting_started/ <br/>
+</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="But-first,-a-note...">But first, a note...<a class="anchor-link" href="#But-first,-a-note...">¶</a></h2><p>Selenium is just a tool to <em>get</em> an HTML file. Once you obtain the file, you parse it exactly the same way as we did in the previous section: using a tool of choice, like Beautiful Soup.</p>
+<p>You've already learned the gritty basics of HTML parsing. The hard part in this section is setting up the web driver.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sample-code:-APIs">Sample code: APIs<a class="anchor-link" href="#Sample-code:-APIs">¶</a></h1><p>APIs - when available - are my favorite way to collect data on the web. Unfortuntately, this variety of data collection is not discussed much online. I will show you the basics.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Live-demo">Live demo<a class="anchor-link" href="#Live-demo">¶</a></h2><p>Follow along with the <a href="https://raw.githubusercontent.com/lorae/web-scraping-tutorial/main/code_examples/selenium_scraping.py">code</a></p>
+<p>File path: code_examples/selenium_scraping.py</p>
 </div>
 </div>
 </div>
