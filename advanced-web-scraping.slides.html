@@ -7526,7 +7526,12 @@ main {
 </ul>
 </li>
 <li><a href="#/5">Sample code: Selenium</a></li>
-<li><a href="#/6">Sample code: APIs</a></li>
+<li><a href="#/6">Sample code: APIs</a><ul>
+<li><a href="#/6/1">Viewing network requests</a></li>
+<li><a href="#/6/6">Analyzing network requests</a></li>
+<li><a href="#/6">Using <code>requests</code> to access APIs</a></li>
+</ul>
+</li>
 <li>Automating a web scrape with GitHub Actions</li>
 <li><a href="#/3">Additional Resources</a></li>
 </ol>
@@ -7995,6 +8000,18 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Live-demo">Live demo<a class="anchor-link" href="#Live-demo">¶</a></h2><p>Follow along with the <a href="https://raw.githubusercontent.com/lorae/web-scraping-tutorial/main/code_examples/requests_bs4_scraping.py">code</a></p>
+<p>File path: <code>web-scraping-tutorial/code_examples/requests_bs4_scraping.py</code></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="HTTP-requests-with-requests">HTTP requests with <code>requests</code><a class="anchor-link" href="#HTTP-requests-with-requests">¶</a></h2><p>If you don't already have these packages installed, start by installing them.<sup class="footnote" id="ref10"><a href="https://python-poetry.org/" title="It's a best practice to use environments to control package dependencies. This project uses Poetry: https://python-poetry.org/">[10]</a></sup></p>
 <p>To install the packages, type the following prompt into your terminal:</p>
 </div>
@@ -8168,7 +8185,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/"</span>
@@ -8216,7 +8233,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">session_arguments</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span> 
@@ -8246,7 +8263,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
@@ -8295,10 +8312,10 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8311,7 +8328,273 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>b'&lt;!DOCTYPE html&gt;\n&lt;html lang="en"&gt;\n&lt;head&gt;\n    &lt;meta charset="UTF-8"&gt;\n    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;\n    &lt;title&gt;Web Scraping Resources&lt;/title&gt;\n    &lt;link rel="stylesheet" href="css/styles.css"&gt;\n    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;\n    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;\n    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;\n&lt;/head&gt;\n&lt;body&gt;\n    &lt;h1&gt;Scrape this website!&lt;/h1&gt;\n    &lt;p&gt;Welcome! On this website, you\'ll find a variety of opportunities to practice your skills web scraping with Python. If you\'d like to learn more about how to use this page, please visit my repository, \n        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;\n        .\n    &lt;/p&gt;\n    &lt;h2&gt;Reading list&lt;/h2&gt;\n    &lt;table&gt;\n        &lt;tr class="header-row"&gt;\n            &lt;th class="header-cell"&gt;Title&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Author&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;\n            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer\'s Stone&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;\n        &lt;/tr&gt;\n        &lt;tr class="data-row"&gt;\n            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;\n            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;\n            &lt;td class="data-cell genre"&gt;Children\'s Literature&lt;/td&gt;\n            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;\n            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;\n        &lt;/tr&gt;\n    &lt;/table&gt;\n    &lt;h2&gt;Learning resources&lt;/h2&gt;\n    &lt;div class="promo-grid__promos" id="resources-container"&gt;\n        &lt;!-- Data will be populated here --&gt;\n    &lt;/div&gt;\n    &lt;script&gt;\n        let resourcesData = [];\n        \n        async function fetchResources() {\n            const response = await fetch(\'data/web-scraping-resources.json\');\n            resourcesData = await response.json();\n            displayResources(resourcesData);\n        }\n\n        function displayResources(data) {\n            const container = document.getElementById(\'resources-container\');\n            container.innerHTML = \'\';\n            data.forEach(resource =&gt; {\n                const card = document.createElement(\'div\');\n                card.className = \'digest-card\';\n\n                const topSection = document.createElement(\'div\');\n                topSection.className = \'digest-card__top\';\n\n                const image = document.createElement(\'img\');\n                image.className = \'digest-card__image\';\n                image.src = resource.image;\n                image.alt = `${resource.title} image`;\n                topSection.appendChild(image);\n\n                const textContainer = document.createElement(\'div\');\n                textContainer.className = \'digest-card__text\';\n\n                const title = document.createElement(\'div\');\n                title.className = \'digest-card__title\';\n                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;\n                textContainer.appendChild(title);\n\n                const date = document.createElement(\'div\');\n                date.className = \'digest-card__date\';\n                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;\n                textContainer.appendChild(date);\n\n                const authors = document.createElement(\'div\');\n                authors.className = \'digest-card__items\';\n                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(\', \')}`;\n                textContainer.appendChild(authors);\n\n                topSection.appendChild(textContainer);\n                card.appendChild(topSection);\n\n                const description = document.createElement(\'div\');\n                description.className = \'digest-card__summary\';\n                description.textContent = resource.description;\n                card.appendChild(description);\n\n                const keywords = document.createElement(\'div\');\n                keywords.className = \'digest-card__keywords\';\n                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(\', \')}`;\n                card.appendChild(keywords);\n\n                container.appendChild(card);\n            });\n        }\n\n        fetchResources();\n\n        // Function to fetch and display GDP data\n        async function fetchGDPData() {\n            const response = await fetch(\'data/gdp-data.csv\');\n            const data = await response.text();\n            const parsedData = Papa.parse(data, { header: true }).data;\n\n            const labels = parsedData.map(row =&gt; row.Date);\n            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));\n\n            const ctx = document.getElementById(\'gdpChart\').getContext(\'2d\');\n            new Chart(ctx, {\n                type: \'line\',\n                data: {\n                    labels: labels,\n                    datasets: [{\n                        label: \'US GDP\',\n                        data: gdpValues,\n                        borderColor: \'rgba(75, 192, 192, 1)\',\n                        backgroundColor: \'rgba(75, 192, 192, 0.2)\',\n                        borderWidth: 1\n                    }]\n                },\n                options: {\n                    responsive: true,\n                    scales: {\n                        x: {\n                            display: true,\n                            title: {\n                                display: true,\n                                text: \'Year\'\n                            }\n                        },\n                        y: {\n                            display: true,\n                            title: {\n                                display: true,\n                                text: \'GDP (in billions)\'\n                            }\n                        }\n                    },\n                    plugins: {\n                        tooltip: {\n                            enabled: true,\n                            mode: \'nearest\',\n                            intersect: false,\n                            callbacks: {\n                                label: function(context) {\n                                    let label = context.dataset.label || \'\';\n                                    if (label) {\n                                        label += \': \';\n                                    }\n                                    if (context.parsed.y !== null) {\n                                        label += new Intl.NumberFormat(\'en-US\', { style: \'currency\', currency: \'USD\' }).format(context.parsed.y);\n                                    }\n                                    return label;\n                                }\n                            }\n                        }\n                    }\n                }\n            });\n        }\n\n        fetchGDPData();\n    &lt;/script&gt;\n    &lt;h2&gt;Interactive Graph&lt;/h2&gt;\n    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;\n    &lt;div class="container"&gt;\n        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;\n        &lt;div class="promo-grid__promos" id="resources-container"&gt;\n            &lt;!-- Data will be populated here --&gt;\n        &lt;/div&gt;\n    &lt;/div&gt;\n&lt;/body&gt;\n&lt;/html&gt;\n'
+<pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Web Scraping Resources&lt;/title&gt;
+    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Scrape this website!&lt;/h1&gt;
+    &lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
+        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
+        .
+    &lt;/p&gt;
+    &lt;h2&gt;Reading list&lt;/h2&gt;
+    &lt;table&gt;
+        &lt;tr class="header-row"&gt;
+            &lt;th class="header-cell"&gt;Title&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Author&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
+            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class="data-row"&gt;
+            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
+            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
+            &lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
+            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
+            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    &lt;h2&gt;Learning resources&lt;/h2&gt;
+    &lt;div class="promo-grid__promos" id="resources-container"&gt;
+        &lt;!-- Data will be populated here --&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        let resourcesData = [];
+        
+        async function fetchResources() {
+            const response = await fetch('data/web-scraping-resources.json');
+            resourcesData = await response.json();
+            displayResources(resourcesData);
+        }
+
+        function displayResources(data) {
+            const container = document.getElementById('resources-container');
+            container.innerHTML = '';
+            data.forEach(resource =&gt; {
+                const card = document.createElement('div');
+                card.className = 'digest-card';
+
+                const topSection = document.createElement('div');
+                topSection.className = 'digest-card__top';
+
+                const image = document.createElement('img');
+                image.className = 'digest-card__image';
+                image.src = resource.image;
+                image.alt = `${resource.title} image`;
+                topSection.appendChild(image);
+
+                const textContainer = document.createElement('div');
+                textContainer.className = 'digest-card__text';
+
+                const title = document.createElement('div');
+                title.className = 'digest-card__title';
+                title.innerHTML = `&lt;a href="${resource.link}"&gt;${resource.title}&lt;/a&gt;`;
+                textContainer.appendChild(title);
+
+                const date = document.createElement('div');
+                date.className = 'digest-card__date';
+                date.innerHTML = `&lt;span class="digest-card__label"&gt;${resource.date}&lt;/span&gt;`;
+                textContainer.appendChild(date);
+
+                const authors = document.createElement('div');
+                authors.className = 'digest-card__items';
+                authors.innerHTML = `&lt;span class="digest-card__label"&gt;Author(s) - &lt;/span&gt;${resource.authors.map(author =&gt; `&lt;span&gt;&lt;a href="${author.link}"&gt;${author.name}&lt;/a&gt;&lt;/span&gt;`).join(', ')}`;
+                textContainer.appendChild(authors);
+
+                topSection.appendChild(textContainer);
+                card.appendChild(topSection);
+
+                const description = document.createElement('div');
+                description.className = 'digest-card__summary';
+                description.textContent = resource.description;
+                card.appendChild(description);
+
+                const keywords = document.createElement('div');
+                keywords.className = 'digest-card__keywords';
+                keywords.innerHTML = `&lt;span class="digest-card__label"&gt;Keywords: &lt;/span&gt;${resource.keywords.join(', ')}`;
+                card.appendChild(keywords);
+
+                container.appendChild(card);
+            });
+        }
+
+        fetchResources();
+
+        // Function to fetch and display GDP data
+        async function fetchGDPData() {
+            const response = await fetch('data/gdp-data.csv');
+            const data = await response.text();
+            const parsedData = Papa.parse(data, { header: true }).data;
+
+            const labels = parsedData.map(row =&gt; row.Date);
+            const gdpValues = parsedData.map(row =&gt; parseFloat(row.GDP));
+
+            const ctx = document.getElementById('gdpChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'US GDP',
+                        data: gdpValues,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Year'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'GDP (in billions)'
+                            }
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            enabled: true,
+                            mode: 'nearest',
+                            intersect: false,
+                            callbacks: {
+                                label: function(context) {
+                                    let label = context.dataset.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    if (context.parsed.y !== null) {
+                                        label += new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(context.parsed.y);
+                                    }
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        fetchGDPData();
+    &lt;/script&gt;
+    &lt;h2&gt;Interactive Graph&lt;/h2&gt;
+    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
+    &lt;div class="container"&gt;
+        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;
+        &lt;div class="promo-grid__promos" id="resources-container"&gt;
+            &lt;!-- Data will be populated here --&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
 </pre>
 </div>
 </div>
@@ -8856,6 +9139,18 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Live-demo">Live demo<a class="anchor-link" href="#Live-demo">¶</a></h2><p>Follow along with the <a href="https://raw.githubusercontent.com/lorae/web-scraping-tutorial/main/code_examples/selenium_scraping.py">code</a></p>
+<p>File path: <code>web-scraping-tutorial/code_examples/selenium_scraping.py</code></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <h2 id="But-first,-a-note...">But first, a note...<a class="anchor-link" href="#But-first,-a-note...">¶</a></h2><p>Selenium is just a tool to <em>get</em> an HTML file. Once you obtain the file, you parse it exactly the same way as we did in the previous section: using a tool of choice, like Beautiful Soup.</p>
 </div>
 </div>
@@ -8884,7 +9179,6 @@ main {
 <span class="kn">from</span> <span class="nn">selenium.webdriver.common.by</span> <span class="kn">import</span> <span class="n">By</span>
 <span class="kn">from</span> <span class="nn">selenium.webdriver.chrome.options</span> <span class="kn">import</span> <span class="n">Options</span>
 <span class="kn">from</span> <span class="nn">webdriver_manager.chrome</span> <span class="kn">import</span> <span class="n">ChromeDriverManager</span>
-<span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">from</span> <span class="nn">bs4</span> <span class="kn">import</span> <span class="n">BeautifulSoup</span>
 </pre></div>
 </div>
@@ -9333,6 +9627,495 @@ main {
 </div>
 </div>
 </div>
+</div></section></section><section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h1 id="Sample-code:-APIs">Sample code: APIs<a class="anchor-link" href="#Sample-code:-APIs">¶</a></h1><p>APIs - when available - are <strong>my favorite way to collect data</strong> from the internet. They're also a bit of a <em>secret</em> method - there's not many tutorials on using hidden APIs for web scraping!</p>
+<p>You're already familiar with the main tool you'll need for this: the <code>requests</code> package.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Viewing-network-requests">Viewing network requests<a class="anchor-link" href="#Viewing-network-requests">¶</a></h2><p>Remember the dyamically-rendered content we saw in the last section, and how we had to use <code>selenium</code> to access it?</p>
+<p><strong>Sometimes, there's a simpler way</strong>: we can import the data directly, without opening a browser or dealing with any HTML at all.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><strong>API access isn't always possible</strong>. We'll have to inspect the HTTP requests that our browser sends to the server and the responses sent from the server to our browser to determine whether there's any information that we can intercept.</p>
+<p>The easiest way to view this activity is to access the <strong>network requests pane</strong>.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>With your browser open on the webpage in question,</p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol>
+<li>right click,</li>
+<li>select "Inspect element",</li>
+<li>then select the "Network" tab.</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p><img alt="The network requests pane is open but empty." src="slides/network-requests-before-loading.png"/></p>
+<p>Here, the network requests pane is open but empty. Since the website already loaded, the requests are done.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>To view the requests as they happen, simply refresh the webpage with the network requests tab open.</p>
+<p><img alt="The network requests pane is open and monitoring activity." src="slides/network-requests-after-loading.png"/></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Recall the procedure that the browser uses to access data:</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<ol>
+<li>DNS lookup</li>
+<li>Initial HTTP request</li>
+<li>Server response</li>
+<li>Parsing HTML + additional requests</li>
+<li>Assembling the page</li>
+</ol>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>The first request we see is the <strong>initial HTTP request</strong> (<strong>step 2</strong>). The response from the server is the initial HTML file (<strong>step 3</strong>), which your browser begins to parse.</p>
+<p><img alt="The initial HTTP request" src="slides/first-http-request-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>As your browser parses this HTML file, it encounters additional references that it needs, causing it to make more requests for external resources (<strong>step 4</strong>).</p>
+<p><img alt="The remaining requests." src="slides/more-http-requests-screenshot.png"/></p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Monitoring-network-requests">Monitoring network requests<a class="anchor-link" href="#Monitoring-network-requests">¶</a></h2><p>Websites make many requests, and API requests are often subtle. It can be tricky to tell which - if any- exchange the information you seek, since their titles are often uninformative.</p>
+<p><strong>I typically start by sorting requests by <code>Type</code></strong>. API requests tend to be of type <code>xhr</code> or <code>fetch</code>, but this is not a hard and fast rule.</p>
+<p>You can also look at the <strong>title of the request</strong> and its <strong>headers</strong>. If the request contains the string "api" in it, that can be a good tell.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>When in doubt, inspect the responses. Do they contain the data you seek?</p>
+<p>(A word of caution: Sometimes responses are very long, and if you aren't thorough, you might miss the data.)</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>For especially tough cases, poking around where you think APIs might be used on the frontend, such as <strong>navigating forward on a menu, displaying more years on an interactive graph, or searching for things in the website's the search bar</strong> can help.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>If those actions trigger an API request, the network requests pane will show new entries at the bottom.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Live-demo:-Find-the-API-requests">Live demo: Find the API requests<a class="anchor-link" href="#Live-demo:-Find-the-API-requests">¶</a></h2><p>Link: <a href="https://lorae.github.io/web-scraping-tutorial/">https://lorae.github.io/web-scraping-tutorial/</a></p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>This website uses 2 API requests, which each load a file:</p>
+<ul>
+<li>web-scraping-resources.json</li>
+<li>gdp-data.csv</li>
+</ul>
+</div>
+</div>
+</div>
+</div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's learn how to access these files using the <code>requests</code> package.</p>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h2 id="Using-requests-to-access-APIs">Using <code>requests</code> to access APIs<a class="anchor-link" href="#Using-requests-to-access-APIs">¶</a></h2><p>If the request is a GET request, you can oftentimes copy the request URL and paste it in your browser as if you're navigating to a new website. The response will appear in plain text.</p>
+<p>(Subjectively, this works about 80% of the time.)</p>
+<p>Translating this to Python code is easy.</p>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Let's start by importing the <code>requests</code> library and assigning some headers.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+
+<span class="n">my_headers</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">'User-Agent'</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s1">'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '</span>
+        <span class="s1">'AppleWebKit/537.36 (KHTML, like Gecko) '</span>
+        <span class="s1">'Chrome/122.0.6261.112 Safari/537.36'</span>
+    <span class="p">),</span>
+    <span class="s1">'Accept'</span><span class="p">:</span> <span class="p">(</span>
+        <span class="s1">'text/html,application/xhtml+xml,application/xml;q=0.9,'</span>
+        <span class="s1">'image/avif,image/webp,image/apng,*/*;q=0.8,'</span>
+        <span class="s1">'application/signed-exchange;v=b3;q=0.7'</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Next, we copy the request URL.</p>
+</div>
+</div>
+</div>
+</div><div class="fragment"><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">my_request_url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/data/web-scraping-resources.json"</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>We then proceed exactly as we did with the "normal" URL:</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">session_arguments</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span> 
+                                     <span class="n">url</span><span class="o">=</span><span class="n">my_request_url</span><span class="p">,</span> 
+                                     <span class="n">headers</span><span class="o">=</span><span class="n">my_headers</span><span class="p">)</span>
+<span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span>
+<span class="n">prepared_request</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">prepare_request</span><span class="p">(</span><span class="n">session_arguments</span><span class="p">)</span>
+<span class="n">response</span><span class="p">:</span> <span class="n">requests</span><span class="o">.</span><span class="n">Response</span> <span class="o">=</span> <span class="n">session</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prepared_request</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div></div></section><section>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>But this time, when we view the response, it's not a jumble of HTML code.  Instead, it's a clean data file in a JSON format.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>[
+    {
+        "title": "Introduction to Data Science Using Python",
+        "date": "June 5, 2020",
+        "link": "https://github.com/DistrictDataLabs/Brookings_Python_DS",
+        "authors": [
+            {"name": "District Data Labs", "link": "#"}
+        ],
+        "description": "A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.",
+        "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrame", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
+        "source": "GitHub",
+        "image": "images/upward-connected-scatter.jpg"
+    },
+    {
+        "title": "Webscraping in R (and a little Python and Excel too)",
+        "date": "February 22, 2023",
+        "link": "https://example.com/secret",
+        "authors": [
+            {"name": "Valerie Wirtschafter", "link": "#"},
+            {"name": "Mimi Majumder", "link": "#"}
+        ],
+        "description": "Another test description.",
+        "keywords": ["test", "keyword"],
+        "source": "Brookings Internal",
+        "image": ""
+    },
+    {
+        "title": "Populating the page: how browsers work",
+        "date": "July 20, 2023",
+        "link": "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work",
+        "authors": [
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Web/Performance/How_browsers_work/contributors.txt"}
+        ],
+        "description": "A concise blog post, aimed at developers, that explains how browsers provide their users with a web experience.",
+        "keywords": ["DNS lookup", "TCP handshake", "TLS negotiation", "HTTP GET request", "response", "parsing", "DOM tree", "CSSOM tree", "JavaScript compilation", "render", "paint"],
+        "source": "Mozilla Developer Network",
+        "image": "images/laptop-web.jpg"
+    },
+    {
+        "title": "What is DNS? | How DNS works",
+        "date": "",
+        "link": "https://www.cloudflare.com/learning/dns/what-is-dns/",
+        "authors": [
+            {"name": "", "link": "#"}
+        ],
+        "description": "A blog post explaining the DNS resolution process. A useful starting point for laypeople interested in learning more about the process.",
+        "keywords": ["DNS server", "IP address", "recursive DNS resolver", "DNS lookup", "DNS caching"],
+        "source": "Cloudflare",
+        "image": "images/router.jpg"
+    },
+    {
+        "title": "How the web works",
+        "date": "November 17, 2023",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works",
+        "authors": [
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works/contributors.txt"}
+        ],
+        "description": "A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.",
+        "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
+        "source": "Mozilla Developer Network",
+        "image": "images/writing-website-with-image.jpg"
+    },
+    {
+        "title": "A Practical Introduction to Web Scraping in Python",
+        "date": "",
+        "link": "https://realpython.com/python-web-scraping-practical-introduction/",
+        "authors": [
+            {"name": "David Amos", "link": "https://realpython.com/python-web-scraping-practical-introduction/#author"}
+        ],
+        "description": "A tutorial aimed at beginners to web scraping with some prior knowledge of Python. Focuses mainly on building skills with HTML parsing using BeautifulSoup and interacting with the browser using MechanicalSoup. After this tutorial, users will likely be ready to learn to use Selenium.",
+        "keywords": ["HTML", "regex", "regular expressions", "BeautifulSoup", "MechanicalSoup"],
+        "source": "Real Python",
+        "image": "images/computer.jpg"
+    },
+    {
+        "title": "Automate the Boring Stuff: Web Scraping (Chapter 12)",
+        "date": "",
+        "link": "https://automatetheboringstuff.com/2e/chapter12/",
+        "authors": [
+            {"name": "Al Sweigart", "link": "https://realpython.com/python-web-scraping-practical-introduction/#author"}
+        ],
+        "description": "A free online textbook introducing users to concepts in Python. This chapter assumes basic proficiency in Python from reading previous chapters. Walks users through inspecting the HTML code underlying websites using developer tools on the web browser, parsing the content using BeautifulSoup, and rendering interactive pages using a Selenium webdriver.",
+        "keywords": ["requests", "GET requests", "HTML", "View page source", "Inspect element", "Developer tools", "HTML elements", "BeautifulSoup", "select method", "Selenium"],
+        "source": "Real Python",
+        "image": "images/book.jpg"
+    },
+    {
+        "title": "Getting Started (with Selenium)",
+        "date": "January 12, 2022",
+        "link": "https://www.selenium.dev/documentation/webdriver/getting_started/",
+        "authors": [
+            {"name": "", "link": "#"}
+        ],
+        "description": "Generalized documentation for Selenium, with options to select programming language (such as Python).",
+        "keywords": ["webdrivers", "browsers", "waits", "elements", "interactions", "sample code", "Python"],
+        "source": "Selenium",
+        "image": "images/laptop-web.jpg"
+    },
+    {
+        "title": "Getting started with the web",
+        "date": "February 4, 2024",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+        "authors": [
+            {"name": "MDN contributors", "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/contributors.txt"}
+        ],
+        "description": "A high-quality series of blog posts that guides skills levels ranging from absolute beginners to those with more intermediate understanding through the process of building a website. Comprised of short, accessible blog posts covering many topics, including how the web works, and introductions to HTML, CSS, and JavaScript. Aimed at developers, but serves as useful background for more general audiences and those interested in understanding the web better for web scraping.",
+        "keywords": ["HTML", "CSS", "JavaScript", "tools and testing"],
+        "source": "Mozilla Developer Network",
+        "image": "images/building-blocks.jpg"
+    },
+    {
+        "title": "roundup",
+        "date": "June 16, 2024",
+        "link": "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
+        "authors": [
+            {"name": "Lorae Stojanovic", "link": "#"}
+        ],
+        "description": "Lorae's (the creater of this website) GitHub repository which scrapes pre-print academic economics papers from 20+ sources; presents titles, abstracts, authors and hyperlinks on an online dashboard. Auto-updates daily using GitHub Actions workflow. May be helpful sample code for those interested in web scraping in Python or automating their scraping using GitHub Actions.",
+        "keywords": ["web scraping", "Python", "GitHub Actions", "Streamlit"],
+        "source": "GitHub",
+        "image": "images/single-page-file.jpg"
+    }
+]
+
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -9340,19 +10123,9 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h1 id="Sample-code:-APIs">Sample code: APIs<a class="anchor-link" href="#Sample-code:-APIs">¶</a></h1><p>APIs - when available - are my favorite way to collect data on the web. Unfortuntately, this variety of data collection is not discussed much online. I will show you the basics.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
-</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h2 id="Live-demo">Live demo<a class="anchor-link" href="#Live-demo">¶</a></h2><p>Follow along with the <a href="https://raw.githubusercontent.com/lorae/web-scraping-tutorial/main/code_examples/selenium_scraping.py">code</a></p>
-<p>File path: code_examples/selenium_scraping.py</p>
+<p>If the request is a POST request, this will not work.</p>
+<p>Also, if the API is more strict and requires more headers, this also will not work.You can oftentimes get away with copying the request URL and pasting into your browser. If the request is a GET recopy the web request by <strong>right clicking and selecting "copy as cURL"</strong></p>
+<p><img alt="copy as cURL" src="slides/copy-as-cURL.png"/></p>
 </div>
 </div>
 </div>
