@@ -12,11 +12,29 @@
 <body>
     <div class="container">
         <h1>Scrape this website!</h1>
-        <p>Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
-            <a href="https://github.com/lorae/web-scraping-tutorial" target="_blank">lorae/web-scraping-tutorial</a>
-            .
-        </p>
-        <h2>Reading list</h2>
+        <p>Welcome! Are you interested in learning how to gather data from the internet? This website was designed as a trial ground to practice skills covered in Lorae Stojanovic's presentation to the Brookings Data Network on June 20, 2024, <a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html">"Web Scraping with Python"</a>. The presentation includes <a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html">slides</a>, <a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html">code to scrape this website</a>, and a <a href="https://github.com/lorae/web-scraping-tutorial">GitHub repository</a> encapsulating the entire project, including the webpage that you're currently reading.</p>
+
+        <p>The presentation covers foundational topics related to web scraping with Python, such as:</p>
+        <ul>
+            <li>How your browser <a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/2/5">interacts with external resources</a> to access and display a website</li>
+            <li><a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/2">Using the <code>requests</code> package</a> to access static web content via HTTP requests</li>
+            <li><a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/9">Parsing HTML code</a> using the <code>beautifulsoup4</code> package</li>
+            <li><a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/5">Accessing dynamic content</a> using the <code>selenium</code> package</li>
+            <li><a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/1">Inspecting network requests</a> to locate hidden APIs</li>
+            <li><a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/10">Accessing APIs</a> using the <code>requests</code> package</li>
+        </ul>
+
+        <p>Feel free to explore the code accompanying the presentation, which scrapes data from this website using three methods:</p>
+        <ul>
+            <li><a href="#">HTTP requests and HTML parsing</a></li>
+            <li><a href="#">Selenium webdriver</a></li>
+            <li><a href="#">Direct API access</a></li>
+        </ul>
+
+        <p>Go forth and explore!</p>
+
+        <h2>Top US Companies by Profit per Employee</h2>
+        <p>Profit per employee is calculated by dividing a company's yearly profit by its number of full-time staff. Data are courtesy of the <a href="https://www.visualcapitalist.com/profit-per-employee-top-u-s-companies-ranking/">Visual Capitalist</a> and <a href="https://companiesmarketcap.com/">Companies Market Cap</a>.</p>
         <table class="styled-table">
             <thead>
                 <tr class="header-row">
