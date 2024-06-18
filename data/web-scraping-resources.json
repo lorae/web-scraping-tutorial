@@ -4,7 +4,7 @@
         "date": "June 5, 2020",
         "link": "https://github.com/DistrictDataLabs/Brookings_Python_DS",
         "authors": [
-            {"name": "District Data Labs", "link": "#"}
+            {"name": "District Data Labs", "link": "https://districtdatalabs.silvrback.com/"}
         ],
         "description": "A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.",
         "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrame", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
@@ -19,10 +19,10 @@
             {"name": "Valerie Wirtschafter", "link": "#"},
             {"name": "Mimi Majumder", "link": "#"}
         ],
-        "description": "Another test description.",
-        "keywords": ["test", "keyword"],
+        "description": "A thorough introductory guide to web scraping for R users, suitable for an absolute beginner. Explains using CSS selectors, scheduling jobs, and scraping tables, images, and PDFs, among other topics.",
+        "keywords": ["copy-paste", "APIs", "DOM parsing", "HTML", "CSS", "polite", "rvest", "paginated webpages", "cronR", "pdftools", "requests", "BeautifulSoup", "Excel"],
         "source": "Brookings Internal",
-        "image": ""
+        "image": "images/document.jpg"
     },
     {
         "title": "Populating the page: how browsers work",
@@ -91,7 +91,7 @@
         "authors": [
             {"name": "", "link": "#"}
         ],
-        "description": "Generalized documentation for Selenium, with options to select programming language (such as Python).",
+        "description": "Generalized documentation for Selenium using multiple programming languages (like Python), including installing the library and organizing and executing Selenium code. Includes several lines of sample code illustrating how to start and end a session, find elements, and take action on elements.",
         "keywords": ["webdrivers", "browsers", "waits", "elements", "interactions", "sample code", "Python"],
         "source": "Selenium",
         "image": "images/laptop-web.jpg"
@@ -119,5 +119,122 @@
         "keywords": ["web scraping", "Python", "GitHub Actions", "Streamlit"],
         "source": "GitHub",
         "image": "images/single-page-file.jpg"
+    },
+    {
+        "title": "Text Mining with R: A Tidy Approach",
+        "date": "2023",
+        "link": "https://www.tidytextmining.com/",
+        "authors": [
+            {"name": "Julia Silge", "link": "https://juliasilge.com/"},
+            {"name": "David Robinson", "link": "http://varianceexplained.org/"}
+
+        ],
+        "description": "A free, open-source book by the authors of the `tidytext` R package that introduces text mining in R. The authors provide extensive examples of text analysis in action, including sentiment analysis, the tf-idf statistic, n-grams, and document-term matrics. Real examples use data from Twitter archives, NASA datasets, and more.",
+        "keywords": ["tidytext", "unnest_tokens()", "sentiments dataset", "tf-idf statistic", "n-grams", "document-term matrices", "tidy() method"],
+        "source": "",
+        "image": "images/chat-box.jpg"
+    },
+    {
+        "title": "Text as Data",
+        "date": "2023",
+        "link": "https://cbail.github.io/textasdata/Text_as_Data.html",
+        "authors": [
+            {"name": "Chris Bail", "link": "https://www.chrisbail.net/"}
+        ],
+        "description": "A free, online course by a Professor of Sociology, Public Policy, and Data Science at Duke University. The course materials - which involve programming in R - are available on his GitHub page. His course covers topics such as APIs, basic text analysis, dictionary-based text analysis, topic modeling, text networks, and word embeddings.",
+        "keywords": ["GitHub", "text as data", "screen-scraping", "APIs", "basic text analysis", "dictionary-based text analysis", "topic modeling", "text networks", "word embeddings"],
+        "source": "Duke University",
+        "image": "images/chat-box.jpg"
+    },
+    {
+        "title": "Text as Data (Spring 2021, NYU)",
+        "date": "January 8, 2021",
+        "link": "https://github.com/ArthurSpirling/text-as-data-class-spring2021",
+        "authors": [
+            {"name": "Arthur Sprling", "link": "https://github.com/ArthurSpirling"}
+        ],
+        "description": "An NYU course taught in spring 2021, aimed at students who have taken at least one class in statistics or inference and who have a basic knowledge of calculus, progability, densities, distributions, statistical tests, hypothesis testing, maximum likelihood, and generalized linear models. The course is applied and uses R as a programming language.",
+        "keywords": ["GitHub", "vector space model of a document", "bag of words", "word distributions", "lexical diversity", "sentiment", "machine learning", "support vector machines", "k-NN models", "random forests/trees", "bursts and memes"],
+        "source": "New York University",
+        "image": "images/newspaper.jpg"
+    },
+    {
+        "title": "Web Scraping with R",
+        "date": "February 8, 2022",
+        "link": "https://steviep42.github.io/webscraping/book",
+        "authors": [
+            {"name": "Steve Pittard", "link": "https://github.com/steviep42"}
+        ],
+        "description": "A book explaining how to web scrape using R. Walks users through extensive code and real-life examples scraping websites such as IMDB, PubMed, and AAUP Faculty Compensation. Chapters are fairly self-contained and cover topics such as static page scraping, XML and JSON, APIs, and sentiment analysis.",
+        "keywords": ["GitHub", "vector space model of a document", "bag of words", "word distributions", "lexical diversity", "sentiment", "machine learning", "support vector machines", "k-NN models", "random forests/trees", "bursts and memes"],
+        "source": "New York University",
+        "image": "images/newspaper.jpg"
+    },
+    {
+        "title": "D-Lab Python Web Scraping Workshop",
+        "date": "2024",
+        "link": "https://github.com/dlab-berkeley/Python-Web-Scraping",
+        "authors": [
+            {"name": "Tom van Neunen", "link": "https://github.com/tomvannuenen"},
+            {"name": "Pratik Sachdeva", "link": "https://github.com/pssachdeva"}
+        ],
+        "description": "This GitHub repository contains links to Google Slides and Jupyter slides with sample code and practice problems that are used in an interactive workshop taught by UC Berkeley's D-Lab. The material covers basic web scraping methods using Python such as the requests and beautifulsoup4 packages.",
+        "keywords": ["GitHub", "Python", "requests", "BeautifulSoup", "beautifulsoup4", "lxml", "JSON", "HTML tags", "href elements"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/woman-programming.jpg"
+    },
+    {
+        "title": "D-Lab Python Geospatial Fundamentals Workshop",
+        "date": "2022",
+        "link": "https://github.com/dlab-berkeley/Python-Geospatial-Fundamentals-Legacy",
+        "authors": [
+            {"name": "Hikari Murayama", "link": "https://github.com/hikari-murayama"},
+            {"name": "Patty Frontiera", "link": "https://github.com/pattyf"},
+            {"name": "Drew Terasaki Hart", "link": "https://github.com/erthward"},
+            {"name": "Pratik Sachdeva", "link": "https://github.com/pssachdeva"},
+            {"name": "Aaron Culich", "link": "https://github.com/aculich"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6-hour introduction to working with geospatial data in Python. Learn how to import, visualize, and analyze geospatial data using GeoPandas in Python.",
+        "keywords": ["GitHub", "Python", "spatial DataFrames", "GeoPandas", "GeoDataFrames", "matplotlib", "vector spatial data", "geoprocessing", "color palettes", "data classification"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/phone-with-location.jpg"
+    },
+    {
+        "title": "D-Lab Python Machine Learning Workshop",
+        "date": "2024",
+        "link": "https://github.com/dlab-berkeley/Python-Machine-Learning",
+        "authors": [
+            {"name": "D-Lab contributors", "link": "https://github.com/dlab-berkeley/Python-Machine-Learning?tab=readme-ov-file#contributors"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6 hour introduction to machine learning in Python. Learn how to perform classification, regression, clustering, and do model selection using scikit-learn in Python.",
+        "keywords": ["GitHub", "Python", "machine learning", "regression", "regularization", "preprocessing", "classification", "scikit-learn"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/hierarchy-graph.jpg"
+    },
+    {
+        "title": "D-Lab Python Text Analysis Workshop",
+        "date": "2022",
+        "link": "https://github.com/dlab-berkeley/Python-Text-Analysis",
+        "authors": [
+            {"name": "D-Lab contributors", "link": "https://github.com/dlab-berkeley/Python-Text-Analysis?tab=readme-ov-file#contributors"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 12 hour introduction to text analysis with Python. Learn how to perform bag-of-words, sentiment analysis, topic modeling, word embeddings, and more, using scikit-learn, NLTK, Gensim, and spaCy in Python.",
+        "keywords": ["GitHub", "Python", "text analysis", "bag-of-words", "sentiment analysis", "topic modeling", "word embeddings", "scikit-learn", "NLTK", "Gensim", "spaCy"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/quotation-marks.jpg"
+    },
+    {
+        "title": "D-Lab Python Deep Learning Workshop",
+        "date": "2022",
+        "link": "https://github.com/dlab-berkeley/Python-Deep-Learning",
+        "authors": [
+            {"name": "Sean Perez", "link": "https://github.com/seanmperez"},
+            {"name": "seangariando", "link": "https://github.com/seangariando"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6 hour introduction to deep learning with Python. Convey the basics of deep learning in Python using keras on image datasets. Students are empowered with a general grasp of deep learning, example code that they can modify, a working computational environment, and resources for further study.",
+        "keywords": ["GitHub", "Python", "deep learning", "Jupyter notebook", "dataset splitting", "feed forward neural networks", "vanilla neural networks", "convolutional neural networks", "image classification"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/horizontal-nodes.jpg"
     }
+
 ]
