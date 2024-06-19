@@ -7,7 +7,7 @@
             {"name": "District Data Labs", "link": "https://districtdatalabs.silvrback.com/"}
         ],
         "description": "A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.",
-        "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrame", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
+        "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrames", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
         "source": "GitHub",
         "image": "images/upward-connected-scatter.jpg"
     },
@@ -181,7 +181,7 @@
         "description": "This GitHub repository contains links to Google Slides and Jupyter slides with sample code and practice problems that are used in an interactive workshop taught by UC Berkeley's D-Lab. The material covers basic web scraping methods using Python such as the requests and beautifulsoup4 packages.",
         "keywords": ["GitHub", "Python", "requests", "BeautifulSoup", "beautifulsoup4", "lxml", "JSON", "HTML tags", "href elements"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/woman-programming.jpg"
+        "image": "images/screen-lots-of-clicking.jpg"
     },
     {
         "title": "D-Lab Python Geospatial Fundamentals Workshop",
@@ -232,9 +232,74 @@
             {"name": "seangariando", "link": "https://github.com/seangariando"}
         ],
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6 hour introduction to deep learning with Python. Convey the basics of deep learning in Python using keras on image datasets. Students are empowered with a general grasp of deep learning, example code that they can modify, a working computational environment, and resources for further study.",
-        "keywords": ["GitHub", "Python", "deep learning", "Jupyter notebook", "dataset splitting", "feed forward neural networks", "vanilla neural networks", "convolutional neural networks", "image classification"],
+        "keywords": ["GitHub", "Python", "deep learning", "Jupyter", "dataset splitting", "feed forward neural networks", "vanilla neural networks", "convolutional neural networks", "image classification"],
         "source": "UC Berkeley D-Lab",
         "image": "images/horizontal-nodes.jpg"
+    },
+    {
+        "title": "D-Lab Python Data Visualization Workshop",
+        "date": "2022",
+        "link": "https://github.com/dlab-berkeley/Python-Data-Visualization",
+        "authors": [
+            {"name": "D-Lab contributors", "link": "https://github.com/dlab-berkeley/Python-Data-Visualization/graphs/contributors"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3 hour introduction to data visualization with Python. Learn how to create histograms, bar plots, box plots, scatter plots, compound figures, and more, using matplotlib and seaborn.",
+        "keywords": ["GitHub", "Python", "data visualization", "histograms", "bar plots", "box plots", "scatter plots", "compound figures", "matplotlib", "seaborn"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/upward-graph.jpg"
+    },
+    {
+        "title": "D-Lab Python Fundamentals Workshop",
+        "date": "2024",
+        "link": "https://github.com/dlab-berkeley/Python-Fundamentals",
+        "authors": [
+            {"name": "Tom van Nuenen", "link": "https://github.com/tomvannuenen"},
+            {"name": "Pratik Sachdeva", "link": "https://github.com/pssachdeva"},
+            {"name": "Aaron Culich", "link": "https://github.com/aculich"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3-part, 6 hour introduction to Python. Learn how to create variables, distinguish data types, use methods, and work with Pandas, using Python and Jupyter.",
+        "keywords": ["GitHub", "Python", "variables", "data types", "methods", "Pandas", "Jupyter"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/man-programming.jpg"
+    },
+    {
+        "title": "D-Lab Python Intermediate Workshop",
+        "date": "2024",
+        "link": "https://github.com/dlab-berkeley/Python-Intermediate",
+        "authors": [
+            {"name": "D-Lab contributors", "link": "https://github.com/dlab-berkeley/Python-Intermediate?tab=readme-ov-file#contributors"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3-part, 6 hour workshop diving deeper into Python. Learn how to create functions, use if-statements and for-loops, and work with Pandas, using Python and Jupyter.",
+        "keywords": ["GitHub", "Python", "functions", "if-statements", "for-loops", "Pandas", "Jupyter"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/woman-programming.jpg"
+    },
+    {
+        "title": "D-Lab Python Data Wrangling Workshop",
+        "date": "2024",
+        "link": "https://github.com/dlab-berkeley/Python-Data-Wrangling",
+        "authors": [
+            {"name": "Peter Amerkhanian", "link": "https://github.com/peter-amerkhanian"},
+            {"name": "Pratik Sachdeva", "link": "https://github.com/pssachdeva"},
+            {"name": "Tom van Nuenen", "link": "https://github.com/tomvannuenen"},
+            {"name": "Aniket Kesari", "link": "https://github.com/Akesari12"}
+        ],
+        "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's Python data wrangling workshop. Learn how to use the Pandas library, wrangle DataFrame objects, read CSV files, index data, deal with missing data, sort values, merge DataFrames, perform complex grouping, and more.",
+        "keywords": ["GitHub", "Python", "Pandas", "DataFrames", "read_csv()", "describe()", "indexing", "missing values", "NA values", "merging", "groupby()", "grouping"],
+        "source": "UC Berkeley D-Lab",
+        "image": "images/floppy-disk.jpg"
+    },
+    {
+        "title": "Legality and Ethics of Web Scraping",
+        "date": "September 2018",
+        "link": "https://www.researchgate.net/publication/324907302_Legality_and_Ethics_of_Web_Scraping",
+        "authors": [
+            {"name": "Vlad Krotov", "link": ""},
+            {"name": "Leiser Silva", "link": ""}
+        ],
+        "description": "A conference paper presented by Vlad Krotov of Murray State University and Leiser Silva of the University of Houston in the Twenty-Fourth Americas Conference on Information Systems in New Orleans in September 2018. The 5-page PDF, accessible for free, reviews the U.S. legal literature on the subject and discusses legality and ethics of web scraping and web crawling.",
+        "keywords": ["big data", "web data", "web scraping", "web crawling", "law", "ethics"],
+        "source": "ResearchGate",
+        "image": "images/governance-parthenon.jpg"
     }
-
 ]
