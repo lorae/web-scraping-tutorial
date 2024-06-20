@@ -100,4 +100,45 @@ TODO: explain how to run the .ipynb file
 
 TODO
 
+# Project Structure
+The schematic below illustrates the basic file structure of the project. 
+
+```
+web-scraping-tutorial/
+│
+├── .gitignore
+├── README.md # The file you are currently reading
+├── advanced-web-scraping.slides.html # Formatted presentation slides
+├── index.html # Produces instructional website
+│
+├── sample_code/
+│ ├── requests_bs4_sc3raping.py # Sample code for scraping static content
+│ ├── selenium_scraping.py # Sample code for scraping dynamic content
+│ └── api_requests.py # Sample code for requesting APIs
+│
+├── slides_content/
+│ ├── advanced-web-scraping.ipynb # Jupyter notebook producing presentation slides
+│ └── images/ # contains images used in the slides
+│   ├── all-http-requests-screenshot.png
+│   ├── brookings-edu-screenshot.png
+│   ├── client-server-request-response.png
+│   ├── client-server.png
+│   └── ...
+│
+└── web_content/ # Content used in index.html (instructional website)
+  └── css/ # Styling for instructional website
+  │ └── styles.css
+  │ 
+  └── data/ # Data used in index.html (instructional website) external requests
+  │ ├── gdp-data.csv # Used to populate the GDP graph on index.html
+  │ └── web-scraping-resources.json # Used to populate cards for external resources on index.html
+  │
+  └── images/ # Images used in index.html (instructional website) external requests
+    ├── book.jpg
+    ├── building_blocks.jpg
+    ├── chat_box.jpg
+    ├── computer_cloud.jpg
+    └── ...
+```
+
 
