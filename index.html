@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Scraping Resources</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="web_content/css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
@@ -232,7 +232,7 @@
         let resourcesData = [];
         
         async function fetchResources() {
-            const response = await fetch('data/web-scraping-resources.json');
+            const response = await fetch('web_content/data/web-scraping-resources.json');
             resourcesData = await response.json();
             displayResources(resourcesData);
         }
@@ -292,7 +292,7 @@
 
         // Function to fetch and display GDP data
         async function fetchGDPData() {
-            const response = await fetch('data/gdp-data.csv');
+            const response = await fetch('web_content/data/gdp-data.csv');
             const data = await response.text();
             const parsedData = Papa.parse(data, { header: true }).data;
 

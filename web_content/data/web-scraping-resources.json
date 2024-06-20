@@ -9,7 +9,7 @@
         "description": "A GitHub repository containing slides and code introducing an audience with no Python experience to data science tools in Python.",
         "keywords": ["Python", "data science", "data structures", "loops", "list comprehension", "conditional evaluation", "functions", "Pandas", "DataFrames", "data visualization", "plotly", "hypothesis tests", "regression analysis", "machine learning"],
         "source": "GitHub",
-        "image": "images/upward-connected-scatter.jpg"
+        "image": "web_content/images/upward-connected-scatter.jpg"
     },
     {
         "title": "Webscraping in R (and a little Python and Excel too)",
@@ -22,7 +22,7 @@
         "description": "A thorough introductory guide to web scraping for R users, suitable for an absolute beginner. Explains using CSS selectors, scheduling jobs, and scraping tables, images, and PDFs, among other topics.",
         "keywords": ["copy-paste", "APIs", "DOM parsing", "HTML", "CSS", "polite", "rvest", "paginated webpages", "cronR", "pdftools", "requests", "BeautifulSoup", "Excel"],
         "source": "Brookings Internal",
-        "image": "images/document.jpg"
+        "image": "web_content/images/document.jpg"
     },
     {
         "title": "Populating the page: how browsers work",
@@ -34,7 +34,7 @@
         "description": "A concise blog post, aimed at developers, that explains how browsers provide their users with a web experience.",
         "keywords": ["DNS lookup", "TCP handshake", "TLS negotiation", "HTTP GET request", "response", "parsing", "DOM tree", "CSSOM tree", "JavaScript compilation", "render", "paint"],
         "source": "Mozilla Developer Network",
-        "image": "images/laptop-web.jpg"
+        "image": "web_content/images/laptop-web.jpg"
     },
     {
         "title": "What is DNS? | How DNS works",
@@ -46,7 +46,7 @@
         "description": "A blog post explaining the DNS resolution process. A useful starting point for laypeople interested in learning more about the process.",
         "keywords": ["DNS server", "IP address", "recursive DNS resolver", "DNS lookup", "DNS caching"],
         "source": "Cloudflare",
-        "image": "images/router.jpg"
+        "image": "web_content/images/router.jpg"
     },
     {
         "title": "How the web works",
@@ -58,7 +58,7 @@
         "description": "A high-level blog post accessible to beginners, aimed at developers, that explains how a phone or computer browser displays a webpage. Part of a longer series of blog posts that may be helpful for those hoping to learn more about browsers in depth.",
         "keywords": ["clients", "servers", "requests", "responses", "TCP", "IP address", "DNS", "HTTP", "component files", "code files", "assets", "packets"],
         "source": "Mozilla Developer Network",
-        "image": "images/writing-website-with-image.jpg"
+        "image": "web_content/images/writing-website-with-image.jpg"
     },
     {
         "title": "A Practical Introduction to Web Scraping in Python",
@@ -70,7 +70,7 @@
         "description": "A tutorial aimed at beginners to web scraping with some prior knowledge of Python. Focuses mainly on building skills with HTML parsing using BeautifulSoup and interacting with the browser using MechanicalSoup. After this tutorial, users will likely be ready to learn to use Selenium.",
         "keywords": ["HTML", "regex", "regular expressions", "BeautifulSoup", "MechanicalSoup"],
         "source": "Real Python",
-        "image": "images/computer.jpg"
+        "image": "web_content/images/computer.jpg"
     },
     {
         "title": "Automate the Boring Stuff: Web Scraping (Chapter 12)",
@@ -82,7 +82,7 @@
         "description": "A free online textbook introducing users to concepts in Python. This chapter assumes basic proficiency in Python from reading previous chapters. Walks users through inspecting the HTML code underlying websites using developer tools on the web browser, parsing the content using BeautifulSoup, and rendering interactive pages using a Selenium webdriver.",
         "keywords": ["requests", "GET requests", "HTML", "View page source", "Inspect element", "Developer tools", "HTML elements", "BeautifulSoup", "select method", "Selenium"],
         "source": "Real Python",
-        "image": "images/book.jpg"
+        "image": "web_content/images/book.jpg"
     },
     {
         "title": "Getting Started (with Selenium)",
@@ -94,7 +94,7 @@
         "description": "Generalized documentation for Selenium using multiple programming languages (like Python), including installing the library and organizing and executing Selenium code. Includes several lines of sample code illustrating how to start and end a session, find elements, and take action on elements.",
         "keywords": ["webdrivers", "browsers", "waits", "elements", "interactions", "sample code", "Python"],
         "source": "Selenium",
-        "image": "images/laptop-web.jpg"
+        "image": "web_content/images/laptop-web.jpg"
     },
     {
         "title": "Getting started with the web",
@@ -106,7 +106,7 @@
         "description": "A high-quality series of blog posts that guides skills levels ranging from absolute beginners to those with more intermediate understanding through the process of building a website. Comprised of short, accessible blog posts covering many topics, including how the web works, and introductions to HTML, CSS, and JavaScript. Aimed at developers, but serves as useful background for more general audiences and those interested in understanding the web better for web scraping.",
         "keywords": ["HTML", "CSS", "JavaScript", "tools and testing"],
         "source": "Mozilla Developer Network",
-        "image": "images/building-blocks.jpg"
+        "image": "web_content/images/building-blocks.jpg"
     },
     {
         "title": "roundup",
@@ -118,7 +118,7 @@
         "description": "Lorae's (the creater of this website) GitHub repository which scrapes pre-print academic economics papers from 20+ sources; presents titles, abstracts, authors and hyperlinks on an online dashboard. Auto-updates daily using GitHub Actions workflow. May be helpful sample code for those interested in web scraping in Python or automating their scraping using GitHub Actions.",
         "keywords": ["web scraping", "Python", "GitHub Actions", "Streamlit"],
         "source": "GitHub",
-        "image": "images/single-page-file.jpg"
+        "image": "web_content/images/single-page-file.jpg"
     },
     {
         "title": "Text Mining with R: A Tidy Approach",
@@ -132,7 +132,7 @@
         "description": "A free, open-source book by the authors of the `tidytext` R package that introduces text mining in R. The authors provide extensive examples of text analysis in action, including sentiment analysis, the tf-idf statistic, n-grams, and document-term matrics. Real examples use data from Twitter archives, NASA datasets, and more.",
         "keywords": ["tidytext", "unnest_tokens()", "sentiments dataset", "tf-idf statistic", "n-grams", "document-term matrices", "tidy() method"],
         "source": "",
-        "image": "images/chat-box.jpg"
+        "image": "web_content/images/chat-box.jpg"
     },
     {
         "title": "Text as Data",
@@ -144,7 +144,7 @@
         "description": "A free, online course by a Professor of Sociology, Public Policy, and Data Science at Duke University. The course materials - which involve programming in R - are available on his GitHub page. His course covers topics such as APIs, basic text analysis, dictionary-based text analysis, topic modeling, text networks, and word embeddings.",
         "keywords": ["GitHub", "text as data", "screen-scraping", "APIs", "basic text analysis", "dictionary-based text analysis", "topic modeling", "text networks", "word embeddings"],
         "source": "Duke University",
-        "image": "images/chat-box.jpg"
+        "image": "web_content/images/chat-box.jpg"
     },
     {
         "title": "Text as Data (Spring 2021, NYU)",
@@ -156,7 +156,7 @@
         "description": "An NYU course taught in spring 2021, aimed at students who have taken at least one class in statistics or inference and who have a basic knowledge of calculus, progability, densities, distributions, statistical tests, hypothesis testing, maximum likelihood, and generalized linear models. The course is applied and uses R as a programming language.",
         "keywords": ["GitHub", "vector space model of a document", "bag of words", "word distributions", "lexical diversity", "sentiment", "machine learning", "support vector machines", "k-NN models", "random forests/trees", "bursts and memes"],
         "source": "New York University",
-        "image": "images/newspaper.jpg"
+        "image": "web_content/images/newspaper.jpg"
     },
     {
         "title": "Web Scraping with R",
@@ -168,7 +168,7 @@
         "description": "A book explaining how to web scrape using R. Walks users through extensive code and real-life examples scraping websites such as IMDB, PubMed, and AAUP Faculty Compensation. Chapters are fairly self-contained and cover topics such as static page scraping, XML and JSON, APIs, and sentiment analysis.",
         "keywords": ["GitHub", "vector space model of a document", "bag of words", "word distributions", "lexical diversity", "sentiment", "machine learning", "support vector machines", "k-NN models", "random forests/trees", "bursts and memes"],
         "source": "New York University",
-        "image": "images/newspaper.jpg"
+        "image": "web_content/images/newspaper.jpg"
     },
     {
         "title": "D-Lab Python Web Scraping Workshop",
@@ -181,7 +181,7 @@
         "description": "This GitHub repository contains links to Google Slides and Jupyter slides with sample code and practice problems that are used in an interactive workshop taught by UC Berkeley's D-Lab. The material covers basic web scraping methods using Python such as the requests and beautifulsoup4 packages.",
         "keywords": ["GitHub", "Python", "requests", "BeautifulSoup", "beautifulsoup4", "lxml", "JSON", "HTML tags", "href elements"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/screen-lots-of-clicking.jpg"
+        "image": "web_content/images/screen-lots-of-clicking.jpg"
     },
     {
         "title": "D-Lab Python Geospatial Fundamentals Workshop",
@@ -197,7 +197,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6-hour introduction to working with geospatial data in Python. Learn how to import, visualize, and analyze geospatial data using GeoPandas in Python.",
         "keywords": ["GitHub", "Python", "spatial DataFrames", "GeoPandas", "GeoDataFrames", "matplotlib", "vector spatial data", "geoprocessing", "color palettes", "data classification"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/phone-with-location.jpg"
+        "image": "web_content/images/phone-with-location.jpg"
     },
     {
         "title": "D-Lab Python Machine Learning Workshop",
@@ -209,7 +209,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6 hour introduction to machine learning in Python. Learn how to perform classification, regression, clustering, and do model selection using scikit-learn in Python.",
         "keywords": ["GitHub", "Python", "machine learning", "regression", "regularization", "preprocessing", "classification", "scikit-learn"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/hierarchy-graph.jpg"
+        "image": "web_content/images/hierarchy-graph.jpg"
     },
     {
         "title": "D-Lab Python Text Analysis Workshop",
@@ -221,7 +221,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 12 hour introduction to text analysis with Python. Learn how to perform bag-of-words, sentiment analysis, topic modeling, word embeddings, and more, using scikit-learn, NLTK, Gensim, and spaCy in Python.",
         "keywords": ["GitHub", "Python", "text analysis", "bag-of-words", "sentiment analysis", "topic modeling", "word embeddings", "scikit-learn", "NLTK", "Gensim", "spaCy"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/quotation-marks.jpg"
+        "image": "web_content/images/quotation-marks.jpg"
     },
     {
         "title": "D-Lab Python Deep Learning Workshop",
@@ -234,7 +234,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 6 hour introduction to deep learning with Python. Convey the basics of deep learning in Python using keras on image datasets. Students are empowered with a general grasp of deep learning, example code that they can modify, a working computational environment, and resources for further study.",
         "keywords": ["GitHub", "Python", "deep learning", "Jupyter", "dataset splitting", "feed forward neural networks", "vanilla neural networks", "convolutional neural networks", "image classification"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/horizontal-nodes.jpg"
+        "image": "web_content/images/horizontal-nodes.jpg"
     },
     {
         "title": "D-Lab Python Data Visualization Workshop",
@@ -246,7 +246,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3 hour introduction to data visualization with Python. Learn how to create histograms, bar plots, box plots, scatter plots, compound figures, and more, using matplotlib and seaborn.",
         "keywords": ["GitHub", "Python", "data visualization", "histograms", "bar plots", "box plots", "scatter plots", "compound figures", "matplotlib", "seaborn"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/upward-graph.jpg"
+        "image": "web_content/images/upward-graph.jpg"
     },
     {
         "title": "D-Lab Python Fundamentals Workshop",
@@ -260,7 +260,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3-part, 6 hour introduction to Python. Learn how to create variables, distinguish data types, use methods, and work with Pandas, using Python and Jupyter.",
         "keywords": ["GitHub", "Python", "variables", "data types", "methods", "Pandas", "Jupyter"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/man-programming.jpg"
+        "image": "web_content/images/man-programming.jpg"
     },
     {
         "title": "D-Lab Python Intermediate Workshop",
@@ -272,7 +272,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's 3-part, 6 hour workshop diving deeper into Python. Learn how to create functions, use if-statements and for-loops, and work with Pandas, using Python and Jupyter.",
         "keywords": ["GitHub", "Python", "functions", "if-statements", "for-loops", "Pandas", "Jupyter"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/woman-programming.jpg"
+        "image": "web_content/images/woman-programming.jpg"
     },
     {
         "title": "D-Lab Python Data Wrangling Workshop",
@@ -287,7 +287,7 @@
         "description": "This GitHub repository contains the materials related to UC Berkey's D-Lab's Python data wrangling workshop. Learn how to use the Pandas library, wrangle DataFrame objects, read CSV files, index data, deal with missing data, sort values, merge DataFrames, perform complex grouping, and more.",
         "keywords": ["GitHub", "Python", "Pandas", "DataFrames", "read_csv()", "describe()", "indexing", "missing values", "NA values", "merging", "groupby()", "grouping"],
         "source": "UC Berkeley D-Lab",
-        "image": "images/floppy-disk.jpg"
+        "image": "web_content/images/floppy-disk.jpg"
     },
     {
         "title": "Legality and Ethics of Web Scraping",
@@ -300,6 +300,6 @@
         "description": "A conference paper presented by Vlad Krotov of Murray State University and Leiser Silva of the University of Houston in the Twenty-Fourth Americas Conference on Information Systems in New Orleans in September 2018. The 5-page PDF, accessible for free, reviews the U.S. legal literature on the subject and discusses legality and ethics of web scraping and web crawling.",
         "keywords": ["big data", "web data", "web scraping", "web crawling", "law", "ethics"],
         "source": "ResearchGate",
-        "image": "images/governance-parthenon.jpg"
+        "image": "web_content/images/governance-parthenon.jpg"
     }
 ]
