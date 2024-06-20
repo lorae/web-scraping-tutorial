@@ -1,16 +1,22 @@
 # Purpose
-The purpose of this repository is to act as a web scraping training ground for those hoping to develop their skills in Python. It was presented to the Brookings Institution as part of the Brookings Data Network presentation series on XXX XX, 2024.
+The purpose of this repository is to act as a web scraping training ground for those hoping to develop their skills in Python. It was presented by Lorae Stojanovic to the Brookings Institution as part of the Brookings Data Network presentation series on June 20, 2024.
 
-The repository has two main elements: 
-## 1. **[Instructional slides](https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html)** 
+The repository has three main elements: 
+1. **[Instructional slides](https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html)** 
 These slides (produced using Jupyter) walk users through web scraping techniques such as:
    - Making network requests
    - Parsing HTML code
    - Using Selenium
    - Discovering hidden APIs
    - Rendering JSON data sets
-## 2. **[Instructional webpage](https://lorae.github.io/web-scraping-tutorial/)** 
+2. **[Instructional webpage](https://lorae.github.io/web-scraping-tutorial/)** 
 This webpage, hosted on GitHub, acts as an illustrative example website that users can web scrape directly as they follow along with instructions from the slides.
+
+3. **[Sample code](https://lorae.github.io/web-scraping-tutorial/sample_code/)**
+The code walks users through:
+   - Web scraping static content using HTTP requests and parsing the response using the `beautifulsoup4` library
+   - Web scraping dynamic content using the `selenium` library
+   - Requesting APIs using the `requests` library
 
 # Getting Started
 If you'd simply like to view the educational materials, please navigate to:
@@ -18,6 +24,10 @@ If you'd simply like to view the educational materials, please navigate to:
 **Instructional slides:** https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html
 
 **Instructional website:** https://lorae.github.io/web-scraping-tutorial
+
+**Instructional code:** https://lorae.github.io/sample_code
+
+# Instructions for running the project
 
 If you'd like to run the source code on your computer, proceed with the steps below.
 
