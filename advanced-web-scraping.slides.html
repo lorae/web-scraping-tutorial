@@ -8024,7 +8024,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
@@ -8113,7 +8113,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_headers</span> <span class="o">=</span> <span class="p">{</span>
@@ -8150,7 +8150,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">my_url</span> <span class="o">=</span> <span class="s2">"https://lorae.github.io/web-scraping-tutorial/"</span>
@@ -8177,7 +8177,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>We're interested specifically in scraping the titles and authors of the books that appear on the table in the webpage.</p>
+<p>We're interested specifically in scraping the company names and profit per employee of the entries in the table in the webpage.</p>
 <p>In order to do this, we have to first get the HTML file for the website.</p>
 </div>
 </div>
@@ -8198,7 +8198,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">session_arguments</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">'GET'</span><span class="p">,</span> 
@@ -8228,7 +8228,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">)</span>
@@ -8277,7 +8277,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
@@ -8299,134 +8299,235 @@ main {
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;title&gt;Web Scraping Resources&lt;/title&gt;
-    &lt;link rel="stylesheet" href="css/styles.css"&gt;
+    &lt;link rel="stylesheet" href="web_content/css/styles.css"&gt;
     &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"&gt;
     &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
     &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;h1&gt;Scrape this website!&lt;/h1&gt;
-    &lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
-        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
-        .
-    &lt;/p&gt;
-    &lt;h2&gt;Reading list&lt;/h2&gt;
-    &lt;table&gt;
-        &lt;tr class="header-row"&gt;
-            &lt;th class="header-cell"&gt;Title&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Author&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Genre&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
-            &lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;1984&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
-        &lt;/tr&gt;
-        &lt;tr class="data-row"&gt;
-            &lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
-            &lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
-            &lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
-            &lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
-            &lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/table&gt;
-    &lt;h2&gt;Learning resources&lt;/h2&gt;
-    &lt;div class="promo-grid__promos" id="resources-container"&gt;
-        &lt;!-- Data will be populated here --&gt;
+    &lt;div class="container"&gt;
+        &lt;h1&gt;Scrape this website!&lt;/h1&gt;
+        &lt;p&gt;Welcome! Are you interested in learning how to gather data from the internet? This website was designed as a trial ground to practice skills covered in Lorae Stojanovic's presentation to the Brookings Data Network on June 20, 2024, &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;"Web Scraping with Python"&lt;/a&gt;. The presentation includes &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;slides&lt;/a&gt;, &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;code to scrape this website&lt;/a&gt;, and a &lt;a href="https://github.com/lorae/web-scraping-tutorial"&gt;GitHub repository&lt;/a&gt; encapsulating the entire project, including the webpage that you're currently reading.&lt;/p&gt;
+
+        &lt;p&gt;The presentation covers foundational topics related to web scraping with Python, such as:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;How your browser &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/2/5"&gt;interacts with external resources&lt;/a&gt; to access and display a website&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/2"&gt;Using the &lt;code&gt;requests&lt;/code&gt; package&lt;/a&gt; to access static web content via HTTP requests&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/9"&gt;Parsing HTML code&lt;/a&gt; using the &lt;code&gt;beautifulsoup4&lt;/code&gt; package&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/5"&gt;Accessing dynamic content&lt;/a&gt; using the &lt;code&gt;selenium&lt;/code&gt; package&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/1"&gt;Inspecting network requests&lt;/a&gt; to locate hidden APIs&lt;/li&gt;
+            &lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/10"&gt;Accessing APIs&lt;/a&gt; using the &lt;code&gt;requests&lt;/code&gt; package&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;Feel free to explore the code accompanying the presentation, which scrapes data from this website using three methods:&lt;/p&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="#"&gt;HTTP requests and HTML parsing&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Selenium webdriver&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="#"&gt;Direct API access&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;p&gt;Go forth and explore!&lt;/p&gt;
+
+        &lt;h2&gt;Top US Companies by Profit per Employee&lt;/h2&gt;
+        &lt;p&gt;Profit per employee is calculated by dividing a company's yearly profit by its number of full-time staff. Data are courtesy of the &lt;a href="https://www.visualcapitalist.com/profit-per-employee-top-u-s-companies-ranking/"&gt;Visual Capitalist&lt;/a&gt; and &lt;a href="https://companiesmarketcap.com/"&gt;Companies Market Cap&lt;/a&gt;.&lt;/p&gt;
+        &lt;table class="styled-table"&gt;
+            &lt;thead&gt;
+                &lt;tr class="header-row"&gt;
+                    &lt;th class="header-cell rank"&gt;Rank&lt;/th&gt;
+                    &lt;th class="header-cell company"&gt;Company&lt;/th&gt;
+                    &lt;th class="header-cell industry"&gt;Industry&lt;/th&gt;
+                    &lt;th class="header-cell profit-per-employee"&gt;Profit per Employee&lt;/th&gt;
+                    &lt;th class="header-cell market-cap"&gt;Market Cap, June 2024&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;1&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;ConocoPhillips&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$1,970,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$127.38 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;2&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Fannie Mae&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$1,510,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$5.16 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;3&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Freddie Mac&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$1,190,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$22.71 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;4&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Valero&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$1,180,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$49.39 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;5&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Occidental Petroleum&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$1,110,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$54.31 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;6&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Cheniere Energy&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$921,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$36.88 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;7&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;ExxonMobil&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$899,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$490.67 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;8&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Phillips 66&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$848,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$57.59 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;9&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Marathon Petroleum&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$815,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$60.75 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;10&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Chevron&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$809,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$280.40 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;11&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;PBF Energy&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$798,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$5.10 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;12&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Enterprise Products&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$752,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$61.45 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;13&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Apple&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$609,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$3,245 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;14&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Broadcom&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$575,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$839.05 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;15&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;HF Sinclair&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$560,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$10.01 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;16&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;D. R. Horton&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Construction&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$433,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$45.90 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;17&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;AIG&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$392,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$49.19 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;18&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Lennar&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Construction&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$384,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$40.93 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;19&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Energy Transfer&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$379,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$52.18 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;20&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Pfizer&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Healthcare&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$378,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$155.32 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;21&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Netflix&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$351,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$295.45 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;22&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Microsoft&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$329,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$3,317 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;23&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Alphabet&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$315,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$2,170 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;24&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Meta&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$268,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$1,266 B&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class="data-row"&gt;
+                    &lt;td class="data-cell rank"&gt;25&lt;/td&gt;
+                    &lt;td class="data-cell company"&gt;Qualcomm&lt;/td&gt;
+                    &lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+                    &lt;td class="data-cell profit-per-employee"&gt;$254,000&lt;/td&gt;
+                    &lt;td class="data-cell market-cap"&gt;$253.43 B&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;h2&gt;Learning resources&lt;/h2&gt;
+        &lt;div class="promo-grid__promos" id="resources-container"&gt;
+            &lt;!-- Data will be populated here --&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
     &lt;script&gt;
         let resourcesData = [];
         
         async function fetchResources() {
-            const response = await fetch('data/web-scraping-resources.json');
+            const response = await fetch('web_content/data/web-scraping-resources.json');
             resourcesData = await response.json();
             displayResources(resourcesData);
         }
@@ -8486,7 +8587,7 @@ main {
 
         // Function to fetch and display GDP data
         async function fetchGDPData() {
-            const response = await fetch('data/gdp-data.csv');
+            const response = await fetch('web_content/data/gdp-data.csv');
             const data = await response.text();
             const parsedData = Papa.parse(data, { header: true }).data;
 
@@ -8549,12 +8650,11 @@ main {
 
         fetchGDPData();
     &lt;/script&gt;
-    &lt;h2&gt;Interactive Graph&lt;/h2&gt;
-    &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
-    &lt;div class="container"&gt;
-        &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;
-        &lt;div class="promo-grid__promos" id="resources-container"&gt;
-            &lt;!-- Data will be populated here --&gt;
+    &lt;div class = "container"&gt;
+        &lt;h2&gt;Interactive Graph&lt;/h2&gt;
+        &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
+        &lt;div class="container"&gt;
+            &lt;canvas id="gdpChart" width="400" height="200"&gt;&lt;/canvas&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/body&gt;
@@ -8606,7 +8706,7 @@ main {
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<p>The data we want is contained in a <code>&lt;tr&gt;</code> element with class <code>data-row</code>. And after further inspection, we find that the title is in a <code>&lt;td&gt;</code> child element with classes <code>data-cell</code> and <code>title</code>. The author is a sibling <code>&lt;td&gt;</code> element with classes <code>data-cell</code> and <code>author</code>.</p>
+<p>The data we want is contained in a <code>&lt;tr&gt;</code> element with class <code>data-row</code>. And after further inspection, we find that the company name is in a <code>&lt;td&gt;</code> child element with classes <code>data-cell</code> and <code>company</code>. The profit per employee is a sibling <code>&lt;td&gt;</code> element with classes <code>data-cell</code> and <code>profit-per-employee</code>.</p>
 <p><img alt="Inspect sub-element screenshot" src="slides_content/images/inspect-sub-element-static-screenshot.png"/></p>
 </div>
 </div>
@@ -8627,7 +8727,7 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s1">'html.parser'</span><span class="p">)</span>
@@ -8651,134 +8751,231 @@ main {
 &lt;meta charset="utf-8"/&gt;
 &lt;meta content="width=device-width, initial-scale=1.0" name="viewport"/&gt;
 &lt;title&gt;Web Scraping Resources&lt;/title&gt;
-&lt;link href="css/styles.css" rel="stylesheet"/&gt;
+&lt;link href="web_content/css/styles.css" rel="stylesheet"/&gt;
 &lt;link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;amp;display=swap" rel="stylesheet"/&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;
 &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
+&lt;div class="container"&gt;
 &lt;h1&gt;Scrape this website!&lt;/h1&gt;
-&lt;p&gt;Welcome! On this website, you'll find a variety of opportunities to practice your skills web scraping with Python. If you'd like to learn more about how to use this page, please visit my repository, 
-        &lt;a href="https://github.com/lorae/web-scraping-tutorial" target="_blank"&gt;lorae/web-scraping-tutorial&lt;/a&gt;
-        .
-    &lt;/p&gt;
-&lt;h2&gt;Reading list&lt;/h2&gt;
-&lt;table&gt;
+&lt;p&gt;Welcome! Are you interested in learning how to gather data from the internet? This website was designed as a trial ground to practice skills covered in Lorae Stojanovic's presentation to the Brookings Data Network on June 20, 2024, &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;"Web Scraping with Python"&lt;/a&gt;. The presentation includes &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;slides&lt;/a&gt;, &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html"&gt;code to scrape this website&lt;/a&gt;, and a &lt;a href="https://github.com/lorae/web-scraping-tutorial"&gt;GitHub repository&lt;/a&gt; encapsulating the entire project, including the webpage that you're currently reading.&lt;/p&gt;
+&lt;p&gt;The presentation covers foundational topics related to web scraping with Python, such as:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;How your browser &lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/2/5"&gt;interacts with external resources&lt;/a&gt; to access and display a website&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/2"&gt;Using the &lt;code&gt;requests&lt;/code&gt; package&lt;/a&gt; to access static web content via HTTP requests&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/4/9"&gt;Parsing HTML code&lt;/a&gt; using the &lt;code&gt;beautifulsoup4&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/5"&gt;Accessing dynamic content&lt;/a&gt; using the &lt;code&gt;selenium&lt;/code&gt; package&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/1"&gt;Inspecting network requests&lt;/a&gt; to locate hidden APIs&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://lorae.github.io/web-scraping-tutorial/advanced-web-scraping.slides.html#/6/10"&gt;Accessing APIs&lt;/a&gt; using the &lt;code&gt;requests&lt;/code&gt; package&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Feel free to explore the code accompanying the presentation, which scrapes data from this website using three methods:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;HTTP requests and HTML parsing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Selenium webdriver&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="#"&gt;Direct API access&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Go forth and explore!&lt;/p&gt;
+&lt;h2&gt;Top US Companies by Profit per Employee&lt;/h2&gt;
+&lt;p&gt;Profit per employee is calculated by dividing a company's yearly profit by its number of full-time staff. Data are courtesy of the &lt;a href="https://www.visualcapitalist.com/profit-per-employee-top-u-s-companies-ranking/"&gt;Visual Capitalist&lt;/a&gt; and &lt;a href="https://companiesmarketcap.com/"&gt;Companies Market Cap&lt;/a&gt;.&lt;/p&gt;
+&lt;table class="styled-table"&gt;
+&lt;thead&gt;
 &lt;tr class="header-row"&gt;
-&lt;th class="header-cell"&gt;Title&lt;/th&gt;
-&lt;th class="header-cell"&gt;Author&lt;/th&gt;
-&lt;th class="header-cell"&gt;Genre&lt;/th&gt;
-&lt;th class="header-cell"&gt;Copies Sold&lt;/th&gt;
-&lt;th class="header-cell"&gt;Publication Year&lt;/th&gt;
+&lt;th class="header-cell rank"&gt;Rank&lt;/th&gt;
+&lt;th class="header-cell company"&gt;Company&lt;/th&gt;
+&lt;th class="header-cell industry"&gt;Industry&lt;/th&gt;
+&lt;th class="header-cell profit-per-employee"&gt;Profit per Employee&lt;/th&gt;
+&lt;th class="header-cell market-cap"&gt;Market Cap, June 2024&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;1&lt;/td&gt;
+&lt;td class="data-cell company"&gt;ConocoPhillips&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$1,970,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$127.38 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Adventures of Tom Sawyer&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Mark Twain&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;2,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1876&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;2&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Fannie Mae&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$1,510,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$5.16 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;Pride and Prejudice&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Jane Austen&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Romance&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;20,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1813&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;3&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Freddie Mac&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$1,190,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$22.71 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;1984&lt;/td&gt;
-&lt;td class="data-cell author"&gt;George Orwell&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Dystopian&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;25,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1949&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;4&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Valero&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$1,180,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$49.39 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Great Gatsby&lt;/td&gt;
-&lt;td class="data-cell author"&gt;F. Scott Fitzgerald&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Tragedy&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;15,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1925&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;5&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Occidental Petroleum&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$1,110,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$54.31 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;To Kill a Mockingbird&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Harper Lee&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Southern Gothic&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;40,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1960&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;6&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Cheniere Energy&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$921,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$36.88 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;Moby-Dick&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Herman Melville&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Adventure&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;3,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1851&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;7&lt;/td&gt;
+&lt;td class="data-cell company"&gt;ExxonMobil&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$899,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$490.67 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;War and Peace&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Leo Tolstoy&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Historical&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;36,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1869&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;8&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Phillips 66&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$848,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$57.59 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;Crime and Punishment&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Fyodor Dostoevsky&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Psychological&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;12,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1866&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;9&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Marathon Petroleum&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$815,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$60.75 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Catcher in the Rye&lt;/td&gt;
-&lt;td class="data-cell author"&gt;J.D. Salinger&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Realistic Fiction&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;65,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1951&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;10&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Chevron&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$809,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$280.40 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;Harry Potter and the Sorcerer's Stone&lt;/td&gt;
-&lt;td class="data-cell author"&gt;J.K. Rowling&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;120,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1997&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;11&lt;/td&gt;
+&lt;td class="data-cell company"&gt;PBF Energy&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$798,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$5.10 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Hobbit&lt;/td&gt;
-&lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;100,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1937&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;12&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Enterprise Products&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$752,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$61.45 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Lord of the Rings&lt;/td&gt;
-&lt;td class="data-cell author"&gt;J.R.R. Tolkien&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;150,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1954&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;13&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Apple&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$609,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$3,245 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;The Chronicles of Narnia&lt;/td&gt;
-&lt;td class="data-cell author"&gt;C.S. Lewis&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Fantasy&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;85,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1950&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;14&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Broadcom&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$575,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$839.05 B&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr class="data-row"&gt;
-&lt;td class="data-cell title"&gt;Anne of Green Gables&lt;/td&gt;
-&lt;td class="data-cell author"&gt;Lucy Maud Montgomery&lt;/td&gt;
-&lt;td class="data-cell genre"&gt;Children's Literature&lt;/td&gt;
-&lt;td class="data-cell copies-sold"&gt;50,000,000&lt;/td&gt;
-&lt;td class="data-cell publication-year"&gt;1908&lt;/td&gt;
+&lt;td class="data-cell rank"&gt;15&lt;/td&gt;
+&lt;td class="data-cell company"&gt;HF Sinclair&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$560,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$10.01 B&lt;/td&gt;
 &lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;16&lt;/td&gt;
+&lt;td class="data-cell company"&gt;D. R. Horton&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Construction&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$433,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$45.90 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;17&lt;/td&gt;
+&lt;td class="data-cell company"&gt;AIG&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Financials&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$392,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$49.19 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;18&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Lennar&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Construction&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$384,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$40.93 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;19&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Energy Transfer&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Energy&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$379,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$52.18 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;20&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Pfizer&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Healthcare&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$378,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$155.32 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;21&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Netflix&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$351,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$295.45 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;22&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Microsoft&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$329,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$3,317 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;23&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Alphabet&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$315,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$2,170 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;24&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Meta&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$268,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$1,266 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class="data-row"&gt;
+&lt;td class="data-cell rank"&gt;25&lt;/td&gt;
+&lt;td class="data-cell company"&gt;Qualcomm&lt;/td&gt;
+&lt;td class="data-cell industry"&gt;Tech&lt;/td&gt;
+&lt;td class="data-cell profit-per-employee"&gt;$254,000&lt;/td&gt;
+&lt;td class="data-cell market-cap"&gt;$253.43 B&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h2&gt;Learning resources&lt;/h2&gt;
 &lt;div class="promo-grid__promos" id="resources-container"&gt;
 &lt;!-- Data will be populated here --&gt;
 &lt;/div&gt;
+&lt;/div&gt;
 &lt;script&gt;
         let resourcesData = [];
         
         async function fetchResources() {
-            const response = await fetch('data/web-scraping-resources.json');
+            const response = await fetch('web_content/data/web-scraping-resources.json');
             resourcesData = await response.json();
             displayResources(resourcesData);
         }
@@ -8838,7 +9035,7 @@ main {
 
         // Function to fetch and display GDP data
         async function fetchGDPData() {
-            const response = await fetch('data/gdp-data.csv');
+            const response = await fetch('web_content/data/gdp-data.csv');
             const data = await response.text();
             const parsedData = Papa.parse(data, { header: true }).data;
 
@@ -8901,12 +9098,11 @@ main {
 
         fetchGDPData();
     &lt;/script&gt;
+&lt;div class="container"&gt;
 &lt;h2&gt;Interactive Graph&lt;/h2&gt;
 &lt;p&gt;The following graph contains United States nominal Gross Domestic Product data from Q1 1947 to Q1 2024. Data is courtesy of the Federal Reserve Bank of St. Louis "FRED" service. &lt;/p&gt;
 &lt;div class="container"&gt;
 &lt;canvas height="200" id="gdpChart" width="400"&gt;&lt;/canvas&gt;
-&lt;div class="promo-grid__promos" id="resources-container"&gt;
-&lt;!-- Data will be populated here --&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/body&gt;
@@ -8934,26 +9130,26 @@ main {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [54]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="c1"># Select elements corresponding to table rows</span>
 <span class="n">elements</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">'tr.data-row'</span><span class="p">)</span>
 
 <span class="c1"># Initialize lists for data output</span>
-<span class="n">Titles</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="n">Authors</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">Companies</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">PPEs</span> <span class="o">=</span> <span class="p">[]</span>
 
 <span class="k">for</span> <span class="n">el</span> <span class="ow">in</span> <span class="n">elements</span><span class="p">:</span>
-    <span class="n">title</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'title'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
-    <span class="n">author</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'author'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">company</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'company'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">ppe</span> <span class="o">=</span> <span class="n">el</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">'td'</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s1">'profit-per-employee'</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
     
     <span class="c1"># Add data to lists</span>
-    <span class="n">Titles</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
-    <span class="n">Authors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">author</span><span class="p">)</span>
+    <span class="n">Companies</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">company</span><span class="p">)</span>
+    <span class="n">PPEs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ppe</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">Titles</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Authors</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Companies</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">PPEs</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -8966,8 +9162,8 @@ main {
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>['The Adventures of Tom Sawyer', 'Pride and Prejudice', '1984', 'The Great Gatsby', 'To Kill a Mockingbird', 'Moby-Dick', 'War and Peace', 'Crime and Punishment', 'The Catcher in the Rye', "Harry Potter and the Sorcerer's Stone", 'The Hobbit', 'The Lord of the Rings', 'The Chronicles of Narnia', 'Anne of Green Gables']
-['Mark Twain', 'Jane Austen', 'George Orwell', 'F. Scott Fitzgerald', 'Harper Lee', 'Herman Melville', 'Leo Tolstoy', 'Fyodor Dostoevsky', 'J.D. Salinger', 'J.K. Rowling', 'J.R.R. Tolkien', 'J.R.R. Tolkien', 'C.S. Lewis', 'Lucy Maud Montgomery']
+<pre>['ConocoPhillips', 'Fannie Mae', 'Freddie Mac', 'Valero', 'Occidental Petroleum', 'Cheniere Energy', 'ExxonMobil', 'Phillips 66', 'Marathon Petroleum', 'Chevron', 'PBF Energy', 'Enterprise Products', 'Apple', 'Broadcom', 'HF Sinclair', 'D. R. Horton', 'AIG', 'Lennar', 'Energy Transfer', 'Pfizer', 'Netflix', 'Microsoft', 'Alphabet', 'Meta', 'Qualcomm']
+['$1,970,000', '$1,510,000', '$1,190,000', '$1,180,000', '$1,110,000', '$921,000', '$899,000', '$848,000', '$815,000', '$809,000', '$798,000', '$752,000', '$609,000', '$575,000', '$560,000', '$433,000', '$392,000', '$384,000', '$379,000', '$378,000', '$351,000', '$329,000', '$315,000', '$268,000', '$254,000']
 </pre>
 </div>
 </div>

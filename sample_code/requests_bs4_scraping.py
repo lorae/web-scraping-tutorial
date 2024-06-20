@@ -32,19 +32,23 @@ print(soup)
 elements = soup.select('tr.data-row')
 
 # Initialize lists for data output
-Titles = []
-Authors = []
+# Select elements corresponding to table rows
+elements = soup.select('tr.data-row')
+
+# Initialize lists for data output
+Companies = []
+PPEs = []
 
 for el in elements:
-    title = el.find('td', class_='title').text
-    author = el.find('td', class_='author').text
+    company = el.find('td', class_='company').text
+    ppe = el.find('td', class_='profit-per-employee').text
     
     # Add data to lists
-    Titles.append(title)
-    Authors.append(author)
+    Companies.append(company)
+    PPEs.append(ppe)
 
-print(Titles)
-print(Authors)
+print(Companies)
+print(PPEs)
 
 # NOTE: This code is intentionally nonfunctional. See slides for more
 # information.
